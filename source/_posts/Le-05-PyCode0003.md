@@ -2,7 +2,7 @@
 title: PyCode0003
 date: 2016-07-01 02:01:50
 updated: 2016-07-01 02:01:55
-categories: [Learning]
+categories: [Learning, PyCode]
 tags: [python]
 ---
 

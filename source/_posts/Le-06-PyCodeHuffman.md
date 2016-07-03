@@ -2,7 +2,7 @@
 title: PyCodeHuffman
 date: 2016-07-01 01:58:53
 updated: 2016-07-01 01:58:58
-categories: [Learning]
+categories: [Learning, PyCode]
 tags: [python]
 ---
 
