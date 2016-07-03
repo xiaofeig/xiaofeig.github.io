@@ -70,5 +70,5 @@ theme: landscape
 deploy:
   type: git
   repo:
-  	github: git@github.com:xiaofeig/xiaofeig.github.io.git,master
-	coding: git@git.coding.net:xiaofeig/xiaofeig.github.io.git,master
+    github: git@github.com:xiaofeig/xiaofeig.github.io.git,master
+    coding: git@git.coding.net:xiaofeig/xiaofeig.github.io.git,master
