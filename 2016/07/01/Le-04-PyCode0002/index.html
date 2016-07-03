@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Protocol," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -57,48 +57,16 @@
 
 
 
-<meta name="description" content="前言提供不可靠、无连接的数据传送服务。
-
-不可靠（unreliable）：
-不保证IP数据报能成功到达目的地
-错误处理方法：丢弃该数据报，然后发送ICMP消息报给信源端
-任何要求的可靠性必须由上层来提供（如TCP）
-
-
-无连接（connectionless）：
-IP不维护任何关于后续数据报的状态信息
-每个数据报的处理是相互独立的，可不按发送顺序接口，可独立选择路由">
+<meta name="description" content="Python 练习册，每天一个小程序第 0002 题将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IP：网际协议">
-<meta property="og:url" content="http://yoursite.com/2016/04/15/Re-00-IP：网际协议/index.html">
+<meta property="og:title" content="PyCode0002">
+<meta property="og:url" content="http://yoursite.com/2016/07/01/Le-04-PyCode0002/index.html">
 <meta property="og:site_name" content="Xiaofei's Blog">
-<meta property="og:description" content="前言提供不可靠、无连接的数据传送服务。
-
-不可靠（unreliable）：
-不保证IP数据报能成功到达目的地
-错误处理方法：丢弃该数据报，然后发送ICMP消息报给信源端
-任何要求的可靠性必须由上层来提供（如TCP）
-
-
-无连接（connectionless）：
-IP不维护任何关于后续数据报的状态信息
-每个数据报的处理是相互独立的，可不按发送顺序接口，可独立选择路由">
-<meta property="og:image" content="http://7xjq7c.com1.z0.glb.clouddn.com/RG%5D1H%7B%7BG7IOG443%254KYWME9.png?imageMogr2/thumbnail/450x">
-<meta property="og:updated_time" content="2016-04-15T13:03:19.000Z">
+<meta property="og:description" content="Python 练习册，每天一个小程序第 0002 题将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。">
+<meta property="og:updated_time" content="2016-06-30T18:00:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IP：网际协议">
-<meta name="twitter:description" content="前言提供不可靠、无连接的数据传送服务。
-
-不可靠（unreliable）：
-不保证IP数据报能成功到达目的地
-错误处理方法：丢弃该数据报，然后发送ICMP消息报给信源端
-任何要求的可靠性必须由上层来提供（如TCP）
-
-
-无连接（connectionless）：
-IP不维护任何关于后续数据报的状态信息
-每个数据报的处理是相互独立的，可不按发送顺序接口，可独立选择路由">
-<meta name="twitter:image" content="http://7xjq7c.com1.z0.glb.clouddn.com/RG%5D1H%7B%7BG7IOG443%254KYWME9.png?imageMogr2/thumbnail/450x">
+<meta name="twitter:title" content="PyCode0002">
+<meta name="twitter:description" content="Python 练习册，每天一个小程序第 0002 题将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。">
 
 
 
@@ -116,7 +84,7 @@ IP不维护任何关于后续数据报的状态信息
   };
 </script>
 
-  <title> IP：网际协议 | Xiaofei's Blog </title>
+  <title> PyCode0002 | Xiaofei's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +234,7 @@ IP不维护任何关于后续数据报的状态信息
             
             
               
-                IP：网际协议
+                PyCode0002
               
             
           </h1>
@@ -278,8 +246,8 @@ IP不维护任何关于后续数据报的状态信息
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-15T21:03:10+08:00" content="2016-04-15">
-              2016-04-15
+            <time itemprop="dateCreated" datetime="2016-07-01T02:00:23+08:00" content="2016-07-01">
+              2016-07-01
             </time>
           </span>
 
@@ -292,20 +260,8 @@ IP不维护任何关于后续数据报的状态信息
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Reading/" itemprop="url" rel="index">
-                    <span itemprop="name">Reading</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Reading/TCP-IP详解-卷1：协议/" itemprop="url" rel="index">
-                    <span itemprop="name">TCP/IP详解 卷1：协议</span>
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
                   </a>
                 </span>
 
@@ -320,8 +276,8 @@ IP不维护任何关于后续数据报的状态信息
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/15/Re-00-IP：网际协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/Re-00-IP：网际协议/" itemprop="commentsCount"></span>
+                <a href="/2016/07/01/Le-04-PyCode0002/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/Le-04-PyCode0002/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -331,7 +287,7 @@ IP不维护任何关于后续数据报的状态信息
 
           
           
-             <span id="/2016/04/15/Re-00-IP：网际协议/" class="leancloud_visitors" data-flag-title="IP：网际协议">
+             <span id="/2016/07/01/Le-04-PyCode0002/" class="leancloud_visitors" data-flag-title="PyCode0002">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -352,110 +308,16 @@ IP不维护任何关于后续数据报的状态信息
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>提供不可靠、无连接的数据传送服务。</p>
-<ul>
-<li>不可靠（unreliable）：<ul>
-<li>不保证IP数据报能成功到达目的地</li>
-<li>错误处理方法：丢弃该数据报，然后发送ICMP消息报给信源端</li>
-<li>任何要求的可靠性必须由上层来提供（如TCP）</li>
-</ul>
-</li>
-<li>无连接（connectionless）：<ul>
-<li>IP不维护任何关于后续数据报的状态信息</li>
-<li>每个数据报的处理是相互独立的，可不按发送顺序接口，可独立选择路由</li>
-</ul>
-</li>
-</ul>
+        <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0002-题"><a href="#第-0002-题" class="headerlink" title="第 0002 题"></a>第 0002 题</h2><p>将 0001 题生成的 200 个激活码（或者优惠券）保存到 <strong>MySQL</strong> 关系型数据库中。</p>
 <a id="more"></a>
-<h1 id="IP首部"><a href="#IP首部" class="headerlink" title="IP首部"></a>IP首部</h1><h2 id="IP数据报格式"><a href="#IP数据报格式" class="headerlink" title="IP数据报格式"></a>IP数据报格式</h2><p><img src="http://7xjq7c.com1.z0.glb.clouddn.com/RG%5D1H%7B%7BG7IOG443%254KYWME9.png?imageMogr2/thumbnail/450x" alt=""></p>
-<h2 id="首部字段"><a href="#首部字段" class="headerlink" title="首部字段"></a>首部字段</h2><ol>
-<li>目前的协议版本号是4。</li>
-<li>首部长度是指首部占32bit字的数目，即首部长度为2即表示首占8字节。由于它是4比特字段，因此首部最长为60字节。</li>
-<li>服务类型（TOS，type of service)字段：<ol>
-<li>3bit的优先权子字段（已被忽略）</li>
-<li>4bit的TOS字段：<ol>
-<li>最小时延</li>
-<li>最大吞吐量</li>
-<li>最高可靠性</li>
-<li>最小费用</li>
-</ol>
-</li>
-<li>1bit的未用位，必须置0</li>
-</ol>
-</li>
-<li>总长度字段指整个IP数据报的长度（单位：字节），该字段长度为16bit，所以数据报最长可达65535Byte。该字段是必要字段，因为一些数据链路需要填充一些数据以达到最小长度，比如以太网的最下帧长为46Byte，IP数据报可能会小于46Byte，此时数据链路会填充不足的部分以达到最小帧长，当接收IP数据报时就需要通过总长度字段识别46字节中多少是IP数据报的内容。</li>
-<li>标识字段唯一的标识主机发送的每一个数据报，通过每发一份其值加1。</li>
-<li>生存时间（TTL，time to live）设置了数据报可以经过的最多路由器数。</li>
-<li>首部校验和是根据IP首部计算的校验和码。ICMP、IGMP、UDP和TCP在它们各自的首部中均含有同时覆盖首部和数据校验和码<ol>
-<li>校验和字段置0</li>
-<li>对首部中每个16bit进行二进制反码求和，结果存入校验和字段中</li>
-<li>收到IP数据报后，同样对首部中每个16bit进行反码求和，由于接收方在计算过程中包含了发送方存在首部中的校验和，因此，如果首部在传输过程中没有发送任何差错是，计算结果应该全为1</li>
-<li>由于路由器会修改TTL字段（减1），所以每转发一份报文时，增加它的校验和</li>
-</ol>
-</li>
-<li>任选项（很少被使用）：<ol>
-<li>安全和处理限制</li>
-<li>记录路径</li>
-<li>时间戳</li>
-<li>严格的源站选路</li>
-<li>以上为任选项，它们都是以32bit为界限，必要时插入值为0的填充字节，保证IP首部始终是32bit的整数倍</li>
-</ol>
-</li>
-</ol>
-<h1 id="IP路由选择"><a href="#IP路由选择" class="headerlink" title="IP路由选择"></a>IP路由选择</h1><ul>
-<li>源主机<ol>
-<li>如果目的主机和源主机直接相连（点对点链路）或都在一个共享网络上（以太网或令牌环网），那么数据报被直接送到目的主机上。</li>
-<li>否则主机把数据发送到默认的路由器上。</li>
-</ol>
-</li>
-<li>目的主机<ol>
-<li>收到一份数据报并进行发送时，它会检索路由表</li>
-<li>当数据报来自某个网络接口时，IP首先检查目的IP地址是否为本机的IP地址之一或者IP广播地址<ol>
-<li>如果是，数据报就被送到有IP首部协议字段所指定的协议模块进行处理</li>
-<li>如果不是<ol>
-<li>如果IP层被设置为路由器的功能，转发数据报</li>
-<li>否则丢弃数据报</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
+<hr>
+<ul>
+<li><a href="http://dev.mysql.com/doc/connector-python/en/" target="_blank" rel="external">MySql Connector/Python doc</a></li>
+<li><a href="http://dev.mysql.com/downloads/connector/python/" target="_blank" rel="external">mysql-connector-python-2.1.3-py3.4-winx64.msi</a></li>
+<li>验证安装：<code>python34/Lib/site-packages/</code>目录下有<code>mysql</code>文件夹</li>
 </ul>
-<h2 id="路由表"><a href="#路由表" class="headerlink" title="路由表"></a>路由表</h2><h3 id="字段"><a href="#字段" class="headerlink" title="字段"></a>字段</h3><ul>
-<li>目的IP地址，可以是完整的主机地址，也可以是网络地址，有标志字段指定。主机地址有一个非0的主机号，以指定某一特定的主机；网络地址的主机号为0，指定网络中的所有主机（如以太网、令牌网）。</li>
-<li>下一跳路由器（next-hop router）的IP地址，或者有直接连接的网络IP地址。下一跳路由器是指一个直接相连网络上的路由器，通过它转发数据报。</li>
-<li>标志，其中一个指明目的IP地址是网络地址还是主机地址；另一个指明下一跳路由器是否为真正的下一个路由器，还是一个直接相连的接口。</li>
-<li>为数据报的传输指定一个网络接口。</li>
-</ul>
-<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ol>
-<li>搜索路由表，寻找能与目的IP地址完全匹配的表目（网络号和主机号都要匹配）。如果找到，则把报文发送给该表目指定的下一跳路由器或直接连接的网络接口（取决于标志字段）</li>
-<li>搜索路由表，寻找能与目的网路号相匹配的表目。如果找到，则把报文发送给该表目指定的下一跳路由器或直接连接的网络接口（取决于标志字段）。目的网络上的所有主机都可以通过这个表目来处置。</li>
-<li>搜索路由表，寻找默认表目，并把报文发送给默认表目。</li>
-</ol>
-<p>如果上面步骤都没成功，那么该数据报就不能被传送。如果不能传送的数据报来自本机，那么会向生成数据报的应用程序返回一个“主机不可达”或“网络不可达”的错误。</p>
-<p>为一个网络指定一个路由器，而不必为一个主机指定一个路由器，这样做客极大缩小路由表的规模，比如Internet上的路由器有只有几千个表目，而不会超过100万个。</p>
-<h1 id="子网寻址"><a href="#子网寻址" class="headerlink" title="子网寻址"></a>子网寻址</h1><ul>
-<li>子网编址：将主机号分成一个子网号和一个主机号</li>
-<li>原因：A类和B类地址为主机号分配了太多的空间，而事实中一个网络中并不安排这么多主机。</li>
-<li>子网对外部路由器来说隐藏了内部网络组织的细节，而对于子网内部的路由器是不透明的。</li>
-<li>与30个C类地址相比，用一个包含30个子网的B类地址的好处是可以缩小Internet路由表的规模。</li>
-</ul>
-<h1 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h1><h2 id="目的和构成"><a href="#目的和构成" class="headerlink" title="目的和构成"></a>目的和构成</h2><ul>
-<li>确定多少比特用于子网号，多少比特用于主机号。</li>
-<li>1的比特留给网络号和子网号，0的比特留个主机号。</li>
-</ul>
-<h2 id="确定IP数据报的目的"><a href="#确定IP数据报的目的" class="headerlink" title="确定IP数据报的目的"></a>确定IP数据报的目的</h2><ol>
-<li>本子网的主机</li>
-<li>本网络中其它子网中的主机</li>
-<li>其它网络上的主机</li>
-</ol>
-<p>如果知道本机的IP地址，就可确认其为A类、B类或C类，也就可知网络号和子网号之间的分界线，再根据子网掩码即可确定子网号和主机号之间的分界线。</p>
-<h1 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h1><p>最近在读TCP/IP详解这本书，个人觉得写的很棒，翻译的也很不错，大部分内容都能看懂，难点的就是书中的那些例子，没有办法去实现它，想尝试着测试一下。</p>
-<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><ul>
-<li>2016-04-15 21:03:10 星期五 初稿</li>
-<li>2016-04-15 21:03:10 星期五 初次发布</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="keyword">from</span> mysql.connector <span class="keyword">import</span> errorcode</div><div class="line"><span class="keyword">import</span> mysql.connector</div><div class="line"></div><div class="line"><span class="keyword">from</span> case0001 <span class="keyword">import</span> generatecode</div><div class="line"></div><div class="line">config = &#123;</div><div class="line">    <span class="string">'user'</span>: <span class="string">'root'</span>,</div><div class="line">    <span class="string">'password'</span>: <span class="string">'xxxxoooo'</span>,</div><div class="line">    <span class="string">'host'</span>: <span class="string">'139.129.xx.ooo'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">DB_NAME = <span class="string">'python_demo'</span></div><div class="line"></div><div class="line">TABLES = &#123;&#125;</div><div class="line">TABLES[<span class="string">'activation_code'</span>] = (</div><div class="line">   <span class="string">"create table activation_code ("</span></div><div class="line">   <span class="string">"  id int(11) NOT NULL PRIMARY KEY,"</span></div><div class="line">   <span class="string">"  activation_code char(16) NOT NULL,"</span></div><div class="line">   <span class="string">"  create_time datetime NOT NULL "</span></div><div class="line">   <span class="string">")character set utf8 collate utf8_general_ci"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    conn = mysql.connector.connect(**config)</div><div class="line">    cursor = conn.cursor()</div><div class="line"></div><div class="line">    <span class="comment"># 创建数据库</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">createdb</span><span class="params">()</span>:</span></div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            cursor.execute(<span class="string">'create database &#123;&#125; character set utf8 collate utf8_general_ci'</span>.format(DB_NAME))</div><div class="line">        <span class="keyword">except</span> mysql.connector.Error <span class="keyword">as</span> err:</div><div class="line">            <span class="keyword">if</span> err.errno == errorcode.ER_DB_CREATE_EXISTS:</div><div class="line">                print(<span class="string">"Database &#123;&#125; already exists."</span>.format(DB_NAME))</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                print(err)</div><div class="line"></div><div class="line">    <span class="comment"># 创建表</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">createtable</span><span class="params">()</span>:</span></div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            conn.database = DB_NAME</div><div class="line">            cursor.execute(TABLES[<span class="string">'activation_code'</span>])</div><div class="line">        <span class="keyword">except</span>  mysql.connector.Error <span class="keyword">as</span> err:</div><div class="line">            <span class="keyword">if</span> err.errno == errorcode.ER_TABLE_EXISTS_ERROR:</div><div class="line">                print(<span class="string">"Table &#123;&#125; already exists."</span>.format(<span class="string">'activation_code'</span>))</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                print(err)</div><div class="line"></div><div class="line">    <span class="comment"># 插入激活码</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">()</span>:</span></div><div class="line">        codes = generatecode(<span class="number">200</span>, <span class="number">6</span>, <span class="number">10</span>)</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            <span class="keyword">for</span> code <span class="keyword">in</span> codes:</div><div class="line">                add_code = (<span class="string">"insert into activation_code "</span></div><div class="line">                            <span class="string">"(id, activation_code, create_time) "</span></div><div class="line">                            <span class="string">"values (%s, %s, %s)"</span>)</div><div class="line">                data_code =(int(code[<span class="number">0</span>:<span class="number">6</span>], <span class="number">16</span>), code, datetime.now())</div><div class="line">                cursor.execute(add_code, data_code)</div><div class="line">                conn.commit()</div><div class="line">        <span class="keyword">except</span> mysql.connector.Error <span class="keyword">as</span> err:</div><div class="line">            print(err)</div><div class="line"></div><div class="line">    createdb()</div><div class="line">    createtable()</div><div class="line">    insert()</div><div class="line"></div><div class="line"><span class="keyword">except</span> mysql.connector.Error <span class="keyword">as</span> err:</div><div class="line">    <span class="keyword">if</span> err.errno == errorcode.ER_ACCESS_DENIED_ERROR:</div><div class="line">        print(<span class="string">'Something is wrong with your user name or password'</span>)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        print(err)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    cursor.close()</div><div class="line">    conn.close()</div></pre></td></tr></table></figure>
+<hr>
 
       
     </div>
@@ -491,7 +353,7 @@ IP不维护任何关于后续数据报的状态信息
       
         <div class="post-tags">
           
-            <a href="/tags/Protocol/" rel="tag">#Protocol</a>
+            <a href="/tags/python/" rel="tag">#python</a>
           
         </div>
       
@@ -500,16 +362,16 @@ IP不维护任何关于后续数据报的状态信息
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/01/Le-00-Hexo-NexT/" rel="next" title="Hexo-NexT搭建博客">
-                <i class="fa fa-chevron-left"></i> Hexo-NexT搭建博客
+              <a href="/2016/07/01/Le-06-PyCodeHuffman/" rel="next" title="PyCodeHuffman">
+                <i class="fa fa-chevron-left"></i> PyCodeHuffman
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/17/Le-01-七牛同步文件/" rel="prev" title="七牛同步文件">
-                七牛同步文件 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/01/Le-05-PyCode0003/" rel="prev" title="PyCode0003">
+                PyCode0003 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,10 +387,10 @@ IP不维护任何关于后续数据报的状态信息
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/04/15/Re-00-IP：网际协议/"
-     data-title="IP：网际协议"
+        <div class="ds-share flat" data-thread-key="2016/07/01/Le-04-PyCode0002/"
+     data-title="PyCode0002"
      data-content=""
-     data-url="http://yoursite.com/2016/04/15/Re-00-IP：网际协议/">
+     data-url="http://yoursite.com/2016/07/01/Le-04-PyCode0002/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -558,8 +420,8 @@ IP不维护任何关于后续数据报的状态信息
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/15/Re-00-IP：网际协议/"
-           data-title="IP：网际协议" data-url="http://yoursite.com/2016/04/15/Re-00-IP：网际协议/">
+      <div class="ds-thread" data-thread-key="2016/07/01/Le-04-PyCode0002/"
+           data-title="PyCode0002" data-url="http://yoursite.com/2016/07/01/Le-04-PyCode0002/">
       </div>
     
   </div>
@@ -717,7 +579,7 @@ IP不维护任何关于后续数据报的状态信息
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP首部"><span class="nav-number">2.</span> <span class="nav-text">IP首部</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IP数据报格式"><span class="nav-number">2.1.</span> <span class="nav-text">IP数据报格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首部字段"><span class="nav-number">2.2.</span> <span class="nav-text">首部字段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP路由选择"><span class="nav-number">3.</span> <span class="nav-text">IP路由选择</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路由表"><span class="nav-number">3.1.</span> <span class="nav-text">路由表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字段"><span class="nav-number">3.1.1.</span> <span class="nav-text">字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能"><span class="nav-number">3.1.2.</span> <span class="nav-text">功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子网寻址"><span class="nav-number">4.</span> <span class="nav-text">子网寻址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子网掩码"><span class="nav-number">5.</span> <span class="nav-text">子网掩码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目的和构成"><span class="nav-number">5.1.</span> <span class="nav-text">目的和构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确定IP数据报的目的"><span class="nav-number">5.2.</span> <span class="nav-text">确定IP数据报的目的</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#体会"><span class="nav-number">6.</span> <span class="nav-text">体会</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新日志"><span class="nav-number">7.</span> <span class="nav-text">更新日志</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-练习册，每天一个小程序"><span class="nav-number">1.</span> <span class="nav-text">Python 练习册，每天一个小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-0002-题"><span class="nav-number">1.1.</span> <span class="nav-text">第 0002 题</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
