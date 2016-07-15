@@ -236,6 +236,869 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/15/Le-0C-PyCode0012/" itemprop="url">
+                  PyCode0012
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T11:31:21+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/15/Le-0C-PyCode0012/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-0C-PyCode0012/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/15/Le-0C-PyCode0012/" class="leancloud_visitors" data-flag-title="PyCode0012">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0012-题"><a href="#第-0012-题" class="headerlink" title="第 0012 题"></a>第 0012 题</h2><p>敏感词文本文件 filtered_words.txt，里面的内容 和 0011题一样，当用户输入敏感词语，则用 星号 * 替换，例如当用户输入「帝都是个好城市」，则变成「**是个好城市」。</p>
+<hr>
+<ul>
+<li>使用到<code>re.sub(...)</code>这个<strong>&#42;&#42;</strong>函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">from</span> case0011 <span class="keyword">import</span> generatepat, getflag</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">ignoreword</span><span class="params">(s, pattern)</span>:</span></div><div class="line">    <span class="keyword">return</span> re.sub(pattern, <span class="keyword">lambda</span> mo: mo.group(<span class="number">0</span>).__len__()*<span class="string">'*'</span>, s)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    path = <span class="string">'resource/filtered_words.txt'</span></div><div class="line">    pattern = <span class="string">'('</span> + generatepat(path) + <span class="string">')'</span></div><div class="line">    flag = <span class="number">0</span></div><div class="line">    <span class="keyword">while</span> flag == <span class="number">0</span>:</div><div class="line">        s = input(<span class="string">'Input: '</span>)</div><div class="line">        result = ignoreword(s, pattern)</div><div class="line">        print(result)</div><div class="line">        flag = getflag()</div><div class="line">    print(<span class="string">"Bye..."</span>)</div></pre></td></tr></table></figure>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/15/Le-0B-PyCode0011/" itemprop="url">
+                  PyCode0011
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T11:29:39+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/15/Le-0B-PyCode0011/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-0B-PyCode0011/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/15/Le-0B-PyCode0011/" class="leancloud_visitors" data-flag-title="PyCode0011">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0011-题"><a href="#第-0011-题" class="headerlink" title="第 0011 题"></a>第 0011 题</h2><p>敏感词文本文件 filtered_words.txt，里面的内容为以下内容，当用户输入敏感词语时，则打印出 Freedom，否则打印出 Human Rights。</p>
+<pre><code>帝都
+程序员
+python
+滚粗
+尼妹
+王尼玛
+腻害
+煞笔
+papi酱
+</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generatepat</span><span class="params">(path)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    根据文件内容生成pattern</div><div class="line">    :param path: 文件路径</div><div class="line">    :return: 生成正则匹配的pattern</div><div class="line">    """</div><div class="line">    <span class="keyword">with</span> open(path, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">        keywords = f.read().split(<span class="string">'\n'</span>)</div><div class="line">        pattern = <span class="string">'|'</span>.join(keywords)</div><div class="line">        <span class="keyword">return</span> pattern</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">matchword</span><span class="params">(s, pattern)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    搜索关键字</div><div class="line">    """</div><div class="line">    result = re.search(pattern, s)</div><div class="line">    <span class="keyword">if</span> result == <span class="keyword">None</span>:</div><div class="line">        print(<span class="string">'Freedom'</span>)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        print(<span class="string">'Human Rights'</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getflag</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    生成下一步的标记</div><div class="line">    :return: 下一步的标记flag</div><div class="line">    """</div><div class="line">    next = <span class="keyword">True</span></div><div class="line">    <span class="keyword">while</span> next:</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            flag = int(input(<span class="string">'Continue-&gt; 0, Exit-&gt; 1: '</span>))</div><div class="line">            <span class="keyword">if</span> flag == <span class="number">0</span> <span class="keyword">or</span> flag ==<span class="number">1</span>:</div><div class="line">                next = <span class="keyword">False</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                print(<span class="string">"Oops! Just 0 or 1. Thanks!"</span>)</div><div class="line">        <span class="keyword">except</span> ValueError:</div><div class="line">            print(<span class="string">"Oops!  That was no valid number.  Try again..."</span>)</div><div class="line">    <span class="keyword">return</span> flag</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    path = <span class="string">'resource/filtered_words.txt'</span></div><div class="line">    pattern = generatepat(path)</div><div class="line">    flag = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> flag == <span class="number">0</span>:</div><div class="line">        s = input(<span class="string">'Input: '</span>)</div><div class="line">        matchword(s, pattern)</div><div class="line">        flag = getflag()</div><div class="line">    print(<span class="string">"Bye..."</span>)</div></pre></td></tr></table></figure>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/15/Le-0A-PyCode0009/" itemprop="url">
+                  PyCode0009
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T11:28:37+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/15/Le-0A-PyCode0009/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-0A-PyCode0009/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/15/Le-0A-PyCode0009/" class="leancloud_visitors" data-flag-title="PyCode0009">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0009-题"><a href="#第-0009-题" class="headerlink" title="第 0009 题"></a>第 0009 题</h2><p>一个HTML文件，找出里面的<strong>链接</strong>。</p>
+<hr>
+<ul>
+<li>待完善</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line">content = <span class="string">''</span></div><div class="line"><span class="keyword">with</span> open(<span class="string">'resource/toc.html'</span>, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">    content = f.read()</div><div class="line"></div><div class="line">p1 = <span class="string">r'src="(.*?)"'</span></div><div class="line">p2 = <span class="string">r'href="(.*?)"'</span></div><div class="line"></div><div class="line">r1 = re.findall(p1, content)</div><div class="line">r2 = re.findall(p2, content)</div><div class="line"></div><div class="line">print(r1 + r2)</div></pre></td></tr></table></figure>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/15/Le-09-PyCode0007/" itemprop="url">
+                  PyCode0007
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T11:28:06+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/15/Le-09-PyCode0007/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-09-PyCode0007/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/15/Le-09-PyCode0007/" class="leancloud_visitors" data-flag-title="PyCode0007">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0007-题"><a href="#第-0007-题" class="headerlink" title="第 0007 题"></a>第 0007 题</h2><p>有个目录，里面是你自己写过的程序，统计一下你写过多少行代码。包括空行和注释，但是要分别列出来。</p>
+<hr>
+<ul>
+<li>正则匹配统计总行数、空行数和注释行数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countline</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    统计文件中内容的总行数、空行数和注释行数</div><div class="line">    :param s: 待统计的文本</div><div class="line">    :return: 返回包含统计信息的dict</div><div class="line">    """</div><div class="line">    result = &#123;&#125;</div><div class="line">    <span class="comment"># 匹配总行</span></div><div class="line">    result[<span class="string">'totalline'</span>] = re.findall(<span class="string">r'\n'</span>, s).__len__() + <span class="number">1</span></div><div class="line">    <span class="comment"># 匹配空行</span></div><div class="line">    result[<span class="string">'blankline'</span>] = re.findall(<span class="string">r'^( *(\n)?)$'</span>, s, flags=re.MULTILINE).__len__()</div><div class="line">    <span class="comment"># 匹配注释行</span></div><div class="line">    result[<span class="string">'commentline'</span>] = re.findall(<span class="string">r'^( *#)'</span>, s, flags=re.MULTILINE).__len__()</div><div class="line">    <span class="comment"># 匹配多行注释</span></div><div class="line">    mulcomment = re.findall(<span class="string">r'("""\n(.*\n)*?.*""")'</span>, s)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> mulcomment:</div><div class="line">        result[<span class="string">'commentline'</span>] += re.findall(<span class="string">r'\n'</span>, i[<span class="number">0</span>]).__len__() + <span class="number">1</span></div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    p = Path()</div><div class="line">    pyfiles = list(p.glob(<span class="string">'*.py'</span>))</div><div class="line"></div><div class="line">    result = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> pyfile <span class="keyword">in</span> pyfiles:</div><div class="line">        <span class="keyword">with</span> pyfile.open(encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">            s = f.read()</div><div class="line">            temp = countline(s)</div><div class="line">            <span class="keyword">for</span> k, v <span class="keyword">in</span> temp.items():</div><div class="line">                result[k] = result.get(k, <span class="number">0</span>) + v</div><div class="line">    print(result)</div></pre></td></tr></table></figure>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/15/Le-08-PyCode0006/" itemprop="url">
+                  PyCode0006
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T11:21:24+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/15/Le-08-PyCode0006/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-08-PyCode0006/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/15/Le-08-PyCode0006/" class="leancloud_visitors" data-flag-title="PyCode0006">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0006-题"><a href="#第-0006-题" class="headerlink" title="第 0006 题"></a>第 0006 题</h2><p>你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。</p>
+<hr>
+<ul>
+<li>打开文件夹下的每个文件</li>
+<li>正则匹配获取文件中的每个单词</li>
+<li>统计单词出现的频率</li>
+<li>过滤频率最高的单词</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countfreq</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    计算文本中单词出现的频率</div><div class="line">    :param s: 待计算的文本</div><div class="line">    :return: 返回只包含频率最高的单词与频率的dict</div><div class="line">    """</div><div class="line">    regix = <span class="string">r"(\b\w+(\-\w+)*('s)?\b)"</span></div><div class="line">    result = re.findall(regix, s)</div><div class="line">    dic = &#123;&#125;</div><div class="line">    freq = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> result:</div><div class="line">        dic[r[<span class="number">0</span>].lower()] = dic.get(r[<span class="number">0</span>].lower(), <span class="number">0</span>) + <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> dic[r[<span class="number">0</span>].lower()] &gt; freq:</div><div class="line">            freq = dic[r[<span class="number">0</span>].lower()]</div><div class="line">    result=&#123;&#125;</div><div class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> dic.keys():</div><div class="line">        <span class="keyword">if</span> dic[k] == freq:</div><div class="line">            result[k] = freq</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">iterdir</span><span class="params">(pathname)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    遍历文件夹下的文件，统计每个文件中频率最高的单词</div><div class="line">    :param pathname: 文件夹路径</div><div class="line">    :return: 返回每个文件频率最高的单词dict</div><div class="line">    """</div><div class="line">    p = Path(pathname)</div><div class="line">    result = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> p.iterdir():</div><div class="line">        <span class="keyword">if</span> path.is_file():</div><div class="line">            <span class="keyword">with</span> path.open() <span class="keyword">as</span> f:</div><div class="line">                content = f.read()</div><div class="line">                result[path.name] = countfreq(content)</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    pathname = <span class="string">'resource/diary/'</span></div><div class="line">    result = iterdir(pathname)</div><div class="line">    print(result)</div></pre></td></tr></table></figure>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/15/Le-07-PyCode0004/" itemprop="url">
+                  PyCode0004
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T11:20:34+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/15/Le-07-PyCode0004/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-07-PyCode0004/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/15/Le-07-PyCode0004/" class="leancloud_visitors" data-flag-title="PyCode0004">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0004-题"><a href="#第-0004-题" class="headerlink" title="第 0004 题"></a>第 0004 题</h2><p>任一个英文的纯文本文件，统计其中的单词出现的个数。</p>
+<hr>
+<ul>
+<li>统计的可能不太精确，以字符边界<code>\b</code>作为分隔的要素</li>
+<li>只考虑到单词中可能出现的<code>-</code>和<code>&#39;s</code></li>
+<li>文本中还可能出现网址链接、伪代码等，这些未考虑</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countNum</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    :param s: 需要统计的文本</div><div class="line">    :return: 返回文本中单词的个数</div><div class="line">    """</div><div class="line">    pattern = <span class="string">r"(\b\w+(\-\w+)*('s)?\b)"</span></div><div class="line">    result = re.findall(pattern, s)</div><div class="line">    <span class="keyword">return</span> result.__len__()</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="keyword">with</span> open(<span class="string">'resource/python-tutorial.txt'</span>) <span class="keyword">as</span> f:</div><div class="line">        print(countNum(f.read()))</div></pre></td></tr></table></figure>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/01/Le-05-PyCode0003/" itemprop="url">
                   PyCode0003
                 </a>
@@ -767,550 +1630,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/01/Le-02-PyCode0000/" itemprop="url">
-                  PyCode0000
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T01:51:04+08:00" content="2016-07-01">
-              2016-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
-                    <span itemprop="name">PyCode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/01/Le-02-PyCode0000/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/Le-02-PyCode0000/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/07/01/Le-02-PyCode0000/" class="leancloud_visitors" data-flag-title="PyCode0000">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code">Python 练习册，每天一个小程序</a></h1><h2 id="第-0000-题"><a href="#第-0000-题" class="headerlink" title="第 0000 题"></a>第 0000 题</h2><p>将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/01/Le-02-PyCode0000/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/17/Le-01-七牛同步文件/" itemprop="url">
-                  七牛同步文件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T18:02:36+08:00" content="2016-04-17">
-              2016-04-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/17/Le-01-七牛同步文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/17/Le-01-七牛同步文件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/04/17/Le-01-七牛同步文件/" class="leancloud_visitors" data-flag-title="七牛同步文件">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>七牛云对于个人认证之后提供10G免费的存储空间，对于存储博客的一些图片都是足够的，而且也支持对图片的一些<a href="http://developer.qiniu.com/code/v6/api/kodo-api/index.html#image">基本的处理</a>。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/17/Le-01-七牛同步文件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/15/Re-00-IP：网际协议/" itemprop="url">
-                  IP：网际协议
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-15T21:03:10+08:00" content="2016-04-15">
-              2016-04-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Reading/" itemprop="url" rel="index">
-                    <span itemprop="name">Reading</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Reading/TCP-IP详解-卷1：协议/" itemprop="url" rel="index">
-                    <span itemprop="name">TCP/IP详解 卷1：协议</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/15/Re-00-IP：网际协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/Re-00-IP：网际协议/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/04/15/Re-00-IP：网际协议/" class="leancloud_visitors" data-flag-title="IP：网际协议">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>提供不可靠、无连接的数据传送服务。</p>
-<ul>
-<li>不可靠（unreliable）：<ul>
-<li>不保证IP数据报能成功到达目的地</li>
-<li>错误处理方法：丢弃该数据报，然后发送ICMP消息报给信源端</li>
-<li>任何要求的可靠性必须由上层来提供（如TCP）</li>
-</ul>
-</li>
-<li>无连接（connectionless）：<ul>
-<li>IP不维护任何关于后续数据报的状态信息</li>
-<li>每个数据报的处理是相互独立的，可不按发送顺序接口，可独立选择路由</li>
-</ul>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/15/Re-00-IP：网际协议/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/01/Le-00-Hexo-NexT/" itemprop="url">
-                  Hexo-NexT搭建博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-01T16:46:55+08:00" content="2016-04-01">
-              2016-04-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/01/Le-00-Hexo-NexT/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/Le-00-Hexo-NexT/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/04/01/Le-00-Hexo-NexT/" class="leancloud_visitors" data-flag-title="Hexo-NexT搭建博客">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一直在找一个风格简单一点的博客，直到前几天看到Hexo和它的NexT主题，简单的操作和大方的风格，再加上支持markdown语法，不禁就喜欢上了，和我想象中的如此契合。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/01/Le-00-Hexo-NexT/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1349,7 +1675,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

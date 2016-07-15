@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="qiniu," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -57,22 +57,40 @@
 
 
 
-<meta name="description" content="前言七牛云对于个人认证之后提供10G免费的存储空间，对于存储博客的一些图片都是足够的，而且也支持对图片的一些基本的处理。">
+<meta name="description" content="Python 练习册，每天一个小程序第 0006 题你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。
+
+
+打开文件夹下的每个文件
+正则匹配获取文件中的每个单词
+统计单词出现的频率
+过滤频率最高的单词
+
+123456789101112131415161718192021222324252627282930313233343536">
 <meta property="og:type" content="article">
-<meta property="og:title" content="七牛同步文件">
-<meta property="og:url" content="http://yoursite.com/2016/04/17/Le-01-七牛同步文件/index.html">
+<meta property="og:title" content="PyCode0006">
+<meta property="og:url" content="http://yoursite.com/2016/07/15/Le-08-PyCode0006/index.html">
 <meta property="og:site_name" content="Xiaofei's Blog">
-<meta property="og:description" content="前言七牛云对于个人认证之后提供10G免费的存储空间，对于存储博客的一些图片都是足够的，而且也支持对图片的一些基本的处理。">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164642.png?imageView2/0/w/800/h/450">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17170533.png?imageView2/0/w/800/h/450">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164729.png?imageView2/0/w/800/h/450">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164740.png?imageView2/0/w/800/h/450">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164657.png?imageView2/0/w/800/h/450">
-<meta property="og:updated_time" content="2016-04-17T10:02:43.000Z">
+<meta property="og:description" content="Python 练习册，每天一个小程序第 0006 题你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。
+
+
+打开文件夹下的每个文件
+正则匹配获取文件中的每个单词
+统计单词出现的频率
+过滤频率最高的单词
+
+123456789101112131415161718192021222324252627282930313233343536">
+<meta property="og:updated_time" content="2016-07-15T03:21:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="七牛同步文件">
-<meta name="twitter:description" content="前言七牛云对于个人认证之后提供10G免费的存储空间，对于存储博客的一些图片都是足够的，而且也支持对图片的一些基本的处理。">
-<meta name="twitter:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164642.png?imageView2/0/w/800/h/450">
+<meta name="twitter:title" content="PyCode0006">
+<meta name="twitter:description" content="Python 练习册，每天一个小程序第 0006 题你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。
+
+
+打开文件夹下的每个文件
+正则匹配获取文件中的每个单词
+统计单词出现的频率
+过滤频率最高的单词
+
+123456789101112131415161718192021222324252627282930313233343536">
 
 
 
@@ -90,7 +108,7 @@
   };
 </script>
 
-  <title> 七牛同步文件 | Xiaofei's Blog </title>
+  <title> PyCode0006 | Xiaofei's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +258,7 @@
             
             
               
-                七牛同步文件
+                PyCode0006
               
             
           </h1>
@@ -252,8 +270,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T18:02:36+08:00" content="2016-04-17">
-              2016-04-17
+            <time itemprop="dateCreated" datetime="2016-07-15T11:21:24+08:00" content="2016-07-15">
+              2016-07-15
             </time>
           </span>
 
@@ -273,6 +291,18 @@
 
                 
                 
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
+                    <span itemprop="name">PyCode</span>
+                  </a>
+                </span>
+
+                
+                
 
               
             </span>
@@ -282,8 +312,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/17/Le-01-七牛同步文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/17/Le-01-七牛同步文件/" itemprop="commentsCount"></span>
+                <a href="/2016/07/15/Le-08-PyCode0006/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-08-PyCode0006/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -293,7 +323,7 @@
 
           
           
-             <span id="/2016/04/17/Le-01-七牛同步文件/" class="leancloud_visitors" data-flag-title="七牛同步文件">
+             <span id="/2016/07/15/Le-08-PyCode0006/" class="leancloud_visitors" data-flag-title="PyCode0006">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -314,38 +344,16 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>七牛云对于个人认证之后提供10G免费的存储空间，对于存储博客的一些图片都是足够的，而且也支持对图片的一些<a href="http://developer.qiniu.com/code/v6/api/kodo-api/index.html#image" target="_blank" rel="external">基本的处理</a>。</p>
-<a id="more"></a>
-<h1 id="创建目标空间"><a href="#创建目标空间" class="headerlink" title="创建目标空间"></a>创建目标空间</h1><p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164642.png?imageView2/0/w/800/h/450" alt=""></p>
-<h1 id="qrsync-命令行上传同步工具"><a href="#qrsync-命令行上传同步工具" class="headerlink" title="qrsync 命令行上传同步工具"></a><a href="http://developer.qiniu.com/code/v6/tool/qrsync.html" target="_blank" rel="external">qrsync 命令行上传同步工具</a></h1><h2 id="下载Windows-64bits版本"><a href="#下载Windows-64bits版本" class="headerlink" title="下载Windows 64bits版本"></a>下载<a href="http://devtools.qiniu.com/qiniu-devtools-windows_amd64-current.zip" target="_blank" rel="external">Windows 64bits</a>版本</h2><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17170533.png?imageView2/0/w/800/h/450" alt=""></p>
-<h2 id="创建配置文件conf-json"><a href="#创建配置文件conf-json" class="headerlink" title="创建配置文件conf.json"></a>创建配置文件<code>conf.json</code></h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"src"</span>: <span class="string">"d:/qiniu/github"</span>,</div><div class="line">    <span class="attr">"dest"</span>: <span class="string">"qiniu:access_key=MgITw196aXX0DDDDpXXDDDDHXXWZrXX3hLXXXXr2&amp;secret_key=GdDDFgXXWXX7DXXsFXX8DXXhEYXXe9-ICuTjqxOe&amp;bucket=github"</span>,</div><div class="line">    <span class="attr">"debug_level"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/Yixiaohan/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0006-题"><a href="#第-0006-题" class="headerlink" title="第 0006 题"></a>第 0006 题</h2><p>你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。</p>
+<hr>
 <ul>
-<li>src：同步的文件夹</li>
-<li>access_key、secret_key：密钥登录可在<a href="https://portal.qiniu.com/user/key" target="_blank" rel="external">密钥管理中</a>查看</li>
+<li>打开文件夹下的每个文件</li>
+<li>正则匹配获取文件中的每个单词</li>
+<li>统计单词出现的频率</li>
+<li>过滤频率最高的单词</li>
 </ul>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164729.png?imageView2/0/w/800/h/450" alt=""></p>
-<ul>
-<li>bucket：目标空间名称</li>
-</ul>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>将解压后的文件夹路径添加到path即可，比如我的是<code>E:\qiniu-64-v3.0.20150620</code></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164740.png?imageView2/0/w/800/h/450" alt=""></p>
-<h2 id="同步文件"><a href="#同步文件" class="headerlink" title="同步文件"></a>同步文件</h2><p>先添加一个文件至同步的文件夹中，然后运行如下命令：</p>
-<ul>
-<li>cmd：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Users\xiaofeig&gt;qrsync e:/qiniu-64-v3.0.20150620/conf.json</div></pre></td></tr></table></figure>
-<ul>
-<li>git bash：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ qrsync /e/qiniu-64-v3.0.20150620/conf.json</div></pre></td></tr></table></figure>
-<h2 id="访问文件"><a href="#访问文件" class="headerlink" title="访问文件"></a>访问文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://domainName/filename</div></pre></td></tr></table></figure>
-<p>domainName为<strong>外链默认域名</strong>，比如我的：<a href="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164642.png" target="_blank" rel="external">http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164642.png</a></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/2016-04-17164657.png?imageView2/0/w/800/h/450" alt=""></p>
-<h1 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h1><p>Markdown中的图片之前是直接放在github中的，使用相对路径，这样的结果就是在浏览博客源码时，图片都浏览不到了，所以就需要使用外链的图片，而七牛云正好提供了这样的服务。试过之后，每次上传图片的时候都要打开网页，略累，看到官网上提供的命令行工具就方便多了。:)</p>
-<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><ul>
-<li>2016-04-17 18:02:36 星期日 初稿</li>
-<li>2016-04-17 18:02:43 星期日 调整格式，初次发布</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countfreq</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    计算文本中单词出现的频率</div><div class="line">    :param s: 待计算的文本</div><div class="line">    :return: 返回只包含频率最高的单词与频率的dict</div><div class="line">    """</div><div class="line">    regix = <span class="string">r"(\b\w+(\-\w+)*('s)?\b)"</span></div><div class="line">    result = re.findall(regix, s)</div><div class="line">    dic = &#123;&#125;</div><div class="line">    freq = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> result:</div><div class="line">        dic[r[<span class="number">0</span>].lower()] = dic.get(r[<span class="number">0</span>].lower(), <span class="number">0</span>) + <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> dic[r[<span class="number">0</span>].lower()] &gt; freq:</div><div class="line">            freq = dic[r[<span class="number">0</span>].lower()]</div><div class="line">    result=&#123;&#125;</div><div class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> dic.keys():</div><div class="line">        <span class="keyword">if</span> dic[k] == freq:</div><div class="line">            result[k] = freq</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">iterdir</span><span class="params">(pathname)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    遍历文件夹下的文件，统计每个文件中频率最高的单词</div><div class="line">    :param pathname: 文件夹路径</div><div class="line">    :return: 返回每个文件频率最高的单词dict</div><div class="line">    """</div><div class="line">    p = Path(pathname)</div><div class="line">    result = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> p.iterdir():</div><div class="line">        <span class="keyword">if</span> path.is_file():</div><div class="line">            <span class="keyword">with</span> path.open() <span class="keyword">as</span> f:</div><div class="line">                content = f.read()</div><div class="line">                result[path.name] = countfreq(content)</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    pathname = <span class="string">'resource/diary/'</span></div><div class="line">    result = iterdir(pathname)</div><div class="line">    print(result)</div></pre></td></tr></table></figure>
+<hr>
 
       
     </div>
@@ -381,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/qiniu/" rel="tag">#qiniu</a>
+            <a href="/tags/python/" rel="tag">#python</a>
           
         </div>
       
@@ -390,16 +398,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/15/Re-00-IP：网际协议/" rel="next" title="IP：网际协议">
-                <i class="fa fa-chevron-left"></i> IP：网际协议
+              <a href="/2016/07/15/Le-07-PyCode0004/" rel="next" title="PyCode0004">
+                <i class="fa fa-chevron-left"></i> PyCode0004
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/01/Le-02-PyCode0000/" rel="prev" title="PyCode0000">
-                PyCode0000 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/15/Le-09-PyCode0007/" rel="prev" title="PyCode0007">
+                PyCode0007 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -415,10 +423,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/04/17/Le-01-七牛同步文件/"
-     data-title="七牛同步文件"
+        <div class="ds-share flat" data-thread-key="2016/07/15/Le-08-PyCode0006/"
+     data-title="PyCode0006"
      data-content=""
-     data-url="http://yoursite.com/2016/04/17/Le-01-七牛同步文件/">
+     data-url="http://yoursite.com/2016/07/15/Le-08-PyCode0006/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -448,8 +456,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/17/Le-01-七牛同步文件/"
-           data-title="七牛同步文件" data-url="http://yoursite.com/2016/04/17/Le-01-七牛同步文件/">
+      <div class="ds-thread" data-thread-key="2016/07/15/Le-08-PyCode0006/"
+           data-title="PyCode0006" data-url="http://yoursite.com/2016/07/15/Le-08-PyCode0006/">
       </div>
     
   </div>
@@ -607,7 +615,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建目标空间"><span class="nav-number">2.</span> <span class="nav-text">创建目标空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qrsync-命令行上传同步工具"><span class="nav-number">3.</span> <span class="nav-text">qrsync 命令行上传同步工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载Windows-64bits版本"><span class="nav-number">3.1.</span> <span class="nav-text">下载Windows 64bits版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压"><span class="nav-number">3.2.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建配置文件conf-json"><span class="nav-number">3.3.</span> <span class="nav-text">创建配置文件conf.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-number">3.4.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步文件"><span class="nav-number">3.5.</span> <span class="nav-text">同步文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问文件"><span class="nav-number">3.6.</span> <span class="nav-text">访问文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#体会"><span class="nav-number">4.</span> <span class="nav-text">体会</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新日志"><span class="nav-number">5.</span> <span class="nav-text">更新日志</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-练习册，每天一个小程序"><span class="nav-number">1.</span> <span class="nav-text">Python 练习册，每天一个小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-0006-题"><span class="nav-number">1.1.</span> <span class="nav-text">第 0006 题</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
