@@ -1,17 +1,17 @@
 ---
  title: about
  date: 2016-04-02 14:12:44
- updated: 2016-07-15 00:26:00
+ updated: 2016-07-23 07:45:35
  type: "about"
 ---
 
  # Me
 
-- Name：高小飞
-- Birthday：1995/01
-- Home：xiaofeig.cn
-- PhoneNum：18883870458
-- Email：i@xiaofeig.cn
+- :fa-user: 高小飞
+- :fa-barcode: 1995/01
+- :fa-home: [coding.xiaofeig.cn](http://coding.xiaofeig.cn)
+- :fa-phone: 18883870458
+- :fa-envelope: i@xiaofeig.cn
 
 # Abstract
 
