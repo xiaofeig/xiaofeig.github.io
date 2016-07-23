@@ -6,7 +6,7 @@ categories: [Learning, PyCode]
 tags: [python]
 ---
 
-# [Python 练习册，每天一个小程序]( https://coding.net/u/xiaofeig/p/show-me-the-code/git)
+# [Python 练习册，每天一个小程序](https://github.com/xiaofeig/show-me-the-code)
 
 ## 第 0014 题
 
