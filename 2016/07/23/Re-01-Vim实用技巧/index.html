@@ -1,0 +1,2731 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Vim," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="Vim实用技巧是一本好书:)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim实用技巧">
+<meta property="og:url" content="http://yoursite.com/2016/07/23/Re-01-Vim实用技巧/index.html">
+<meta property="og:site_name" content="Xiaofei's Blog">
+<meta property="og:description" content="Vim实用技巧是一本好书:)。">
+<meta property="og:image" content="http://yoursite.com/6b3ab4d7-8611-4417-845b-abeea454dea5_files/0091AD17.png">
+<meta property="og:updated_time" content="2016-07-23T01:57:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vim实用技巧">
+<meta name="twitter:description" content="Vim实用技巧是一本好书:)。">
+<meta name="twitter:image" content="http://yoursite.com/6b3ab4d7-8611-4417-845b-abeea454dea5_files/0091AD17.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6266250384977692000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Vim实用技巧 | Xiaofei's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7e2ee4ffda2eb8e51b51ee174565d283";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Xiaofei's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Hi, xiaofei...</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Vim实用技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-23T09:57:12+08:00" content="2016-07-23">
+              2016-07-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Reading/" itemprop="url" rel="index">
+                    <span itemprop="name">Reading</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Reading/Vim实用技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">Vim实用技巧</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/23/Re-01-Vim实用技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/Re-01-Vim实用技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/23/Re-01-Vim实用技巧/" class="leancloud_visitors" data-flag-title="Vim实用技巧">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="http://pan.baidu.com/s/1dFujR4d" target="_blank" rel="external">Vim实用技巧</a>是一本好书:)。</p>
+<a id="more"></a>
+<h3 id="第1章-Vim解决问题的方式"><a href="#第1章-Vim解决问题的方式" class="headerlink" title="第1章 Vim解决问题的方式"></a>第1章 Vim解决问题的方式</h3><p>简化重复性操作</p>
+<ul>
+<li><code>.</code> 重复上次修改</li>
+</ul>
+<p><code>x</code>删除光标下的字符，结合<code>.</code>重复上次修改，就可以让Vim删除光标下的字符。</p>
+<p><code>dd</code>删除行，结合<code>.</code>可继续删除行</p>
+<p><code>&gt;G</code>增加当前行的缩进级别</p>
+<p><code>j</code>调转到下一行，结合<code>.</code>可重复操作（好像有点不管用）</p>
+<blockquote>
+<p>从进入插入模式的那一刻起（输入<code>i</code>），到返回普通模式为止（输入<code>&lt;Esc&gt;</code>，或<code>Ctrl+[</code>），Vim会记录每一个按键操作。做出这样一个修改再用<code>.</code>命令的话，它就会重新执行所有这些按键操作。</p>
+</blockquote>
+<p><code>.</code>是一个微型的宏</p>
+<ul>
+<li>不要自我重复</li>
+</ul>
+<p>对于行尾添加内容如分号这种操作，可合并为一步。</p>
+<p>如将如下代码行尾添加分号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var foo=1</div><div class="line">var bar=&apos;a&apos;</div><div class="line">var foobar=foo+bar</div></pre></td></tr></table></figure>
+<p>每行执行<code>$a;&lt;Esc&gt;</code>即可，<code>$</code>可移位至行尾，<code>a</code>在光标后添加。可用<code>.</code>替换<code>a;&lt;Esc&gt;</code>。</p>
+<p>减少无关的移动，<code>a</code>在光标后添加，<code>A</code>则在行尾添加。</p>
+<p>类似命令：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">复合命令</th>
+<th style="text-align:left">等效长命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">c$</td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:left">cl</td>
+</tr>
+<tr>
+<td style="text-align:left">S</td>
+<td style="text-align:left">^c</td>
+</tr>
+<tr>
+<td style="text-align:left">I</td>
+<td style="text-align:left">^i</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">$a</td>
+</tr>
+<tr>
+<td style="text-align:left">o</td>
+<td style="text-align:left"><code>A&lt;CR&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">O</td>
+<td style="text-align:left">ko</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>以退为进</li>
+</ul>
+<p>将下面的代码中的加号两边添加空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var foo = &quot;method(&quot;+argument1+&quot;,&quot;+argument2+&quot;)&quot;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f+s␣+␣&lt;Esc&gt;;.;.;.</div></pre></td></tr></table></figure>
+<p><code>f+</code>找到第一个加号，<code>s</code>删除插入，输入<code>␣+␣</code>，退出<code>&lt;Esc&gt;</code>，<code>;</code>寻找下一个加号，<code>.</code>重复上次操作。</p>
+<ul>
+<li>执行、重复、回退</li>
+</ul>
+<p>对于<code>.</code>命令，可用<code>u</code>撤销；对于<code>f{char}</code>，<code>;</code>正向查找，<code>,</code>反向查找</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目的</th>
+<th style="text-align:left">操作</th>
+<th style="text-align:left">重复</th>
+<th style="text-align:left">回退</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">做出一个修改</td>
+<td style="text-align:left"><code>{edit}</code></td>
+<td style="text-align:left"><code>.</code></td>
+<td style="text-align:left"><code>u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">行内查找下一指定字符</td>
+<td style="text-align:left"><code>f{char}</code>/<code>t{char}</code></td>
+<td style="text-align:left"><code>;</code></td>
+<td style="text-align:left"><code>,</code></td>
+</tr>
+<tr>
+<td style="text-align:left">行内查找上一指定字符</td>
+<td style="text-align:left"><code>F{char}</code>/<code>T{char}</code></td>
+<td style="text-align:left"><code>;</code></td>
+<td style="text-align:left"><code>,</code></td>
+</tr>
+<tr>
+<td style="text-align:left">文档中查找下一处匹配项</td>
+<td style="text-align:left"><code>/pattern&lt;CR&gt;</code></td>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left"><code>N</code></td>
+</tr>
+<tr>
+<td style="text-align:left">文档中查找上一处匹配项</td>
+<td style="text-align:left"><code>?pattern&lt;CR&gt;</code></td>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left"><code>N</code></td>
+</tr>
+<tr>
+<td style="text-align:left">执行替换</td>
+<td style="text-align:left"><code>:s/target/replacement</code></td>
+<td style="text-align:left"><code>&amp;</code></td>
+<td style="text-align:left"><code>u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">执行一系列修改</td>
+<td style="text-align:left"><code>qx{changes}q</code></td>
+<td style="text-align:left"><code>@x</code></td>
+<td style="text-align:left"><code>u</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>查找并手动替换</li>
+</ul>
+<p>将下文中<code>content（内容）</code>替换成<code>copy</code>。</p>
+<p>We’re waiting for content before the site can go live…<br>If you are content with this, let’s go ahead with it…<br>We’ll lauch as soon as we have the content…</p>
+<p>若使用如下命令：</p>
+<p>:%s/content/copy/g</p>
+<p>则将替换所有<code>content</code>，并不是所想要的，第二个<code>content</code>是不需要删除的。</p>
+<p>可使用如下命令：</p>
+<p><code>/content&lt;CR&gt;cwcopynn.</code></p>
+<p><code>cw</code>删字插入，<code>nn</code>跳转到第三个重复操作。</p>
+<ul>
+<li>结识<code>.</code>范式</li>
+</ul>
+<p>一键移动，一键执行</p>
+<h2 id="第一部分-模式（mode）"><a href="#第一部分-模式（mode）" class="headerlink" title="第一部分 模式（mode）"></a>第一部分 模式（mode）</h2><h3 id="第2章-普通模式（normal-mode）"><a href="#第2章-普通模式（normal-mode）" class="headerlink" title="第2章 普通模式（normal mode）"></a>第2章 普通模式（normal mode）</h3><p>Vim的自由放松状态</p>
+<ul>
+<li><p>停顿时请移开画笔</p>
+</li>
+<li><p>把撤销单元切成块</p>
+</li>
+</ul>
+<p>可以看做<code>i{insert some text}&lt;Esc&gt;</code>是一次修改。</p>
+<blockquote>
+<p>在插入模式中移动光标会重置修改状态<br>在插入模式中<code>&lt;Up&gt;</code>、<code>&lt;Down&gt;</code>、<code>&lt;Left&gt;</code>或<code>&lt;Right&gt;</code>这些光标键，将会产生一个新的撤销块。等同于退出插入模式、进入普通模式一次，并使用h（左移一个字符）、j（下一行）、k（上一行）或l（右移一个字符）对光标进行了移动。同时，这也会对<code>.</code>产生影响。</p>
+</blockquote>
+<ul>
+<li>构造可重复的修改</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键操作</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>db</code></td>
+<td style="text-align:left">反向删除字，保留最后一个字符，可用<code>x</code>删除</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>dw</code></td>
+<td style="text-align:left">正向删除字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>daw</code></td>
+<td style="text-align:left">delete a word，删除光标所在的字和相邻的空格，<strong>常用</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>b</code>移至字首</p>
+<ul>
+<li>用次数做简单的算术运算</li>
+</ul>
+<p>大多数普通模式命令可以在执行时指定次数。</p>
+<p><code>[count]&lt;C-a&gt;</code>和<code>[count]&lt;C-z&gt;</code>可对数字做加减操作，<code>count</code>表示加减数，默认为1，并自动正向查找第一个数进行操作。</p>
+<p>下面是CSS片段，现在需要复制最后一行，然后用news替换blog，并将第一个0px改成-180px。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.blog, .news &#123; background-image: url(/sprite.png); &#125;</div><div class="line">.blog &#123; background-position: 0px 0px &#125;</div></pre></td></tr></table></figure>
+<p><code>yypcW.news&lt;Esc&gt;180&lt;C-x&gt;</code></p>
+<p>先将光标移至第二行，<code>yy</code>复制第二行，<code>p</code>粘帖至第三行，<code>cW</code>删除光标字符及下一个空格前所有字符，<code>180&lt;C-x&gt;</code>将第一个0减至-180</p>
+<ul>
+<li>能够重复，就别用次数</li>
+</ul>
+<p>删除下面文字中的<code>more than</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Delete more than one word</div></pre></td></tr></table></figure>
+<p>有三种方式：d2w、2dw、dw.</p>
+<ul>
+<li>双剑合璧，天下无敌</li>
+</ul>
+<p>Vim的强大很大程度上源自操作符和动作命令相结合。</p>
+<p><strong>操作符 + 动作命令 = 操作</strong></p>
+<p>d{motion} 命令可以对字符<code>dl</code>、一个完整单词（<code>dw</code>、<code>daw</code>)或整个段落（dap）进行操作。<code>c{motion}</code>删除插入、<code>y{motion}</code>复制以及其他一些命令</p>
+<p><code>g~</code>、<code>gu</code>和<code>gU</code>命令</p>
+<p><code>gUaw</code>把当前单词转换成大写形式（好像不行）</p>
+<p>Vim的操作符命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">修改（删除插入）</td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left">删除</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">复制到寄存器</td>
+</tr>
+<tr>
+<td style="text-align:left">g~</td>
+<td style="text-align:left">反转大小写</td>
+</tr>
+<tr>
+<td style="text-align:left">gu</td>
+<td style="text-align:left">转换为小写</td>
+</tr>
+<tr>
+<td style="text-align:left">gU</td>
+<td style="text-align:left">转换为大写</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;</td>
+<td style="text-align:left">增加缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;</td>
+<td style="text-align:left">减小缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">=</td>
+<td style="text-align:left">自动缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">!</td>
+<td style="text-align:left">使用外部程序过滤（motion）所跨越的行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="第3章-插入模式"><a href="#第3章-插入模式" class="headerlink" title="第3章 插入模式"></a>第3章 插入模式</h3><ul>
+<li>在插入模式中个即时更正错误</li>
+</ul>
+<p>插入模式下的按键操作</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键操作</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;C-h&gt;</code></td>
+<td style="text-align:left">删除前一个字符（同退格键）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;</code></td>
+<td style="text-align:left">删除前一个字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-u&gt;</code></td>
+<td style="text-align:left">删至行首</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回普通模式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键操作</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;Esc&gt;</code></td>
+<td style="text-align:left">切换到普通模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-[&gt;</code></td>
+<td style="text-align:left">切换到普通模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-o&gt;</code></td>
+<td style="text-align:left">切换到<strong>插入-普通模式</strong></td>
+</tr>
+</tbody>
+</table>
+<p>结识<strong>插入-普通模式</strong></p>
+<ul>
+<li>不离开插入模式，粘帖寄存器中的文本</li>
+</ul>
+<p>重新映射大小写转换键（Caps Lock），很多Vim用户把它当成另一个键用，比如<code>&lt;Esc&gt;</code>或<code>&lt;Ctrl&gt;</code>。</p>
+<p>有如下内容，要求将书名插到最后一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Practical Vim, by Drew Neil</div><div class="line">Read Drew Neil&apos;s</div></pre></td></tr></table></figure>
+<p><code>yt&lt;C-r&gt;0</code>这好像不行</p>
+<p><code>yt</code>是将书名复制到复制专用寄存器中，<code>&lt;C-r&gt;0</code>把刚复制的文本粘帖到光标所在位置。</p>
+<p>一般格式：<code>&lt;C-r&gt;{register}</code>，<code>register</code>表示寄存器名</p>
+<p><code>&lt;C-r&gt;&lt;C-p&gt;{register}</code>会按原义插入寄存器内的文本，并修正任何不必要的缩进。</p>
+<ul>
+<li>随时随地做运算</li>
+</ul>
+<p>表达式寄存器可用来执行一段Vim脚本，并返回结果。</p>
+<p><code>&lt;C-r&gt;=3+5&lt;CR&gt;</code>（好像也不行）</p>
+<ul>
+<li>用字符编码插入非常用字符</li>
+</ul>
+<p><code>&lt;C-v&gt;{code}</code>，如插入<code>A</code>，可输入<code>&lt;C-v&gt;065</code>，code十进制最多包含3位数字，且不超过255，若插入的编码超过3位数，可使用十六进制，<code>&lt;C-v&gt;u{code}</code>，十六进制最多包含四位，如<code>&lt;C-v&gt;u1234</code>。查看文档中字符的编码，只需将光标移至上面，使用<code>ga</code>命令。</p>
+<p><code>&lt;ÿ&gt; 255, Hex 00ff, Octal 377</code></p>
+<p>Unicode基本多文种平面（Unicode Basic Multilingual Plane）的地址空间最大会有65545个字符。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键操作</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;C-v&gt;123</code></td>
+<td style="text-align:left">以十进制字符编码插入字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-v&gt;u1234</code></td>
+<td style="text-align:left">以十六进制字符编码插入字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-v&gt;{nondigit}</code></td>
+<td style="text-align:left">按原义插入非数字字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-k&gt;{char1}{char2}</code></td>
+<td style="text-align:left">插入以二合字母<code>{char1}{char2}</code>表示的字符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>用二合字母插入非常用字符</li>
+</ul>
+<p>这个不懂</p>
+<p>如<code>&lt;C-k&gt;?I</code>插入<code>¿</code>，<code>&lt;C-k&gt;12</code>插入<code>½</code>。</p>
+<ul>
+<li>用替换模式替换已有文本</li>
+</ul>
+<p>在替换模式（Replace mode, REPLACE）中输入会替换文档中的已有文本，除此之外，该模式与插入模式完全相同。</p>
+<p>将如下两句话给成一句话，第二句首字母小写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Type in Insert mode extends the line. But in Replace mode</div><div class="line">the line length doesn&apos;t change.</div></pre></td></tr></table></figure>
+<p><code>f.R,␣b&lt;Esc&gt;</code></p>
+<p><code>R</code>进入替换模式，<code>&lt;Insert&gt;</code>键也可。</p>
+<p>用虚拟替换模式（Virtual replace, VREPLACE)替换制表符，制表符在文件中以单个字符表示，在屏幕中却占据若干列的宽度，替换模式中会被单个字符替换。虚拟替换模式中会将制表符当成一组空格进行处理，即按屏幕上实际显示的宽度替换字符。</p>
+<p><code>gR</code>进入虚拟替换模式</p>
+<p><code>r{char}</code>和<code>gr{char}</code>为单次版本的替换模式和虚拟替换模式修改。</p>
+<h3 id="第4章-可视模式"><a href="#第4章-可视模式" class="headerlink" title="第4章 可视模式"></a>第4章 可视模式</h3><p>Vim有3种不同的可视模式（Visual mode），分别用于操作字符文本、行文本或块文本。</p>
+<ul>
+<li>深入理解可视模式</li>
+</ul>
+<p>当需要将<code>March</code>改成<code>April</code>时，有2种方式：</p>
+<ol>
+<li>先选中<code>March</code>，删除，插入<code>April</code>，可视模式中使用这种方式</li>
+<li>选中<code>March</code>，直接修改成<code>April</code>，替换模式中始终这种方式</li>
+</ol>
+<p><code>viwcApril</code></p>
+<p><code>viw</code>选中字，<code>c</code>删除字，插入<code>April</code></p>
+<p><code>&lt;C-g&gt;</code>可以在可视模式及选择模式（Select mode）间切换。</p>
+<ul>
+<li>选择高亮选区</li>
+</ul>
+<p>激活可视模式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>v</code></td>
+<td style="text-align:left">激活面向字符的可视模式<code>Visual</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>V</code></td>
+<td style="text-align:left">激活面向行的可视模式<code>Visual Line</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-v&gt;</code></td>
+<td style="text-align:left">激活面向列块的可视模式<code>Visual Block</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gv</code></td>
+<td style="text-align:left">重选上次的高亮选区</td>
+</tr>
+</tbody>
+</table>
+<p>在可视模式间切换</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键操作</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;Esc&gt;</code>/<code>&lt;C-[&gt;</code></td>
+<td style="text-align:left">回到普通模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>v</code>/<code>V</code>/<code>&lt;C-v&gt;</code></td>
+<td style="text-align:left">可视模式回到普通模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>o</code></td>
+<td style="text-align:left">切换到高亮选区的活动端</td>
+</tr>
+</tbody>
+</table>
+<p>切换选区的活动端，高亮选区的范围有两个端点界定。一端固定，一端随光标自由移动，按<code>o</code>即可切换。。</p>
+<ul>
+<li>重复执行面向行的可视命令</li>
+</ul>
+<p>对下面的代码中第四行、第五行进行缩进：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def fib(n):</div><div class="line">    a, b = 0, 1</div><div class="line">    while a &lt; n:</div><div class="line">print a,</div><div class="line">a, b = b, a+b</div><div class="line">fib(42)</div></pre></td></tr></table></figure>
+<p><code>Vj&gt;.</code></p>
+<p><code>V</code>进入面向行可视视图，<code>j</code>选择跳至第二行，<code>&gt;</code>进行缩进，<code>.</code>重复操作</p>
+<p>设置缩进长度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:set shiftwidth=4 softtabstop=4 expandtab</div></pre></td></tr></table></figure>
+<ul>
+<li>只要可能，最好用操作符命令，而不是可视命令</li>
+</ul>
+<p>将如下链接文字转换为大写格式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>one<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>two<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>three<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>普通模式下：</p>
+<p><code>gUitj.j.</code></p>
+<p><code>gU</code>转换为大写，<code>it</code>是一种被称为文本对象（text object）的特殊动作命令。<code>j.j.</code>重复操作。</p>
+<p>此处不可使用可视模式<code>vitUj.j.</code>，它只能操作等长字符。</p>
+<ul>
+<li>面向列块的可视模式编辑表格数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Chapter Page</div><div class="line">Normal mode 15</div><div class="line">Insert mode 31</div><div class="line">Visual mode 44</div></pre></td></tr></table></figure>
+<p>这节不懂。</p>
+<ul>
+<li>修改列文本</li>
+</ul>
+<p>将下面代码中<code>images</code>目录改成<code>components</code>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">li</span><span class="selector-class">.one</span>      <span class="selector-tag">a</span>&#123; <span class="attribute">background.image</span>: <span class="built_in">url</span>(<span class="string">'/images/sprite.png'</span>); &#125;</div><div class="line"><span class="selector-tag">li</span><span class="selector-class">.two</span>      <span class="selector-tag">a</span>&#123; <span class="attribute">background.image</span>: <span class="built_in">url</span>(<span class="string">'/images/sprite.png'</span>); &#125;</div><div class="line"><span class="selector-tag">li</span><span class="selector-class">.three</span>    <span class="selector-tag">a</span>&#123; <span class="attribute">background.image</span>: <span class="built_in">url</span>(<span class="string">'/images/sprite.png'</span>); &#125;</div></pre></td></tr></table></figure>
+<p><code>&lt;C-v&gt;jjeccomponents&lt;Esc&gt;</code></p>
+<p>插入单词<code>components</code>时，单词只出现在顶行，下面两行无变化，回到普通模式后，会发现刚输入的文本出现在下面两行里。</p>
+<ul>
+<li>在长短不一的高亮后添加文本</li>
+</ul>
+<p>在下面每行代码后添加分号：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="number">1</span></div><div class="line"><span class="keyword">var</span> bar = <span class="string">'a'</span></div><div class="line"><span class="keyword">var</span> foobar = foo + bar</div></pre></td></tr></table></figure>
+<p><code>&lt;C-v&gt;jj$A;&lt;Esc&gt;</code></p>
+<p><code>$</code>把选区扩大到每行的行尾。</p>
+<p>Vim对切换至插入模式命令<code>i</code>和<code>a</code>的约定：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>i</code></td>
+<td style="text-align:left">光标置字符前</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a</code></td>
+<td style="text-align:left">光标置字符后</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>I</code></td>
+<td style="text-align:left">光标置行首</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i</code></td>
+<td style="text-align:left">光标置行尾</td>
+</tr>
+</tbody>
+</table>
+<h3 id="第5章-命令行模式"><a href="#第5章-命令行模式" class="headerlink" title="第5章 命令行模式"></a>第5章 命令行模式</h3><ul>
+<li>结识Vim的命令行模式</li>
+</ul>
+<p>命令行模式会提示我们输入一条Ex命令、一个查找模式，或一个表达式</p>
+<p>可以用Ex命令读写文件（<code>:edit</code>和<code>:write</code>），创建新标签页（<code>:tabnew</code>）及分割窗口（<code>:split</code>），或是操作参数列表（<code>:prev/:next</code>）及缓冲区列表（<code>:bprev/:bnext</code>）。</p>
+<p>操作缓冲区文本的Ex命令：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:[range]delete [x]</code></td>
+<td style="text-align:left">删除指定范围内的行[到寄存器x中]</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]yank [x]</code></td>
+<td style="text-align:left">复制指定范围的行[到寄存器x中]</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[line]put [x]</code></td>
+<td style="text-align:left">在指定行后粘帖寄存器x中的内容</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]copy {address}</code></td>
+<td style="text-align:left">把指定范围内的行拷贝到{address}所指定的行之下</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]move {address}</code></td>
+<td style="text-align:left">把指定范围内的行移动到{address}所指定的行之下</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]join</code></td>
+<td style="text-align:left">连接指定范围内的行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]normal {commands}</code></td>
+<td style="text-align:left">对指定范围内的每一行执行普通模式命令{commands}</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]substitute/{pattern}/{string}/[flags]</code></td>
+<td style="text-align:left">把指定范围内出现{pattern}的地方替换为{string}</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]global/{pattern}/[cmd]</code></td>
+<td style="text-align:left">对指定范围内匹配{pattern}的所有行，在其上执行Ex命令{cmd}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在一行或多个连续行上执行命令</li>
+</ul>
+<p>操作，<code>:print</code>、<code>:delete</code>、<code>:join</code>、<code>:substitute</code>或<code>:normal</code></p>
+<p>对下面代码部分行执行打印操作：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;<span class="name">title</span>&gt;</span>Practical Vim<span class="tag">&lt;/<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Practical Vim<span class="tag">&lt;/<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>打印第1行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:1</div><div class="line">:print</div></pre></td></tr></table></figure>
+<p>或<code>:1p</code></p>
+<p>打印最后一行：<code>:$p</code></p>
+<p><code>$</code>表示最后一行</p>
+<p>打印2-5行：<code>:2,5p</code></p>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:2</div><div class="line">:.,$p</div></pre></td></tr></table></figure>
+<p><code>.</code>代表当前行。</p>
+<p>打印所有行：<code>:%p</code>，<code>%</code>表示所有行。</p>
+<p>或<code>:1,$p</code></p>
+<p>将所有的<code>Practical</code>替换成<code>Pragmatic</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:%s/Practical/Pragmatic/</div></pre></td></tr></table></figure>
+<p><code>s</code>是<code>substitute</code>的缩写。</p>
+<p><strong>用高亮选区指定范围</strong></p>
+<p><code>2GVG:</code>，此时命令行预填充一个范围<code>:&#39;&lt;,&#39;&gt;</code>，打印输入<code>p</code></p>
+<p><code>2G</code>跳至第二行，<code>V</code>面向行可视模式，<code>G</code>不知道是啥。</p>
+<p><strong>用模式指定范围</strong></p>
+<p><code>:/&lt;html&gt;/,/&lt;\/html&gt;/p</code>或<code>:/&lt;html&gt;/,/&lt;//html&gt;/p</code></p>
+<p>格式：<code>:/xxx/,/xxx/p</code></p>
+<p><strong>用偏移地址进行修正</strong></p>
+<p><code>:/&lt;html&gt;/+1,/&lt;\/html&gt;/-1p</code></p>
+<p>偏移的一般形式：<code>:{address}+n</code>，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:2</div><div class="line">:.,.+3p</div></pre></td></tr></table></figure>
+<p>概括：</p>
+<p>|符号|地址|<br>|<code>1</code>|文件第一行|<br>|<code>$</code>|文件最后一行|<br>|<code>0</code>|虚拟行，位于文件第一行上方|<br>|<code>.</code>|光标所在行|<br>|<code>&#39;m</code>|包含位置标记m的行|<br>|<code>&#39;&lt;</code>|高亮选区起始行|<br>|<code>&#39;&gt;</code>|高亮选区结束行|<br>|<code>%</code>|整个文件（<code>:1,$</code>的缩写形式）|</p>
+<ul>
+<li>使用<code>:t</code>和<code>:m</code>命令复制和移动行</li>
+</ul>
+<p><code>:[range]copy {address}</code>（简写形式为<code>:t</code>）把文档中一行或多行复制到另一部分</p>
+<p><code>:[range]move {address}</code>把文档中一行或多行移到其它地方</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:6t.</code></td>
+<td style="text-align:left">把第6行复制到当前行下方</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:t6</code></td>
+<td style="text-align:left">把当前行复制到第6行下方</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:t.</code></td>
+<td style="text-align:left">复制当前行，类似<code>yyp</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:t$</code></td>
+<td style="text-align:left">复制当前行到文本结尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:&#39;&lt;,&#39;&gt;t0</code></td>
+<td style="text-align:left">复制高亮选中的行到文件开头</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在指定范围上执行普通模式命令</li>
+</ul>
+<p>对下面的每行末尾加上分号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var foo = 1</div><div class="line">var bar = &apos;a&apos;</div><div class="line">var baz = &apos;z&apos;</div><div class="line">var foobar = foo + bar</div><div class="line">var foobarbaz = foo + bar + baz</div></pre></td></tr></table></figure>
+<p><code>A;jVG</code></p>
+<p><code>:&#39;&lt;,&#39;&gt;normal .</code></p>
+<p><code>A;</code>第一行末尾加上分号，<code>jVG</code>跳转至第二行并切换至面向行可视模式选中余下全文。</p>
+<p><code>normal .</code>对高亮部分执行普通模式命令<code>.</code></p>
+<p>或<code>VG</code>，<code>:normal A;</code>，先选中全文，使用普通模式命令<code>A;</code></p>
+<p>注释第二、三行：<code>jVj:normal i//</code></p>
+<ul>
+<li>重复上次的Ex命令</li>
+</ul>
+<p><code>@:</code>重复上次Ex命令（不懂）</p>
+<ul>
+<li>自动补全Ex命令</li>
+</ul>
+<p><code>&lt;Tab&gt;</code>键自动补全命令，<code>&lt;C-d&gt;</code>列出所有候选项</p>
+<p>如下，修改配色方案：</p>
+<p><code>:col&lt;C-d&gt;</code><br><code>:color&lt;Tab&gt;</code><br><code>:colorscheme &lt;C-d&gt;</code></p>
+<p>在多个补全项间选择，默认以以第一个补全项补全，然后遍历。</p>
+<p><code>&lt;Tab&gt;</code>、<code>&lt;C-n&gt;</code>或<code>&lt;Right&gt;</code>正向遍历，<code>&lt;S-Tab&gt;</code>、<code>&lt;C-p&gt;</code>或<code>&lt;Left&gt;</code>反向遍历。</p>
+<ul>
+<li>把当前单词插入到命令行</li>
+</ul>
+<p><code>&lt;C-r&gt;&lt;C-w&gt;</code>复制光标下的单词到命令行中</p>
+<p>将下面代码中的变量<code>tally</code>重命名为<code>counter</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var tally;</div><div class="line">for (tally=1; tally &lt;= 10; tally++)&#123;</div><div class="line">    // do something with tally</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>*cwcounter&lt;Esc&gt;</code>，<code>:%s//&lt;C-r&gt;&lt;C-w&gt;/g</code></p>
+<p>光标移至<code>tally</code>，<code>*</code>查找它出现的每处地方（等同于<code>/\&lt;C-r&gt;&lt;C-w&gt;\&gt;&lt;CR&gt;</code><br><code>cw</code>删除，</p>
+<ul>
+<li>回溯历史命令</li>
+</ul>
+<p>先使用<code>:</code>切换至命令行，<code>&lt;Up&gt;</code>或<code>&lt;Down&gt;</code>可滚动历史记录，<code>&lt;C-f&gt;</code>可在单独窗口查看历史记录。</p>
+<p>Vim默认可记录最后20条记录，可在vimrc文件修改，添加如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set history=200</div></pre></td></tr></table></figure>
+<ul>
+<li>结识命令行窗口</li>
+</ul>
+<p>不会</p>
+<ul>
+<li>运行Shell命令</li>
+</ul>
+<p>执行Shell中的程序</p>
+<p>给命令加个<code>!</code>前缀，如<code>:!ls</code>，<code>:!ls</code>和<code>:ls</code>不同，前者是调用shell中的ls命令，后者是调用Vim的内置命令，用来显示缓冲区列表的内容。</p>
+<p><code>:!{cmd}</code>适用于执行一次性命令，可使用<code>:shell</code>启动交互的shell会话，<code>exit</code>可退出会话，回到Vim。</p>
+<p>把缓冲区内容作为标准输入或输出</p>
+<p><code>:read !{cmd}</code>会将命令的标准输出重定向到缓冲区。</p>
+<p>比较以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">:write !sh</div><div class="line">:write ! sh</div><div class="line">:write! sh</div></pre></td></tr></table></figure>
+<p>前两个命令会吧缓冲区的内容传到外部的sh命令作为标准输入，而最后一条命令则调用<code>:write!</code>命令把缓冲区内容写到一个名为sh的文件，<code>!</code>会覆盖已有的sh文件。</p>
+<p><strong>使用外部命令过滤缓冲区内容</strong></p>
+<p>格式：<code>:[range]!{filter}</code></p>
+<p>给定一个范围时，由[range]指定的行传给<code>{cmd}</code>作为标准输入，然后<code>{cmd}</code>的输出覆盖[range]内原本的内容。也就是[range]中的内容被<code>{cmd}</code>过滤了一次。</p>
+<p>基于第二个字段name重排序：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">first name,last name,email</div><div class="line">john,smith,john@example.com</div><div class="line">drew,neil,drew@vimcasts.org</div><div class="line">jane,doe,jane@example.com</div></pre></td></tr></table></figure>
+<p><code>:2,$!sort -t&#39;,&#39; -k2</code></p>
+<p><code>-t&#39;,&#39;</code>参数告诉sort命令这些记录以逗号分隔，然后在用<code>-k2</code>参数指定按第二个字段进行排序</p>
+<p>可将光标移到第2行，执行<code>!G</code>，Vim就会打开命令行并把范围<code>:.,$!</code>预置在命令行，然后输入<code>{filter}</code>。</p>
+<p>概括：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:shell</code></td>
+<td style="text-align:left">启动一个shell（exit回到Vim）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:!{cmd}</code></td>
+<td style="text-align:left">在shell中执行{cmd}</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:read !{cmd}</code></td>
+<td style="text-align:left">在shell中执行{cmd}，并把标准输出插入到光标下方</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]write !{cmd}</code></td>
+<td style="text-align:left">在shell中执行{cmd}，以[range]作为其标准输入</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:[range]!{filter}</code></td>
+<td style="text-align:left">使用外部程序{filter}过滤指定的[range]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第二部分-文件"><a href="#第二部分-文件" class="headerlink" title="第二部分 文件"></a>第二部分 文件</h2><p>关键字：文件、缓冲区、分隔窗口、标签页</p>
+<h3 id="第6章-管理多个文件"><a href="#第6章-管理多个文件" class="headerlink" title="第6章 管理多个文件"></a>第6章 管理多个文件</h3><ul>
+<li>用缓冲区列表管理打开的文件</li>
+</ul>
+<p><strong>了解文件与缓冲区的区别</strong></p>
+<p>通常所说的“编辑文件”其实编辑的是文件在内存中的映像，即“缓冲区”。</p>
+<p>文件时存储在磁盘上，而缓冲区则存在内存中。当Vim打开一个文件时，文件内容被读入一个具有相同名字的缓冲区。当对缓冲区修改时，二者内容就出现了差别，若要保留修改，则需将缓冲区内容写回到文件中。</p>
+<p>对文件的操作命令有：<code>:write</code>、<code>:update</code>、<code>:saveas</code>。</p>
+<p><strong>结识缓冲区列表</strong></p>
+<p><code>$ vim vim_*</code>可同时打开多个文件，<code>:ls</code>查看缓冲区列表，<code>:bn[ext]</code>、<code>bp[revious]</code>切换缓冲区，<code>bfirst</code>、<code>blast</code>分别跳到列表的开头和结尾。</p>
+<p>列表的开头有一个Vim自动分配的编号，<code>buffer N</code>可直接跳转至N缓冲区。<code>buffer {bufname}</code>可实现相同功能（利用<code>&lt;Tab&gt;</code>）。</p>
+<p><code>:bufdo</code>允许列出缓冲区后执行Ex命令（不会）。</p>
+<p><strong>删除缓冲区</strong></p>
+<p><code>:bdelete N1 N2 N3</code> 删除缓冲区N1、N2、N3<br><code>:N,M bdelete</code> 删除N-M的缓冲区</p>
+<p>删除缓冲区并不影响缓冲区所关联的文件，只是简单地将该文件在内存中的映像删掉。</p>
+<ul>
+<li>用参数列表将缓冲区分组</li>
+</ul>
+<p><code>:args</code>参数列表记录了在启动时作为参数传递给Vim的文件列表。“[]”字符指明了活动文件。实际上，可在任意时刻改变参数列表的内容。</p>
+<p><strong>填充参数列表</strong></p>
+<p><code>:args {arglist}</code>{arglist}可以包括文件名、通配符，或一条shell命令的输出结果。</p>
+<p><code>$ vim</code>启动Vim</p>
+<p>用文件名指定文件：</p>
+<p><code>:args vim_1 vim_2</code>填充参数列表，即打开两个文件</p>
+<p>用Glob模式指定文件：</p>
+<p><code>*</code>符号用户匹配0个或多个字符，但它的范围仅限于指定的目录，不递归子目录。</p>
+<p><code>**</code>符号用户匹配0个或多个字符，递归子目录。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Glob模式</th>
+<th style="text-align:left">所匹配的文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:args *.*</code></td>
+<td style="text-align:left">index.html<br>app.js</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:args **/*.js</code></td>
+<td style="text-align:left">app.js<br>lib/framework.js<br>app/controllers/Mailer.js<br>…etc</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:args **/*.*</code></td>
+<td style="text-align:left">app.js<br>index.html<br>lib/framework.js<br>lib/theme.css<br>app/controllers/Mailer.js<br>…etc</td>
+</tr>
+</tbody>
+</table>
+<p>用反引号结构指定文件：</p>
+<p>.chapters</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vim_1</div><div class="line">vim_2</div><div class="line">vim_hello</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:args `cat .chapters`</div></pre></td></tr></table></figure>
+<p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:args `&#123;cmd&#125;`</div></pre></td></tr></table></figure>
+<ul>
+<li>管理隐藏缓冲区</li>
+</ul>
+<p><code>:ls</code>缓冲区名前的<code>+</code>表示被修改过，<code>a</code>表示它当前是活动缓冲区（active），<code>h</code>表示它是隐藏缓冲区（hidden）</p>
+<p><code>:bnext!</code>中<code>!</code>表示强制切换</p>
+<p>在退出时，处理隐藏缓冲区的方式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:w[rite]</code></td>
+<td style="text-align:left">把缓冲区内容写入磁盘</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:e[dit]!</code></td>
+<td style="text-align:left">把磁盘文件内容重新读入缓冲区（回滚修改）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:qa[ll]!</code></td>
+<td style="text-align:left">关闭所有窗口，摒弃修改无需警告</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:wa[ll]!</code></td>
+<td style="text-align:left">把所有改变的缓冲区写入磁盘</td>
+</tr>
+</tbody>
+</table>
+<p>缺省Vim不允许从一个改动过的缓冲区切换到其它缓冲区，除非使用带<code>!</code>的命令。启用了<code>hidden</code>选项后，可以不带<code>!</code>进行切换。（这里好像没有说如何启用的，<code>argdo</code>、<code>bufdo</code>不知道干嘛的）</p>
+<ul>
+<li>将工作区切分成窗口</li>
+</ul>
+<p><strong>创建分割窗口</strong></p>
+<p><code>&lt;C-w&gt;s</code>水平切分窗口（standard，应该是这个单词），<code>&lt;C-w&gt;v</code>垂直切分窗口（vertical）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;s</code></td>
+<td style="text-align:left">水平切分当前窗口，新窗口仍显示当前缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;v</code></td>
+<td style="text-align:left">垂直切分当前窗口，新窗口仍显示当前缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:sp[lit] {file}</code></td>
+<td style="text-align:left">水平切分当前窗口，新窗口载入{file}</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:vsp[lit] {file}</code></td>
+<td style="text-align:left">垂直切分当前窗口，新窗口载入{file}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>窗口间切换（h,j,k,l同字符移动）</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;w</code></td>
+<td style="text-align:left">循环切换</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;h</code></td>
+<td style="text-align:left">至左边窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;j</code></td>
+<td style="text-align:left">至下边窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;k</code></td>
+<td style="text-align:left">至上边窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;l</code></td>
+<td style="text-align:left">至右边窗口</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关闭窗口</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Ex命令</th>
+<th style="text-align:left">普通模式命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:clo[se]</code></td>
+<td style="text-align:left"><code>&lt;C-w&gt;c</code></td>
+<td style="text-align:left">关闭活动窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:on[ly]</code></td>
+<td style="text-align:left"><code>&lt;C-w&gt;o</code></td>
+<td style="text-align:left">只保留活动窗口，关闭其它所有窗口</td>
+</tr>
+</tbody>
+</table>
+<p><strong>改变窗口大小及重新排列窗口</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;=</code></td>
+<td style="text-align:left">使所有窗口等宽、等高</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;_</code></td>
+<td style="text-align:left">最大化活动窗口的高度</td>
+</tr>
+<tr>
+<td style="text-align:left">`<c-w></c-w></td>
+<td style="text-align:left">`</td>
+<td>最大化活动窗口的宽度</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[N]&lt;C-w&gt;_</code></td>
+<td style="text-align:left">把活动窗口的高度设为[N]行</td>
+</tr>
+<tr>
+<td style="text-align:left">`[N]<c-w></c-w></td>
+<td style="text-align:left">`</td>
+<td>把活动窗口的宽度设为[N]行</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>用标签页将窗口分组</li>
+</ul>
+<p><code>page 110 2016-02-05 22:46:50 星期五</code></p>
+<p>Vim的标签页与缓冲区不是一一对应的关系，而应把标签页看成容纳一系列窗口的容器。</p>
+<p><strong>如何使用标签页</strong></p>
+<p>用Vim标签页可以把工作分隔到不同的工作区。</p>
+<p><code>:lcd{path}</code>可用来设置当前窗口的本地工作目录。</p>
+<p><strong>打开及关闭标签页</strong></p>
+<p><code>:tabedit {filename}</code>打开一个新的标签页，忽略{filename}参数，Vim会创建一个新标签页，里面包含一个空缓冲区。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:tabe[dit] {filename}</code></td>
+<td style="text-align:left">在新标签页中打开{filename}</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-w&gt;T</code></td>
+<td style="text-align:left">把当前窗口移到一个新标签页</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:tabc[lose]</code></td>
+<td style="text-align:left">关闭当前标签页及其中的所有窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:tabo[nly]</code></td>
+<td style="text-align:left">只保留活动标签页，关闭所有其他标签页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在标签页间切换</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Ex命令</th>
+<th style="text-align:left">普通模式命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>:tabn[ext] {N}</code></td>
+<td style="text-align:left"><code>{N}gt</code></td>
+<td style="text-align:left">切换到编号为{N}的标签页</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:tabn[ext]</code></td>
+<td style="text-align:left"><code>gt</code></td>
+<td style="text-align:left">切换到下一标签页</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:tabp[revious]</code></td>
+<td style="text-align:left"><code>gT</code></td>
+<td style="text-align:left">切换到上一标签页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重排标签页</strong></p>
+<p><code>:tabmove [N]</code>可重排标签页，[N]为0时，当前标签页会被移到开头；忽略[N]，当前标签页会被移到结尾。</p>
+<h3 id="第7章-打开及保存文件"><a href="#第7章-打开及保存文件" class="headerlink" title="第7章 打开及保存文件"></a>第7章 打开及保存文件</h3><ul>
+<li>用<code>:edit</code>命令打开文件</li>
+</ul>
+<p><strong>相对于当前工作目录打开一个文件</strong></p>
+<p><code>:pwd</code>打印工作目录（print working directory）</p>
+<p><code>:edit lib/framework.js</code></p>
+<p><strong>相对于活动文件目录打开一个文件</strong></p>
+<p>当前编辑的文件时<code>app/controllers/Navigation.js</code>，现在需编辑<code>app/controllers/Main.js</code>。</p>
+<p><code>:edit %&lt;Tab&gt;</code>显示<code>app/controllers/Navigation.js</code>，<code>%</code>代表活动缓冲区的完整文件路径</p>
+<p><code>:edit %:h&lt;Tab&gt;</code>显示<code>app/controllers/</code>，<code>h</code>表示去除文件名。</p>
+<ul>
+<li>使用<code>:find</code>打开文件</li>
+</ul>
+<p><code>:file</code>命令可通过文件名打开文件，无需输入文件的完整路径，但需配置<code>path</code>选项。</p>
+<p><strong>配置<code>path</code>选项</strong></p>
+<p><code>path</code>选项允许执行一些目录，当调用<code>:find</code>命令时，Vim会在这目录中进行查找。</p>
+<p><code>:set path+=app/**</code>，输入<code>:find Main.js</code>，<code>&lt;Tab&gt;</code>可遍历匹配项。</p>
+<ul>
+<li>使用netrw管理文件系统</li>
+</ul>
+<p>这节的功能是由一个名为netrw的插件实现的。</p>
+<p>确保Vim已被配置为可加载插件，需在vimrc加入如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">set nocompatible</div><div class="line">filetype plugin on</div></pre></td></tr></table></figure>
+<p><strong>结识netrw，Vim原生的文件管理器</strong></p>
+<p>一一个指向<strong>目录</strong>的路径启动Vim，Vim就会打开一个文件管理器窗口（如下），光标移动同缓冲区普通模式，<code>&lt;CR&gt;</code>打开目录或载入文件至缓冲区。<code>-</code>可回到上级目录。</p>
+<p><code>vim .</code></p>
+<p><strong>打开文件管理器</strong></p>
+<p><code>:edit {path}</code>可打开文件管理器，<code>{path}</code>为目录名。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Ex命令</th>
+<th style="text-align:left">缩写</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.edit .</code></td>
+<td style="text-align:left"><code>:e .</code></td>
+<td style="text-align:left">打开文件管理器，并显示当前工作目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:Explore</code></td>
+<td style="text-align:left"><code>:E</code>（好像不管用）</td>
+<td style="text-align:left">打开文件管理器，并显示活动缓冲区所在的目录</td>
+</tr>
+</tbody>
+</table>
+<p><strong>与分隔窗口协同工作</strong></p>
+<p>典型的文件编辑器图形用户界面一般使用<strong>侧边栏显示文件管理器</strong>，称作<strong>工程目录树（project drawer）</strong>。</p>
+<p>然而，Vim并不是以上面的方式工作的。Vim中，可将每个窗口看成一张纸牌，纸牌的一面显示文件内容，另一面显示文件管理器。</p>
+<p><strong>使用netrw完成更多功能</strong></p>
+<p><code>:h netrw-%</code>创建新文件<br><code>:h netrw-d</code>创建新目录<br><code>:h netrw-rename</code>重命名文件或目录<br><code>:h retrw-del</code>删除文件或目录</p>
+<p>基于scp、ftp、curl及wget通过网络读写文件。</p>
+<ul>
+<li>把文件保存到不存在的目录中</li>
+</ul>
+<p><code>:edit {file}</code>指定了一个不存在的文件路径时，Vim会创建一个新的空白缓冲区。</p>
+<p><code>&lt;C-g&gt;</code>显示当前文件的文件名和状态,新文件显示[New file]。</p>
+<p>无法写入新文件，可使用<code>:!mkdir -p %:h</code>补救，<code>-p</code>参数创建任何不存在的中间目录，<code>%</code>表示当前完整路径，<code>:h</code>表示隐藏文件名。</p>
+<ul>
+<li>以超级用户权限保存文件</li>
+</ul>
+<p>对于只读文件修改后可用如下命令写入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:w !sudo tee % &gt; /dev/null</div></pre></td></tr></table></figure>
+<p><code>%</code>代表文件的完整路径。</p>
+<h2 id="第三部分-更快地移动及跳转"><a href="#第三部分-更快地移动及跳转" class="headerlink" title="第三部分 更快地移动及跳转"></a>第三部分 更快地移动及跳转</h2><h3 id="第8章-用动作命令在文档中移动"><a href="#第8章-用动作命令在文档中移动" class="headerlink" title="第8章 用动作命令在文档中移动"></a>第8章 用动作命令在文档中移动</h3><ul>
+<li>让手指保持在本位行（home row）上</li>
+</ul>
+<p>|命令|光标动作|<br>|<code>h</code>|左移一列|<br>|<code>l</code>|右移一列|<br>|<code>j</code>|下移一行|<br>|<code>k</code>|上移一行|</p>
+<p><strong>让右手待在它盖在的位置上</strong></p>
+<p>如果觉得太过依赖光标键，可在vimrc文件中添加如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">noremap &lt;Up&gt; &lt;Nop&gt;</div><div class="line">noremap &lt;Down&gt; &lt;Nop&gt;</div><div class="line">noremap &lt;Left&gt; &lt;Nop&gt;</div><div class="line">noremap &lt;Right&gt; &lt;Nop&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>区分实际行与屏幕行</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">光标动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>gj</code></td>
+<td style="text-align:left">向下移动一个屏幕行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gk</code></td>
+<td style="text-align:left">向上移动一个屏幕行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>0</code></td>
+<td style="text-align:left">移动到实际行的行首</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>g0</code></td>
+<td style="text-align:left">移动到屏幕行的行首</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>$</code></td>
+<td style="text-align:left">移动到实际行的行尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>g$</code></td>
+<td style="text-align:left">移动到屏幕行的行尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>^</code></td>
+<td style="text-align:left">移动到实际行的第一个非空白字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>g^</code></td>
+<td style="text-align:left">移动到屏幕行的第一个非空白字符</td>
+</tr>
+</tbody>
+</table>
+<p>如果让j、k操作屏幕行而不是实际行，可在vimrc文件中重新映射。</p>
+<ul>
+<li>基于单词移动</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">光标动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>w</code></td>
+<td style="text-align:left">正向移动到下一单词的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>b</code></td>
+<td style="text-align:left">反向移动到当前单词/上一单词的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>e</code></td>
+<td style="text-align:left">正向移动到当前单词/下一单词的结尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ge</code></td>
+<td style="text-align:left">反向移动到上一单词的结尾</td>
+</tr>
+</tbody>
+</table>
+<p><strong>理解单词与字串</strong></p>
+<p>单词有字母、数字、下划线或其他非空白字符的序列组成，以空白字符分隔；字串有非空白字符序列组成，以非空白字符分隔。</p>
+<p>面向字串的操作包括<code>W</code>、<code>B</code>、<code>E</code>、<code>GE</code>。</p>
+<ul>
+<li>对字符进行查找</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>f{char}</code></td>
+<td style="text-align:left">正向<strong>在光标为知与当前行行尾之间</strong>查找字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>F{char}</code></td>
+<td style="text-align:left">反向<strong>在光标为知与当前行行尾之间</strong>查找字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>t{char}</code></td>
+<td style="text-align:left">正向<strong>在光标为知与当前行行尾之间</strong>查找字符，移动到前一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>T{char}</code></td>
+<td style="text-align:left">反向<strong>在光标为知与当前行行尾之间</strong>查找字符，移动到前一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>;</code></td>
+<td style="text-align:left">查找一下匹配项</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>,</code></td>
+<td style="text-align:left">回退</td>
+</tr>
+</tbody>
+</table>
+<p><code>dt.</code>删除光标处到句尾的所有文本，同<code>dtd</code>。</p>
+<ul>
+<li>通过查找移动</li>
+</ul>
+<p><code>page138 2016-02-06 20:51:31 星期六</code></p>
+<p><code>/{pattern}</code>模式匹配查找，<code>n</code>查找下一匹配项，<code>N</code>回退</p>
+<p><strong>用查找动作操作文本</strong></p>
+<p>查找命令不限于在普通模式下使用，在在可视模式及<em>操作符待决模式</em>中也可使用。</p>
+<ul>
+<li>用精确的文本对象选择选区</li>
+</ul>
+<p>需在面向块可视模式下：</p>
+<p>分隔符文本对象：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文本对象</th>
+<th style="text-align:left">选择区域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>a)</code>或<code>ab</code></td>
+<td style="text-align:left">一对圆括号<code>（parentheses）</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a}</code>或<code>aB</code></td>
+<td style="text-align:left">一对花括号<code>{braces}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a]</code></td>
+<td style="text-align:left">一对方括号<code>[brackets]</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a&gt;</code></td>
+<td style="text-align:left">一对尖括号<code>&lt;angle brackets&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a&#39;</code></td>
+<td style="text-align:left">一对单引号<code>&#39;single quotes&#39;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a&quot;</code></td>
+<td style="text-align:left">一对双引号<code>&quot;double quotes&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a` </code></td>
+<td style="text-align:left">一对反引号<code>`backticks` </code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>at</code></td>
+<td style="text-align:left">一对XML标签<code>&lt;xml&gt;tags&lt;/xml&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i)</code>或<code>ib</code></td>
+<td style="text-align:left">圆括号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i}</code>或<code>iB</code></td>
+<td style="text-align:left">花括号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i]</code></td>
+<td style="text-align:left">方括号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i&gt;</code></td>
+<td style="text-align:left">尖括号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i&#39;</code></td>
+<td style="text-align:left">单引号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i&quot;</code></td>
+<td style="text-align:left">双引号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i` </code></td>
+<td style="text-align:left">反引号内部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>it</code></td>
+<td style="text-align:left">XML标签内部</td>
+</tr>
+</tbody>
+</table>
+<p>配合<code>c{motion}</code>、<code>y{motion}</code>、<code>d{motion}</code>使用。</p>
+<p><strong>用文本对象执行操作</strong></p>
+<p>可视模式适用于介绍文本对象，应为可以很容易看到发生的变化。然而，在操作符待决模式中使用文本对象，才能真正展现出它们的强大能力。（不懂咯）<img src="6b3ab4d7-8611-4417-845b-abeea454dea5_files/0091AD17.png" alt=""></p>
+<p>将下面文本中的{url}替换为#，然后再用一个文本标记把{title}替换掉：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;&lt;a href=&quot;&#123;url&#125;&quot;&gt;&#123;title&#125;&lt;/a&gt;&apos;</div></pre></td></tr></table></figure>
+<p><code>ci&quot;#&lt;Esc&gt;citclick here&lt;Esc&gt;</code></p>
+<p><code>ci&quot;</code>解读为修改双引号内部的内容，<code>cit</code>命令解读为修改为标签内部的内容。<code>yit</code>拷贝标签内的文本，或<code>dit</code>删除文本。</p>
+<ul>
+<li>删除周边，修改内部</li>
+</ul>
+<p>Vim的文本对象分为两类：一类是操作分隔符的文本对象，如<code>i)</code>、<code>i&quot;</code>和<code>it</code>；另一类用于操作文本块，如单词、句子和段落。</p>
+<p>可视模式下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文本对象</th>
+<th style="text-align:left">选择范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>aw</code></td>
+<td style="text-align:left">当前单词及一个空格(a word）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>aW</code></td>
+<td style="text-align:left">当前字串及一个空格</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>as</code></td>
+<td style="text-align:left">当前句子及一个空格</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ap</code></td>
+<td style="text-align:left">当期段落及一个空格</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>iw</code></td>
+<td style="text-align:left">当前单词</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>iW</code></td>
+<td style="text-align:left">当前字串</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is</code></td>
+<td style="text-align:left">当前句子</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ip</code></td>
+<td style="text-align:left">当期段落</td>
+</tr>
+</tbody>
+</table>
+<p>配合<code>c{motion}</code>、<code>y{motion}</code>、<code>d{motion}</code>在普通模式下使用。</p>
+<ul>
+<li>设置位置标记（mark），以便快速调回</li>
+</ul>
+<p><code>m{a-zA-Z}</code>会用选定的字母标记当前光标所在位置。小写位置标记只在每个缓冲区里局部可见，大写位置标记全局可见。</p>
+<p>普通模式下两条跳转到位置标记命令（书上将反了吧）：</p>
+<p><code>`{mark} ` </code>跳转到位置标记所在行，并把光标置于设置位置标记时光标所在之处。</p>
+<p><code>&#39;{mark}</code>跳转到位置标记所在行，并把光标置于该行第一个非空白字符上。</p>
+<p><strong>自动位置标记</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">位置标记</th>
+<th style="text-align:left">跳转到</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">`</td>
+<td style="text-align:left">当前文件中上次跳转动作之前的位置</td>
+</tr>
+<tr>
+<td style="text-align:left">`.</td>
+<td style="text-align:left">上次修改的地方</td>
+</tr>
+<tr>
+<td style="text-align:left">`^</td>
+<td style="text-align:left">上次插入的地方</td>
+</tr>
+<tr>
+<td style="text-align:left">`[</td>
+<td style="text-align:left">上次修改或复制的起始位置</td>
+</tr>
+<tr>
+<td style="text-align:left">`}</td>
+<td style="text-align:left">上次修改或复制的结束位置</td>
+</tr>
+<tr>
+<td style="text-align:left">`&lt;</td>
+<td style="text-align:left">上次高亮选区的起始位置</td>
+</tr>
+<tr>
+<td style="text-align:left">`&gt;</td>
+<td style="text-align:left">上次高亮选区的结束位置</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在匹配括号间跳转</li>
+</ul>
+<p><code>%</code>允许在一组开闭括号间跳转，可作用于()、[]和{}</p>
+<h3 id="第9章-在文件间跳转"><a href="#第9章-在文件间跳转" class="headerlink" title="第9章 在文件间跳转"></a>第9章 在文件间跳转</h3><ul>
+<li>遍历跳转列表</li>
+</ul>
+<p><code>&lt;C-o&gt;</code>回退到跳转之前<br><code>&lt;C-i&gt;</code>前进到跳转之后</p>
+<p><code>:jumps</code>可查看跳转列表</p>
+<p>任何该表当前窗口中活动文件的命令，都可以被称为跳转命令。</p>
+<p>跳转动作：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>[count]G</code></td>
+<td style="text-align:left">跳转到指定行号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/pattern&lt;CR&gt;/?&lt;pattern&lt;CR&gt;/n/N</code></td>
+<td style="text-align:left">跳转到下一个/上一个模式出现之处</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%</code></td>
+<td style="text-align:left">跳转到匹配的括号所在之处</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>(/)</code></td>
+<td style="text-align:left">跳转到上一句/下一句的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>{/}</code></td>
+<td style="text-align:left">跳转到上一段/下一段的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>H/M/L</code></td>
+<td style="text-align:left">跳转到屏幕最上方/正中间/最下方</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gf</code></td>
+<td style="text-align:left">跳转到光标下的文件名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-]&gt;</code></td>
+<td style="text-align:left">跳转到光标下关键字的定义之处</td>
+</tr>
+<tr>
+<td style="text-align:left">`{mark}/‘{mark}</td>
+<td style="text-align:left">跳转到下一个位置标记</td>
+</tr>
+</tbody>
+</table>
+<p>Vim可以同时维护多份跳转列表，每个单独的窗口都拥有一份自己的跳转列表。</p>
+<p>插入模式中，<code>&lt;C-i&gt;</code>等同于<code>&lt;Tab&gt;</code></p>
+<ul>
+<li>遍历改变列表</li>
+</ul>
+<p>Vim会在编辑会话期间维护一张表，记载对每个缓冲区所做的修改，即改变列表（change list）。</p>
+<p><code>:changes</code>查看改变列表</p>
+<p>Vim为每次修改都记录了行号与列号，可以用<code>g;</code>或<code>g,</code>反向或正向遍历改变列表。<code>u&lt;C-r&gt;</code>查看改变的内容。</p>
+<ul>
+<li>跳转到光标下的文件</li>
+</ul>
+<p>Vim会把文档中的文件名当成一个超链接，进行了正确配置后，可用<code>gf</code>（go to file）命令跳转到光标下的文件。</p>
+<p><strong>指定文件的扩展名</strong></p>
+<p><code>:set suffixesadd+=.rb</code>将<code>.rb</code>添加到文件扩展名。</p>
+<p><strong>指定要搜寻的目录</strong></p>
+<p><code>:set path?</code>查看<code>path</code></p>
+<ul>
+<li>用全局位置标记在文件间快速跳转</li>
+</ul>
+<p>全局位置标记是一种书签，可在文件间跳转。</p>
+<p><code>:vimgrep /fooBar/ **</code>可查找所有出现<code>fooBar</code>的地方，包括其他文件。</p>
+<h2 id="第四部分-寄存器"><a href="#第四部分-寄存器" class="headerlink" title="第四部分 寄存器"></a>第四部分 寄存器</h2><h3 id="第10章-复制与粘帖"><a href="#第10章-复制与粘帖" class="headerlink" title="第10章 复制与粘帖"></a>第10章 复制与粘帖</h3><p>术语：删除/剪切（<strong>delete</strong>）、复制（<strong>yank</strong>）与粘帖（<strong>put</strong>）</p>
+<ul>
+<li>用无名寄存器实现删除、复制与粘帖操作</li>
+</ul>
+<p>通常情况下，剪切、复制与粘帖指的是操作系统剪切板，不过，在Vim中，操作的是寄存器。</p>
+<p>调换文本行<code>ddp</code>、创建文本行的副本<code>yyp</code>、复制一个单词（不带空格）<code>yiw</code>、其余类似y{motion}</p>
+<p><code>P</code>粘帖到光标之前</p>
+<p>复制与剪切均拷贝到无名寄存器中了。</p>
+<ul>
+<li>深入理解Vim寄存器</li>
+</ul>
+<p><strong>引用一个寄存器</strong></p>
+<p>给命令加<code>{register}</code>前缀指定要用的寄存器，若不指定，Vim缺省使用无名寄存器，同上。</p>
+<p><code>&quot;ayiw</code>把当前单词复制到寄存器a中，<code>&quot;bdd</code>剪切整行至寄存器b中，<code>&quot;ap</code>粘帖来自寄存器a的单词。</p>
+<p>除普通模式，Vim也提供删除、复制与粘帖操作的Ex命令，如<code>:delete c</code>剪切当前行到寄存器c中，<code>:put c</code>粘帖c寄存器内容至光标所在行下方。</p>
+<p><strong>无名寄存器（””）</strong></p>
+<p>不指定寄存器时，缺省使用无名寄存器，它用<code>&quot;&quot;</code>表示，也可显示地引用该寄存器，如<code>&quot;&quot;p</code>，等同于<code>p</code></p>
+<p><code>x</code>、<code>s</code>、<code>d{motion}</code>、<code>c{motion}</code>与<code>y{motion}</code>（以及对应的大写命令）都会覆盖无名寄存器。</p>
+<p><strong>复制专用寄存器（”0）</strong></p>
+<p><code>y{motion}</code>命令不仅使文本复制到无名寄存器中，而且也被拷贝到复制专用寄存器中。</p>
+<p><code>x</code>、<code>s</code>、<code>d{motion}</code>与<code>c{motion}</code>命令都不会覆盖该寄存器。</p>
+<p>复制专用寄存器是稳定的，无名寄存器是易变的。</p>
+<p><code>:reg</code> 查看寄存器中的内容，<code>:reg &quot;0</code> 查看”0寄存器中的内容</p>
+<p><strong>有名寄存器（”a-“z）</strong></p>
+<p><code>&quot;ayiw</code>复制一个单词到”a寄存器，<code>&quot;Ayiw</code>追加一个单词到”a寄存器。</p>
+<p><strong>黑洞寄存器”_</strong></p>
+<p>黑洞寄存器是个有去无回的地方。</p>
+<p><code>&quot;_d{motion}</code>删除文本且不保存任何副本。</p>
+<p><strong>系统剪切板（”+）与选择专用寄存器（”*）</strong></p>
+<p>Vim的”+寄存器与系统剪切板等效，可通过<code>&quot;+p</code>（或插入模式下用<code>&lt;C-r&gt;+</code>）粘帖到Vim内部。</p>
+<p><strong>表达式寄存器（”=）</strong></p>
+<p>这个不会用</p>
+<p><strong>其它寄存器</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">寄存器</th>
+<th style="text-align:left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&quot;%</code></td>
+<td style="text-align:left">当前文件名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;#</code></td>
+<td style="text-align:left">轮换文件名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;.</code></td>
+<td style="text-align:left">上次插入的文本</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;:</code></td>
+<td style="text-align:left">上次执行的Ex命令</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;/</code></td>
+<td style="text-align:left">上次查找的模式</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>用寄存器中的内容替换高亮选区的文本</li>
+</ul>
+<p>交换两个词<code>chips</code>和<code>fish</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I like chips and fish.</div></pre></td></tr></table></figure>
+<p><code>fcdemmwwvep`mP</code></p>
+<p><code>fc</code>找到chips，<code>de</code>剪切chips至””寄存器，<code>mm</code>添加位置标记，<code>ww</code>跳至fish，<code>ve</code>可视模式选择fish，<code>p</code>粘帖chips并剪切fish至””寄存器，<code>`m</code>回到位置标记m，<code>P</code>粘帖fish。</p>
+<ul>
+<li>把寄存器的内容粘帖出来</li>
+</ul>
+<p><code>page169 2016-02-08 00:21:16 星期一</code></p>
+<p><strong>粘帖面向字符的区域</strong></p>
+<p>假设当前缺省寄存器存有单词“collection”,将它粘帖出来</p>
+<p>第一种：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">collection = getCollection();</div><div class="line">process光标(, target);</div></pre></td></tr></table></figure>
+<p>第二种：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">collection = getCollection();</div><div class="line">process(光标, target);</div></pre></td></tr></table></figure>
+<p>第一种光标所在处是<code>(</code>，应使用<code>p</code>命令，粘帖在光标之后；第二种贯标所在处是<code>,</code>，应使用<code>P</code>命令，粘帖在光标之前。</p>
+<p>插入模式中，<code>&lt;C-r&gt;{register}</code>粘帖寄存器内容，<code>&lt;C-r&gt;&quot;</code>插入无名寄存器的内容，<code>&lt;C-r&gt;0</code>插入复制专用寄存器的内容。</p>
+<p><strong>粘帖面向行的区域</strong></p>
+<p><code>p</code>粘帖至当前行的上一行，<code>P</code>粘帖至当前行的下一行，且光标置于粘帖文本的开头。</p>
+<p><code>gp</code>和<code>gP</code>功能同上，光标置于粘帖文本的结尾。</p>
+<ul>
+<li>与系统剪切板进行交互</li>
+</ul>
+<p>此节略过。。。（不懂）</p>
+<h3 id="第11章-宏"><a href="#第11章-宏" class="headerlink" title="第11章 宏"></a>第11章 宏</h3><p>用宏可以把任意数目的按键操作录制到寄存器，用于之后的回放。</p>
+<p>在一组目标执行宏可以有两种方式，以串行方式回放或者以并行方式多次运行。</p>
+<ul>
+<li>宏的读取与执行</li>
+</ul>
+<p><strong>把命令序列录制成宏</strong></p>
+<p><code>q</code>录制（recording）、停止录制，<code>q{register}</code>录制时指定保存宏的寄存器。</p>
+<p>如：<code>qaA;&lt;Esc&gt;Ivar␣&lt;Esc&gt;q</code>，录制了一段命令序列到寄存器a中。</p>
+<p><code>:reg a</code>查看寄存器a中的内容<code>&quot;a   A;^[Ivar ^[</code>，<code>^[</code>代表<code>&lt;Esc&gt;</code>，可参见<strong>宏中的键盘编码</strong></p>
+<p><strong>通过执行宏来回放命令序列</strong></p>
+<p><code>@{register}</code>执行指定寄存器的内容，<code>@@</code>重复最近调用过的宏。</p>
+<p><strong>以串行方式执行宏</strong></p>
+<p><strong>以并行方式执行宏</strong></p>
+<ul>
+<li>规范光标位置、直达目标以及中止宏</li>
+</ul>
+<p>黄金法则：在录制一个宏时，要确保每条命令都可被重复执行</p>
+<p><strong>规范光标的位置</strong></p>
+<p><strong>用可重复的动作命令直达目标</strong></p>
+<p><strong>当动作命令失败时，宏将中止执行</strong></p>
+<ul>
+<li>加次数回放宏</li>
+</ul>
+<p>将下面文本<code>+</code>号两边加上空格：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x = &quot;(&quot;+a+&quot;,&quot;+b+&quot;,&quot;+c+&quot;,&quot;+d+&quot;,&quot;+e+&quot;)&quot;;</div></pre></td></tr></table></figure>
+<p>录制宏：<code>qqf+s + &lt;Esc&gt;q22@q</code>，次数并不重要，只要大于所需要的次数就行，动作命令失败后，宏将中止执行。</p>
+<p>更简短的录制：<code>f+s + &lt;Esc&gt;qq;.q22@q</code></p>
+<ul>
+<li>在连续的文本行上重复修改</li>
+</ul>
+<p>实现下面文本的转换，<code>.</code>变成<code>)</code>，首字母大写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. one</div><div class="line">2. two</div><div class="line">3. three</div><div class="line">4. four</div></pre></td></tr></table></figure>
+<p>录制宏：<code>qq0f.s)&lt;Esc&gt;w~jq</code></p>
+<p><strong>以串行方式执行宏：</strong><code>3@q</code></p>
+<p><strong>以并行方式执行宏：</strong></p>
+<p>对于下面一段，中间包含了一些注释，如果串行方式执行宏，一定会发生中止。所以可用并行方式执行宏，即选中对象列，再执行宏<code>:normal @q</code>（宏录制在寄存器”q中）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1. one</div><div class="line">2. two</div><div class="line">3. three</div><div class="line">4. four</div><div class="line">// break up</div><div class="line">5. five</div><div class="line">6. six</div><div class="line">// break up</div><div class="line">7. seven</div></pre></td></tr></table></figure>
+<ul>
+<li>给宏追加命令</li>
+</ul>
+<p><code>q{register}</code>寄存器名小写重新录制宏，大写追加录制。</p>
+<ul>
+<li>在一组文件中执行宏</li>
+</ul>
+<p>可跨文件回放宏。</p>
+<p>（不会不懂）</p>
+<ul>
+<li>用迭代求值的方式给列表编号</li>
+</ul>
+<p>给下面的每行文本进行编号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">partridge in a pear tree</div><div class="line">turtle doves</div><div class="line">French hens</div><div class="line">calling birds</div><div class="line">golden rings</div></pre></td></tr></table></figure>
+<p><strong>基本的Vim脚本</strong></p>
+<p><code>:let i=0</code>创建一个变量，<code>:echo i</code>查看变量i</p>
+<p><code>&lt;C-r&gt;=i&lt;CR&gt;</code>插入模式插入变量i</p>
+<p><code>:let i=0&lt;CR&gt;qq:let i+=1&lt;CR&gt;I&lt;C-r&gt;=i&lt;CR&gt;) &lt;Esc&gt;q</code></p>
+<p><code>Vjjjj:normal @q</code></p>
+<ul>
+<li>编辑宏的内容</li>
+</ul>
+<p><strong>将宏粘帖到文档中</strong></p>
+<p>具体动作如同访问寄存器</p>
+<h2 id="第五部分-模式（patterns）"><a href="#第五部分-模式（patterns）" class="headerlink" title="第五部分 模式（patterns）"></a>第五部分 模式（patterns）</h2><h3 id="第12章-按模式匹配及按原义匹配"><a href="#第12章-按模式匹配及按原义匹配" class="headerlink" title="第12章 按模式匹配及按原义匹配"></a>第12章 按模式匹配及按原义匹配</h3><ul>
+<li>调整查找模式的大小写敏感性</li>
+</ul>
+<p><strong>全局设置大小写敏感性</strong></p>
+<p>若启动<code>ignorecase</code>设置，Vim的查找模式将不区分大小写。</p>
+<p><strong>每次查找时设置大小写敏感性</strong></p>
+<p><code>\c</code>后缀会让查找模式忽略大小写，<code>\C</code>强制区分大小写。</p>
+<p><strong>启用更具智能的大小写敏感性设置</strong></p>
+<p><code>smartcase</code>选项启用后，查找模式中输入了大写字母，<code>ignorecase</code>设置就不再生效；如果模式全是由小写字母组成，就会按照忽略大小写的方式进行查找，只要输入一个大写字母，查找方式就会变成区分大小写的了。</p>
+<ul>
+<li>按正则表达式查找时，使用<code>\v</code>模式开关</li>
+</ul>
+<p><strong>与Perl相比，Vim正则表达式的语法风格更接近POSIX。</strong></p>
+<p>构造正则表达式，匹配下面的颜色代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body &#123; color: #3c3c3c; &#125;</div><div class="line">a &#123; color: #0000EE; &#125;</div><div class="line">strong &#123; color: #000; &#125;</div></pre></td></tr></table></figure>
+<p><strong>用magic搜索模式查找十六进制颜色代码</strong></p>
+<p><code>/#\([0-9a-fA-F]\{6}\|[0-9a-fA-F]\{3}\)</code></p>
+<p><strong>一些字符本身并不具有特殊含义，需要对其转义才能具有特殊含义（与我们平时使用的正则正好相反）。</strong></p>
+<p>方括号缺省具有特殊含义，不用转义</p>
+<p>圆括号会按原义匹配字符，需要转义</p>
+<p>花括号需要转义</p>
+<p>开括号转义，闭括号不用转义</p>
+<p><strong>用very magic搜索模式查找十六进制颜色代码</strong></p>
+<p>利用<code>\v</code>模式开关来统一所有特殊符号的规则。</p>
+<p><code>/\v#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})</code></p>
+<p><strong>用十六进制字符类进一步优化模式</strong></p>
+<p>用<code>\x</code>代替完整字符集<code>[0-9a-fA-F]</code>，以下模式等同于前面：<code>/\v#(\x{6}|\x{3})</code></p>
+<ul>
+<li>按原义查找文本时，使用<code>\V</code>原义开关</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The N key searches backward...</div><div class="line">...the \v pattern switch (a.k.a. very magic search)...</div></pre></td></tr></table></figure>
+<p><code>/a\.k\.a\.</code>或<code>/\Va.k.a.</code></p>
+<ul>
+<li>使用圆括号捕获子匹配</li>
+</ul>
+<p>当指定一个模式时，可以捕获其自匹配，并在其他地方引用它们。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I love Paris in the the springtime.</div></pre></td></tr></table></figure>
+<p>上面文本中多写了一个<code>the</code>，通过捕获子匹配可查找到。</p>
+<p><code>/\v&lt;(\w+)\_s+\1&gt;</code></p>
+<p>诀窍在于<code>()</code>与<code>\1</code>的组合使用，任何圆括号内部的匹配文本都会被自动保存到一个临时仓库，可以用<code>\1</code>引用这段被捕获的文本。如果有多组圆括号，可以用<code>\1</code>到<code>\9</code>，<code>\0</code>永远会引用整个匹配，无论有无圆括号。</p>
+<ul>
+<li>界定单词的边界</li>
+</ul>
+<p>在定义模式时，Vim单词界定符能指定单词从哪里开始到哪里结束。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">the problem with these new recruits is that</div><div class="line">they don&apos;t keep their boots clean.</div></pre></td></tr></table></figure>
+<p><code>/the&lt;CR&gt;</code>将匹配到多项。</p>
+<p>在very magic搜索模式下，用&lt;与&gt;符号表示单词界定符。</p>
+<p><code>/\v&lt;the&gt;&lt;CR&gt;</code>只匹配到一项。</p>
+<p><code>\w</code>匹配单词类字符，包括字母、数字以及符号<code>_</code>；<code>\W</code>用来匹配除单词类字符以外的其他字符。</p>
+<ul>
+<li>界定匹配的边界</li>
+</ul>
+<p><code>vimrc</code>中配置<code>set hlsearch</code>，高亮显示查找匹配项。</p>
+<p>元字符<code>\zs</code>标志着一个匹配的起始，<code>\ze</code>界定匹配的结束。与单词定界符类似，<code>\zs</code>和<code>\ze</code>均为零宽度元字符。</p>
+<p>结合着两个字符，可以定义一个模式匹配一个较大的文本范围，然后在收窄范围。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Match &quot;quoted words&quot;---not quote marks.</div></pre></td></tr></table></figure>
+<p><code>/\v&quot;[^&quot;]+&quot;&lt;CR&gt;</code>将匹配双引号和其内部的文本。</p>
+<p><code>/\v&quot;\zs[^&quot;]+\ze&quot;&lt;CR&gt;</code>将只匹配双引号内部的文本。</p>
+<p><code>[^&quot;]+</code>匹配除双引号之外的一个或多个字符。</p>
+<ul>
+<li>转义问题字符</li>
+</ul>
+<p><strong>正向查找时要转义<code>/</code>字符</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Search items: [http://vimdoc.net/search?q=/\\][s]</div><div class="line">...</div><div class="line">[s]:http://vimdoc.net/search?q=/\\</div></pre></td></tr></table></figure>
+<p>光标置于方括号内，<code>&quot;uyi[</code>复制链接。</p>
+<p><code>/\V&lt;C-r&gt;u&lt;CR&gt;</code>查找时，只匹配到<code>http:</code>，因为<code>/</code>被解释成了<strong>查找域结束符</strong>，所有位于首个正斜杠之后的内容都被忽略到了，因此可用\转义。</p>
+<p><strong>反向查找时要转义?号</strong></p>
+<p>执行反向查找时，<code>?</code>会被当作查找域的结束符，所以此时只要转义<code>?</code>，无需转义<code>/</code>。</p>
+<p><code>?&lt;C-r&gt;u</code>查找</p>
+<p><strong>每次都要转义符号\</strong></p>
+<p><strong>用编程的方式转义字符</strong></p>
+<p> 不会不懂</p>
+<h3 id="第13章-查找"><a href="#第13章-查找" class="headerlink" title="第13章 查找"></a>第13章 查找</h3><ul>
+<li>结识查找命令</li>
+</ul>
+<p><strong>执行一次查找</strong></p>
+<p><strong>指定查找的方向</strong></p>
+<p><code>/</code>正向查找，<code>?</code>反向查找</p>
+<p><strong>重复上一次查找</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left">跳至下一处匹配，保持查找方向与偏移不变</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:left">跳至上一处匹配，保持查找方向与偏移不变</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/&lt;CR&gt;</code></td>
+<td style="text-align:left">正向跳转至相同模式的下一处匹配</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>?&lt;CR&gt;</code></td>
+<td style="text-align:left">反向跳转至相同模式的下一处匹配</td>
+</tr>
+</tbody>
+</table>
+<p><strong>回溯之前的查找</strong></p>
+<p><code>/&lt;Up&gt;</code></p>
+<ul>
+<li>高亮查找匹配</li>
+</ul>
+<p><strong>启用高亮查找功能</strong></p>
+<p>配置文件中启用<code>hlsearch</code>，默认不高亮</p>
+<p><strong>禁用高亮查找功能</strong></p>
+<p><code>:set nohlsearch</code>（使用<code>se nohls</code>或<code>:se hls</code>效果相同）可彻底禁用该功能。</p>
+<p><code>:nohlsearch</code>可暂时关闭查找高亮，下一查找会自动打开。</p>
+<ul>
+<li>在执行查找前预览第一处匹配</li>
+</ul>
+<p>激活了<strong>增量查找功能</strong>后，对于每次输入的模式，都自动查找第一处匹配</p>
+<p>vimrc文件中配置<code>set incsearch</code>即可激活。</p>
+<p><strong>检查是否存在一处匹配</strong></p>
+<p>在启用增量查找功能后，匹配到后按<code>&lt;Esc&gt;</code>而不是<code>&lt;CR&gt;</code>，光标即可返回原位。</p>
+<p><strong>根据预览结果对查找域自动补全</strong></p>
+<p><code>&lt;C-r&gt;&lt;C-w&gt;</code>会自动根据预览匹配项自动补全模式。</p>
+<ul>
+<li>统计当前模式的匹配个数</li>
+</ul>
+<p><code>:%s///gn</code></p>
+<p>这实际上调用的是<code>:substitute</code>命令，但标志位n会抑制正常的替换动作，这里的<strong>查找域</strong>留空，旨在让Vim使用当前的查找模式，<strong>替换域</strong>为空，由于标志位n会自动被忽略。</p>
+<ul>
+<li>将光标偏移到查找匹配的结尾</li>
+</ul>
+<p>将下面文本中<code>lang</code>改成<code>language</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Aim to learn a new programming lang  each year.</div><div class="line">Which lang did you pick up last year?</div><div class="line">Which langs would you like to learn?</div></pre></td></tr></table></figure>
+<p>方法一：<code>:%s/lang/language/g</code></p>
+<p>方法二：<code>/lang&lt;CR&gt;eauage</code>，然后<code>n</code>跳转下一匹配项，使用点范式。<code>e</code>跳转到单词末尾。</p>
+<p>方法三：<code>/lang/e&lt;CR&gt;uage&lt;Esc&gt;</code>，然后<code>n</code>跳转下一匹配项，使用点范式。</p>
+<p><code>//e&lt;CR&gt;</code>可重复上次查找，并将光标移至匹配项末尾。</p>
+<ul>
+<li>对完整的查找匹配进行操作</li>
+</ul>
+<p>将文本中的<code>Xml</code>和<code>html</code>都转成大写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">class XhtmlDocument &lt; XmlDocument; end</div><div class="line">class XhtmlTag &lt; XmlTag; end</div></pre></td></tr></table></figure>
+<p>对于<code>Xml</code>可以运行<code>gU3l</code>或<code>3gUl</code>，对于<code>html</code>可以运行<code>gUtD</code>，将光标到第一个D之间的所有字符都转换为大写。</p>
+<p>或者如下：</p>
+<p><code>/\vX(ht)?ml\C&lt;CR&gt;</code>匹配，<code>gU//e&lt;CR&gt;</code>转成大写，<code>//&lt;CR&gt;.</code>匹配下一项重复操作</p>
+<p>这里是将<code>//e&lt;CR&gt;</code>作为一个动作命令使用，范围涵盖有查找匹配的起始到结尾之间的全部内容。</p>
+<p>原文一大段，冗长不懂不会。</p>
+<ul>
+<li>利用查找历史，迭代完成复杂的模式</li>
+</ul>
+<p>匹配单引号里面的文本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">This string contains a &apos;quoted&apos; word.</div><div class="line">This string contains &apos;two&apos; quoted &apos;words.&apos;</div><div class="line">This &apos;string doesn&apos;t make things easy.&apos;</div></pre></td></tr></table></figure>
+<ol>
+<li>粗略匹配<code>/\v&#39;.+&#39;&lt;CR&gt;</code></li>
+<li>逐步求精<code>/\v&#39;[^&#39;]+&#39;&lt;CR&gt;</code></li>
+<li>精益求精<code>/\v&#39;([^&#39;]|&#39;\w)+&#39;&lt;CR&gt;</code></li>
+<li>画上完美句号<code>/\v&#39;([^&#39;]|&#39;\w)+)&#39;&lt;CR&gt;</code></li>
+</ol>
+<p>替换成双引号<code>:%s//&quot;\1&quot;/g</code></p>
+<p>上面的命令等同于：<code>:%s/\v&#39;(([^&#39;]|&#39;\w)+)&#39;/&quot;\1&quot;/g</code></p>
+<ul>
+<li>查找当前高亮选区中的文本</li>
+</ul>
+<p><strong>在可视模式下查找当前单词</strong></p>
+<p><code>*</code>可以匹配光标处的单词。</p>
+<p><strong>查找当前选中的文本</strong></p>
+<p>要弄个vim脚本，好累的哟，不懂啦。</p>
+<h3 id="第14章-替换"><a href="#第14章-替换" class="headerlink" title="第14章 替换"></a>第14章 替换</h3><p>可重用上次的查找模式来快速构造替换命令。</p>
+<ul>
+<li>结识substitute命令</li>
+</ul>
+<p>语法：<code>[range]s[ubstitute]/{pattern}/{string}/[flags]</code></p>
+<p><strong>利用标志位调整substitute命令的行为</strong></p>
+<p>标志位：</p>
+<p><code>g</code>使替换命令在全局范围内执行，即修改<strong>一行内</strong>的所有匹配。</p>
+<p><code>c</code>让我们有机会可以确认或拒绝每一处修改。</p>
+<p><code>n</code>抑制正常的替换行为</p>
+<p><code>e</code>专门屏蔽错误提示信息</p>
+<p><code>&amp;</code>重用上一次substitute命令所用过的标志位</p>
+<p><strong>替换域中的特殊字符</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>\r</code></td>
+<td style="text-align:left">换行符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\t</code></td>
+<td style="text-align:left">制表符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\\</code></td>
+<td style="text-align:left">反斜杠</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\1</code></td>
+<td style="text-align:left">第1个子匹配</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\9</code></td>
+<td style="text-align:left">第9个子匹配</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\0</code></td>
+<td style="text-align:left">匹配模式的所有内容</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&amp;</code></td>
+<td style="text-align:left">匹配模式的所有内容</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~</code></td>
+<td style="text-align:left">上一次调用<code>:s</code>的<code>{string}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\={Vim script}</code></td>
+<td style="text-align:left">执行{Vim script}表达式，并将返回的结果作为替换{string}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在文件范围内查找并替换每一处匹配</li>
+</ul>
+<p>缺省情况下，substitute命令你仅仅作用于当前行，而且只会修改第一处匹配。</p>
+<p>可将文件看成二维平面，字符沿着x轴增加，文本行沿着y轴向下增加。<code>g</code>标志位全选x轴，<code>%</code>前缀全选y轴。</p>
+<p>如将下文所有的<code>going</code>替换成<code>rolling</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">When the going gets tough, the tough get going.</div><div class="line">If you are going through hell, kepp going.</div></pre></td></tr></table></figure>
+<p><code>:%s/going/rolling/g</code></p>
+<ul>
+<li>手动控制每一次替换操作</li>
+</ul>
+<p><code>c</code>标志位使每次替换时都进行询问</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">答案</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>y</code></td>
+<td style="text-align:left">替换此处匹配</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left">忽略此处匹配</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>q</code></td>
+<td style="text-align:left">退出替换过程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>l</code></td>
+<td style="text-align:left"><code>last</code>，替换此处匹配后退出</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a</code></td>
+<td style="text-align:left"><code>all</code>，替换此处与之后所有匹配</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-e&gt;</code></td>
+<td style="text-align:left">向上滚动屏幕</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;C-y&gt;</code></td>
+<td style="text-align:left">向下滚动屏幕</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>重用上次的查找模式</li>
+</ul>
+<p>可把查找域留空，让Vim使用当前的模式，即<code>&quot;/</code>寄存器中的内容。</p>
+<p>对命令历史的影响：重用之后，命令历史中的记录可能就不完整了，可用<code>&lt;C-r&gt;/</code>插入上次查找的内容，避免查找域留空。</p>
+<ul>
+<li>用寄存器的内容替换</li>
+</ul>
+<p><strong>传值</strong></p>
+<p><code>&lt;C-r&gt;{register}</code>传值，粘帖寄存器中的内容至查找域。</p>
+<p><strong>引用</strong></p>
+<p>替换域中<code>\=</code>指示Vim执行一段表达式脚本，<code>@{register}</code>来引用某个寄存器的内容。如<code>:%s//\=@0/g</code></p>
+<p><strong>比较</strong></p>
+<p><code>:let @{register}=&#39;{string}&#39;</code>给寄存器赋值</p>
+<ul>
+<li>重复上一次substitute命令</li>
+</ul>
+<p><strong>在整个文件范围内重复面向行的替换操作</strong></p>
+<p>输入<code>:s/target/replacement/g&lt;CR&gt;</code>之后，发现应该加上前缀<code>%</code>。此时只需输入<code>g&amp;</code>（详见<code>:h g&amp;</code>），它等同于<code>:%s//-/&amp;</code></p>
+<p><strong>修正substitute命令的执行范围</strong></p>
+<p><code>:&amp;&amp;</code>中<code>:&amp;</code>重复上一次<code>:substitute</code>命令，<code>&amp;</code>参数重用上一次<code>:s</code>命令的标志位</p>
+<ul>
+<li>使用自匹配重排CSV文件的字段</li>
+</ul>
+<p>重排字段，email置首列，其次first name，最后last name。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">last name,first name,email</div><div class="line">neil,drew,drew@vimcasts.org</div><div class="line">doe,john,john@example.com</div></pre></td></tr></table></figure>
+<p><code>/\v^([^,]*),([^,]*),([^,]*)$</code>匹配，<code>:%s//\3,\2,\1</code>子匹配重排</p>
+<ul>
+<li>在替换过程中执行算术运算</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;h2&gt;Heading number 1&lt;/h2&gt;</div><div class="line">&lt;h3&gt;Heading number 2&lt;/h3&gt;</div><div class="line">&lt;h4&gt;Heading number 3&lt;/h4&gt;</div></pre></td></tr></table></figure>
+<p>将<code>&lt;h?&gt;</code>标签提升一级。</p>
+<p><code>/\v\&lt;\/?h\zs\d</code>匹配。<code>:s//\=submatch(0)-1/g</code>替换，<code>submatch(0)</code>即可获得当前匹配的内容。</p>
+<ul>
+<li>交换两个或更多的单词</li>
+</ul>
+<p>交换dog和man：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The dog bit the man.</div></pre></td></tr></table></figure>
+<p><code>:let swapper={&quot;dog&quot;:&quot;man&quot;, &quot;man&quot;:&quot;dog&quot;}</code>添加一个变量。<code>:echo swapper[&quot;dog&quot;]</code>查看变量。</p>
+<p><code>/\v(&lt;man&gt;|&lt;dog&gt;)</code>匹配，<code>:%s//\={&quot;dog&quot;:&quot;man&quot;, &quot;man&quot;:&quot;dog&quot;}[submatch(1)]/g</code>，对<code>submatch(1)</code>不是很懂。</p>
+<ul>
+<li>在多个文件中执行查找与替换</li>
+</ul>
+<p>将所有文件Pragmatic Vim中的Pragmatic改成Praticle：</p>
+<p><code>:args **/*.txt</code>打开所有文件，<code>:set hidden</code>启动hidden，保证在不保存文件改动的情况下，能跳转至其它文件，<code>:argdo %s/Pragmatic\ze Vim/Praticle/ge</code>，<code>e</code>参数保证不提示错误信息。</p>
+<p><strong>创建一个只包含目标模式的文件列表</strong></p>
+<p>待续。。。</p>
+<h3 id="第15章-global命令"><a href="#第15章-global命令" class="headerlink" title="第15章 global命令"></a>第15章 global命令</h3><p><code>:global</code>命令结合了Ex命令与Vim的模式匹配两方面能力，所以很强大。</p>
+<ul>
+<li>结识global命令</li>
+</ul>
+<p>语法：<code>:[range]global[!]/{pattern}/[cmd]</code></p>
+<p>缺省的作用范围是整个文件（%）</p>
+<p><code>page250 2016-02-10 22:04:13 星期三</code></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>请博主喝奶茶:)。</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat_reward.gif" alt="xiaofeig WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay_reward.gif" alt="xiaofeig Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vim/" rel="tag">#Vim</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/23/Le-13-PyCode0019/" rel="next" title="PyCode0019">
+                <i class="fa fa-chevron-left"></i> PyCode0019
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/23/Op-00-Vim命令/" rel="prev" title="Vim命令">
+                Vim命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/23/Re-01-Vim实用技巧/"
+     data-title="Vim实用技巧"
+     data-content=""
+     data-url="http://yoursite.com/2016/07/23/Re-01-Vim实用技巧/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/23/Re-01-Vim实用技巧/"
+           data-title="Vim实用技巧" data-url="http://yoursite.com/2016/07/23/Re-01-Vim实用技巧/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar_colorful.jpg"
+               alt="xiaofeig" />
+          <p class="site-author-name" itemprop="name">xiaofeig</p>
+          <p class="site-description motion-element" itemprop="description">因为无能为力，所以顺其自然。因为心无所恃，所以随遇而安。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/gao-xiao-fei-72" target="_blank">
+                  
+                    <i class="fa fa-edit"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-code"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/xiaofeig002" target="_blank">
+                  
+                    <i class="fa fa-film"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/user/home?id=80637490" target="_blank">
+                  
+                    <i class="fa fa-music"></i>
+                  
+                  网易云音乐
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackoverflow.com/users/5844489/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-stack-overflow"></i>
+                  
+                  StackOverflow
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-columns"></i>
+                  
+                  Segmentfault
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第1章-Vim解决问题的方式"><span class="nav-number">1.</span> <span class="nav-text">第1章 Vim解决问题的方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一部分-模式（mode）"><span class="nav-number"></span> <span class="nav-text">第一部分 模式（mode）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第2章-普通模式（normal-mode）"><span class="nav-number">1.</span> <span class="nav-text">第2章 普通模式（normal mode）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3章-插入模式"><span class="nav-number">2.</span> <span class="nav-text">第3章 插入模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4章-可视模式"><span class="nav-number">3.</span> <span class="nav-text">第4章 可视模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5章-命令行模式"><span class="nav-number">4.</span> <span class="nav-text">第5章 命令行模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二部分-文件"><span class="nav-number"></span> <span class="nav-text">第二部分 文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第6章-管理多个文件"><span class="nav-number">1.</span> <span class="nav-text">第6章 管理多个文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7章-打开及保存文件"><span class="nav-number">2.</span> <span class="nav-text">第7章 打开及保存文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三部分-更快地移动及跳转"><span class="nav-number"></span> <span class="nav-text">第三部分 更快地移动及跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第8章-用动作命令在文档中移动"><span class="nav-number">1.</span> <span class="nav-text">第8章 用动作命令在文档中移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第9章-在文件间跳转"><span class="nav-number">2.</span> <span class="nav-text">第9章 在文件间跳转</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四部分-寄存器"><span class="nav-number"></span> <span class="nav-text">第四部分 寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第10章-复制与粘帖"><span class="nav-number">1.</span> <span class="nav-text">第10章 复制与粘帖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第11章-宏"><span class="nav-number">2.</span> <span class="nav-text">第11章 宏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五部分-模式（patterns）"><span class="nav-number"></span> <span class="nav-text">第五部分 模式（patterns）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第12章-按模式匹配及按原义匹配"><span class="nav-number">1.</span> <span class="nav-text">第12章 按模式匹配及按原义匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第13章-查找"><span class="nav-number">2.</span> <span class="nav-text">第13章 查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第14章-替换"><span class="nav-number">3.</span> <span class="nav-text">第14章 替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第15章-global命令"><span class="nav-number">4.</span> <span class="nav-text">第15章 global命令</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaofeig</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xiaofeig"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("CjnhARzzvB4UVTLJHiO2Whwf-gzGzoHsz", "YPfw4nq9yyTA1eIqbFGiN4JP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
