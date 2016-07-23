@@ -7,11 +7,11 @@
 
  # Me
 
-- :fa-user: 高小飞
-- :fa-barcode: 1995/01
-- :fa-home: [coding.xiaofeig.cn](http://coding.xiaofeig.cn)
-- :fa-phone: 18883870458
-- :fa-envelope: i@xiaofeig.cn
+- <i class="fa fa-user"></i> 高小飞
+- <i class="fa fa-barcode"></i> 1995/01
+- <i class="fa fa-home"></i> [coding.xiaofeig.cn](http://coding.xiaofeig.cn)
+- <i class="fa fa-phone"></i> 18883870458
+- <i class="fa fa-envelope"></i> i@xiaofeig.cn
 
 # Abstract
 
