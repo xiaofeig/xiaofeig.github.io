@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="RB-Tree," />
 
 
 
@@ -57,16 +57,29 @@
 
 
 
-<meta name="description" content="Python 练习册，每天一个小程序第 0006 题你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。">
+<meta name="description" content="红黑树红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyCode0006">
-<meta property="og:url" content="http://coding.xiaofeig.cn/2016/07/15/Le-08-PyCode0006/index.html">
+<meta property="og:title" content="红黑树">
+<meta property="og:url" content="http://coding.xiaofeig.cn/2016/08/14/Le-17-Red-Black Tree/index.html">
 <meta property="og:site_name" content="Xiaofei's Blog">
-<meta property="og:description" content="Python 练习册，每天一个小程序第 0006 题你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。">
-<meta property="og:updated_time" content="2016-07-15T03:21:29.000Z">
+<meta property="og:description" content="红黑树红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/0276095b-e89c-4231-925a-8ce95f2edf7b.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/63046423-8883-4c1d-ace1-5f8d41fcac4d.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/673ac674-f761-453b-9210-8fc2df1296f5.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/d8b76800-d009-425d-a32f-c29fdcff3ab6.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/b009e626-bd84-4b98-9ea0-f3ca515ad388.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/a0acf756-5ec2-4d4c-bf71-037f0c233023.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/9ec7a4a1-7087-4703-8e83-a8ce6e3f90ff.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/1153a9f0-07f3-4a4d-ae71-f14881d1658f.png">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/a34cb813-9ba0-4cf7-829e-7e157444b32d.png">
+<meta property="og:updated_time" content="2016-08-14T07:34:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PyCode0006">
-<meta name="twitter:description" content="Python 练习册，每天一个小程序第 0006 题你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。">
+<meta name="twitter:title" content="红黑树">
+<meta name="twitter:description" content="红黑树红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
+<meta name="twitter:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png">
 
 
 
@@ -84,7 +97,7 @@
   };
 </script>
 
-  <title> PyCode0006 | Xiaofei's Blog </title>
+  <title> 红黑树 | Xiaofei's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +247,7 @@
             
             
               
-                PyCode0006
+                红黑树
               
             
           </h1>
@@ -246,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-15T11:21:24+08:00" content="2016-07-15">
-              2016-07-15
+            <time itemprop="dateCreated" datetime="2016-08-14T15:34:04+08:00" content="2016-08-14">
+              2016-08-14
             </time>
           </span>
 
@@ -272,8 +285,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
-                    <span itemprop="name">PyCode</span>
+                  <a href="/categories/Learning/Tree/" itemprop="url" rel="index">
+                    <span itemprop="name">Tree</span>
                   </a>
                 </span>
 
@@ -288,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/15/Le-08-PyCode0006/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/Le-08-PyCode0006/" itemprop="commentsCount"></span>
+                <a href="/2016/08/14/Le-17-Red-Black Tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/14/Le-17-Red-Black Tree/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,7 +312,7 @@
 
           
           
-             <span id="/2016/07/15/Le-08-PyCode0006/" class="leancloud_visitors" data-flag-title="PyCode0006">
+             <span id="/2016/08/14/Le-17-Red-Black Tree/" class="leancloud_visitors" data-flag-title="红黑树">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -320,17 +333,61 @@
       
 
       
-        <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/xiaofeig/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0006-题"><a href="#第-0006-题" class="headerlink" title="第 0006 题"></a>第 0006 题</h2><p>你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。</p>
+        <h1 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h1><p>红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。</p>
 <a id="more"></a>
-<hr>
-<ul>
-<li>打开文件夹下的每个文件</li>
-<li>正则匹配获取文件中的每个单词</li>
-<li>统计单词出现的频率</li>
-<li>过滤频率最高的单词</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countfreq</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    计算文本中单词出现的频率</div><div class="line">    :param s: 待计算的文本</div><div class="line">    :return: 返回只包含频率最高的单词与频率的dict</div><div class="line">    """</div><div class="line">    regix = <span class="string">r"(\b\w+(\-\w+)*('s)?\b)"</span></div><div class="line">    result = re.findall(regix, s)</div><div class="line">    dic = &#123;&#125;</div><div class="line">    freq = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> result:</div><div class="line">        dic[r[<span class="number">0</span>].lower()] = dic.get(r[<span class="number">0</span>].lower(), <span class="number">0</span>) + <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> dic[r[<span class="number">0</span>].lower()] &gt; freq:</div><div class="line">            freq = dic[r[<span class="number">0</span>].lower()]</div><div class="line">    result=&#123;&#125;</div><div class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> dic.keys():</div><div class="line">        <span class="keyword">if</span> dic[k] == freq:</div><div class="line">            result[k] = freq</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">iterdir</span><span class="params">(pathname)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    遍历文件夹下的文件，统计每个文件中频率最高的单词</div><div class="line">    :param pathname: 文件夹路径</div><div class="line">    :return: 返回每个文件频率最高的单词dict</div><div class="line">    """</div><div class="line">    p = Path(pathname)</div><div class="line">    result = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> p.iterdir():</div><div class="line">        <span class="keyword">if</span> path.is_file():</div><div class="line">            <span class="keyword">with</span> path.open() <span class="keyword">as</span> f:</div><div class="line">                content = f.read()</div><div class="line">                result[path.name] = countfreq(content)</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    pathname = <span class="string">'resource/diary/'</span></div><div class="line">    result = iterdir(pathname)</div><div class="line">    print(result)</div></pre></td></tr></table></figure>
-<hr>
+<h2 id="五个规则"><a href="#五个规则" class="headerlink" title="五个规则"></a>五个规则</h2><p>红黑树通过颜色的约束来维持二叉树的平衡，一棵有效的红黑树应满足一下五个规则：</p>
+<ol>
+<li>节点的颜色是红色或黑色的；</li>
+<li>根节点是黑色的；</li>
+<li>红色节点的两个子节点必须是黑色的；</li>
+<li>所有叶子节点（树尾端NIL指针）必须是黑色的；</li>
+<li>任意节点到叶子节点的所有路径包含相同数量的黑色节点。</li>
+</ol>
+<p>添加或删除节点维持红黑树平衡的三个动作：<strong>左旋</strong>，<strong>右旋</strong>，<strong>着色</strong>。</p>
+<p><strong>左旋：</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png" alt=""></p>
+<p><strong>右旋：</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png" alt=""></p>
+<h2 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h2><p>添加节点时，共有如下四种情况：</p>
+<p><strong>1. 父节点为左子节点，叔叔节点为红色</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/0276095b-e89c-4231-925a-8ce95f2edf7b.png" alt=""></p>
+<p><strong>2. 父节点为左子节点，叔叔节点为黑色</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/63046423-8883-4c1d-ace1-5f8d41fcac4d.png" alt=""></p>
+<p><strong>3. 父节点为右子节点，叔叔节点为红色</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/673ac674-f761-453b-9210-8fc2df1296f5.png" alt=""></p>
+<p><strong>4. 父节点为右子节点，叔叔节点为黑色</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png" alt=""></p>
+<h2 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h2><h3 id="删除节点X"><a href="#删除节点X" class="headerlink" title="删除节点X"></a>删除节点X</h3><p>删除节点X时，又分为如下3个步骤：</p>
+<ol>
+<li>若节点X无子节点，直接删除即可，且红黑树不需要进行平衡操作</li>
+<li>若节点X有一个子节点，子节点替换X后，再进行平衡操作</li>
+<li>若节点X左右子节点均不为null，找到X的替换节点M，将M的值赋给X（注意，X的颜色不变），而M就变成了真正待删除的节点，删除M之后再判断M是否有子节点，有则进行平衡操作。找M的规则如下：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">M = X.right;</div><div class="line"><span class="keyword">while</span>(M.left != <span class="keyword">null</span>)</div><div class="line">    M = M.left;</div></pre></td></tr></table></figure>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/d8b76800-d009-425d-a32f-c29fdcff3ab6.png" alt=""></p>
+<p>删除节点X（或M）之后，就可以平衡红黑树了，设删除的节点是M，N是M的唯一子节点：</p>
+<ol>
+<li>若M是红色，删除之后不会破坏红黑树的规则</li>
+<li>若M是黑色，删除之后子树N将少了一个黑色节点<ol>
+<li>若N为红色，将N染黑即可</li>
+<li>若N为黑色，则需要进行如下5种情况的调整</li>
+</ol>
+</li>
+</ol>
+<h3 id="平衡红黑树"><a href="#平衡红黑树" class="headerlink" title="平衡红黑树"></a>平衡红黑树</h3><p>总的调整思路是增加子树N上的黑色节点，5种情况主要依据<strong>父节点P</strong>、<strong>兄弟节点B</strong>以及<strong>B的子节点</strong>的颜色而划分。</p>
+<p><strong>1. 兄弟节点B为红色（父节点P必为黑色），B的子节点均为黑色</strong></p>
+<p>进行如下转化后，红黑树仍然未平衡，子树N上缺少一个黑色节点，但可转为第3种情况。</p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/b009e626-bd84-4b98-9ea0-f3ca515ad388.png" alt=""></p>
+<p><strong>2. 兄弟节点B为黑色，父节点P为黑色，B的子节点均为黑色</strong></p>
+<p>如下的转化是将P的右子树也减少了一个黑色节点，红黑色P总体上就少了一个节点，所以需要将P看做N继续进行调整。</p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/a0acf756-5ec2-4d4c-bf71-037f0c233023.png" alt=""></p>
+<p><strong>3. 兄弟节点B为黑色，父节点P为红色，B的子节点均为黑色</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/9ec7a4a1-7087-4703-8e83-a8ce6e3f90ff.png" alt=""></p>
+<p><strong>4. 兄弟节点B为黑色（父节点P随意），B的左子节点L为红色，B的右子节点为黑色</strong></p>
+<p>调整之后，红黑树未平衡，但转为了第5种情况。</p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/1153a9f0-07f3-4a4d-ae71-f14881d1658f.png" alt=""></p>
+<p><strong>5. 兄弟节点B为黑色（父节点P随意），B的左子节点L随意，B的右子节点为红色</strong></p>
+<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/a34cb813-9ba0-4cf7-829e-7e157444b32d.png" alt=""></p>
 
       
     </div>
@@ -366,7 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/RB-Tree/" rel="tag">#RB-Tree</a>
           
         </div>
       
@@ -375,17 +432,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/15/Le-07-PyCode0004/" rel="next" title="PyCode0004">
-                <i class="fa fa-chevron-left"></i> PyCode0004
+              <a href="/2016/08/07/Le-16-HashMap/" rel="next" title="集合框架HashMap">
+                <i class="fa fa-chevron-left"></i> 集合框架HashMap
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/15/Le-09-PyCode0007/" rel="prev" title="PyCode0007">
-                PyCode0007 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -400,10 +453,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/15/Le-08-PyCode0006/"
-     data-title="PyCode0006"
+        <div class="ds-share flat" data-thread-key="2016/08/14/Le-17-Red-Black Tree/"
+     data-title="红黑树"
      data-content=""
-     data-url="http://coding.xiaofeig.cn/2016/07/15/Le-08-PyCode0006/">
+     data-url="http://coding.xiaofeig.cn/2016/08/14/Le-17-Red-Black Tree/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -433,8 +486,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/15/Le-08-PyCode0006/"
-           data-title="PyCode0006" data-url="http://coding.xiaofeig.cn/2016/07/15/Le-08-PyCode0006/">
+      <div class="ds-thread" data-thread-key="2016/08/14/Le-17-Red-Black Tree/"
+           data-title="红黑树" data-url="http://coding.xiaofeig.cn/2016/08/14/Le-17-Red-Black Tree/">
       </div>
     
   </div>
@@ -592,7 +645,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-练习册，每天一个小程序"><span class="nav-number">1.</span> <span class="nav-text">Python 练习册，每天一个小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-0006-题"><span class="nav-number">1.1.</span> <span class="nav-text">第 0006 题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#红黑树"><span class="nav-number">1.</span> <span class="nav-text">红黑树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#五个规则"><span class="nav-number">1.1.</span> <span class="nav-text">五个规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加节点"><span class="nav-number">1.2.</span> <span class="nav-text">添加节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除节点"><span class="nav-number">1.3.</span> <span class="nav-text">删除节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除节点X"><span class="nav-number">1.3.1.</span> <span class="nav-text">删除节点X</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平衡红黑树"><span class="nav-number">1.3.2.</span> <span class="nav-text">平衡红黑树</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
