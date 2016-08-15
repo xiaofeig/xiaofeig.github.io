@@ -57,29 +57,39 @@
 
 
 
-<meta name="description" content="红黑树红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
+<meta name="description" content="红黑树
+在线演示
+
+红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="红黑树">
 <meta property="og:url" content="http://coding.xiaofeig.cn/2016/08/14/Le-17-Red-Black Tree/index.html">
 <meta property="og:site_name" content="Xiaofei's Blog">
-<meta property="og:description" content="红黑树红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/0276095b-e89c-4231-925a-8ce95f2edf7b.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/63046423-8883-4c1d-ace1-5f8d41fcac4d.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/673ac674-f761-453b-9210-8fc2df1296f5.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/d8b76800-d009-425d-a32f-c29fdcff3ab6.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/b009e626-bd84-4b98-9ea0-f3ca515ad388.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/a0acf756-5ec2-4d4c-bf71-037f0c233023.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/9ec7a4a1-7087-4703-8e83-a8ce6e3f90ff.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/1153a9f0-07f3-4a4d-ae71-f14881d1658f.png">
-<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/a34cb813-9ba0-4cf7-829e-7e157444b32d.png">
-<meta property="og:updated_time" content="2016-08-14T07:34:09.000Z">
+<meta property="og:description" content="红黑树
+在线演示
+
+红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/691c800b-c73e-4308-b920-a2814e63b51a.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/0276095b-e89c-4231-925a-8ce95f2edf7b.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/63046423-8883-4c1d-ace1-5f8d41fcac4d.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/673ac674-f761-453b-9210-8fc2df1296f5.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/d8b76800-d009-425d-a32f-c29fdcff3ab6.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/2c72ca28-0b09-48c2-8f5c-7c2d46b9be9b.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/1fa5714c-c891-4f68-b8e6-967db587dd3d.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/cdf05ad2-9902-4f15-ba47-6dcce49b0c44.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/7a58d38e-ad5c-4838-9fcd-53286eebc2a4.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/9f3f99fa-a0d2-4e39-99cf-983a53b5b352.png">
+<meta property="og:image" content="http://coding.xiaofeig.cn/index_files/52bb97be-0144-4593-8d23-cf0fbfab7cb6.png">
+<meta property="og:updated_time" content="2016-08-15T03:17:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="红黑树">
-<meta name="twitter:description" content="红黑树红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
-<meta name="twitter:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png">
+<meta name="twitter:description" content="红黑树
+在线演示
+
+红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。">
+<meta name="twitter:image" content="http://coding.xiaofeig.cn/index_files/691c800b-c73e-4308-b920-a2814e63b51a.png">
 
 
 
@@ -333,7 +343,10 @@
       
 
       
-        <h1 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h1><p>红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。</p>
+        <h1 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a><a href="http://www.jianshu.com/p/210c2f4ca130" target="_blank" rel="external">红黑树</a></h1><blockquote>
+<p><a href="http://sandbox.runjs.cn/show/2nngvn8w" target="_blank" rel="external">在线演示</a></p>
+</blockquote>
+<p>红黑树是一棵自平衡的排序二叉树，满足二叉树的基本性质：树中任何节点的值大于左子节点，小于右子节点。</p>
 <a id="more"></a>
 <h2 id="五个规则"><a href="#五个规则" class="headerlink" title="五个规则"></a>五个规则</h2><p>红黑树通过颜色的约束来维持二叉树的平衡，一棵有效的红黑树应满足一下五个规则：</p>
 <ol>
@@ -345,26 +358,26 @@
 </ol>
 <p>添加或删除节点维持红黑树平衡的三个动作：<strong>左旋</strong>，<strong>右旋</strong>，<strong>着色</strong>。</p>
 <p><strong>左旋：</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png" alt=""></p>
+<p><img src="index_files/691c800b-c73e-4308-b920-a2814e63b51a.png" alt=""></p>
 <p><strong>右旋：</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png" alt=""></p>
+<p><img src="index_files/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png" alt=""></p>
 <h2 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h2><p>添加节点时，共有如下四种情况：</p>
 <p><strong>1. 父节点为左子节点，叔叔节点为红色</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/0276095b-e89c-4231-925a-8ce95f2edf7b.png" alt=""></p>
+<p><img src="index_files/0276095b-e89c-4231-925a-8ce95f2edf7b.png" alt=""></p>
 <p><strong>2. 父节点为左子节点，叔叔节点为黑色</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/63046423-8883-4c1d-ace1-5f8d41fcac4d.png" alt=""></p>
+<p><img src="index_files/63046423-8883-4c1d-ace1-5f8d41fcac4d.png" alt=""></p>
 <p><strong>3. 父节点为右子节点，叔叔节点为红色</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/673ac674-f761-453b-9210-8fc2df1296f5.png" alt=""></p>
+<p><img src="index_files/673ac674-f761-453b-9210-8fc2df1296f5.png" alt=""></p>
 <p><strong>4. 父节点为右子节点，叔叔节点为黑色</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png" alt=""></p>
+<p><img src="index_files/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png" alt=""></p>
 <h2 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h2><h3 id="删除节点X"><a href="#删除节点X" class="headerlink" title="删除节点X"></a>删除节点X</h3><p>删除节点X时，又分为如下3个步骤：</p>
 <ol>
 <li>若节点X无子节点，直接删除即可，且红黑树不需要进行平衡操作</li>
 <li>若节点X有一个子节点，子节点替换X后，再进行平衡操作</li>
-<li>若节点X左右子节点均不为null，找到X的替换节点M，将M的值赋给X（注意，X的颜色不变），而M就变成了真正待删除的节点，删除M之后再判断M是否有子节点，有则进行平衡操作。找M的规则如下：</li>
+<li>若节点X左右子节点均不为null，找到替代X删除的节点M，将M的值赋给X（注意，X的颜色不变），而M就变成了真正待删除的节点，删除M之后再判断M是否有子节点，有则进行平衡操作。找M的规则如下：</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">M = X.right;</div><div class="line"><span class="keyword">while</span>(M.left != <span class="keyword">null</span>)</div><div class="line">    M = M.left;</div></pre></td></tr></table></figure>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/d8b76800-d009-425d-a32f-c29fdcff3ab6.png" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 右子树[的最左子节点]</span></div><div class="line">M = X.right;</div><div class="line"><span class="keyword">while</span>(M.left != <span class="keyword">null</span>)</div><div class="line">    M = M.left;</div></pre></td></tr></table></figure>
+<p><img src="index_files/d8b76800-d009-425d-a32f-c29fdcff3ab6.png" alt=""></p>
 <p>删除节点X（或M）之后，就可以平衡红黑树了，设删除的节点是M，N是M的唯一子节点：</p>
 <ol>
 <li>若M是红色，删除之后不会破坏红黑树的规则</li>
@@ -374,20 +387,22 @@
 </ol>
 </li>
 </ol>
-<h3 id="平衡红黑树"><a href="#平衡红黑树" class="headerlink" title="平衡红黑树"></a>平衡红黑树</h3><p>总的调整思路是增加子树N上的黑色节点，5种情况主要依据<strong>父节点P</strong>、<strong>兄弟节点B</strong>以及<strong>B的子节点</strong>的颜色而划分。</p>
-<p><strong>1. 兄弟节点B为红色（父节点P必为黑色），B的子节点均为黑色</strong></p>
-<p>进行如下转化后，红黑树仍然未平衡，子树N上缺少一个黑色节点，但可转为第3种情况。</p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/b009e626-bd84-4b98-9ea0-f3ca515ad388.png" alt=""></p>
+<h3 id="平衡红黑树"><a href="#平衡红黑树" class="headerlink" title="平衡红黑树"></a>平衡红黑树</h3><h4 id="5种情况"><a href="#5种情况" class="headerlink" title="5种情况"></a>5种情况</h4><p>总的调整思路是增加子树N上的黑色节点，5种情况主要依据<strong>父节点P</strong>、<strong>兄弟节点B</strong>以及<strong>B的子节点</strong>的颜色而划分。（下图中x是新替换的节点，sib是x的兄弟节点）</p>
+<p><strong>1. 兄弟节点B为红色（父节点P和子节点L、R必为黑色）</strong></p>
+<p>进行如下转化后，红黑树仍然未平衡，子树N上缺少一个黑色节点，依据x的新兄弟节点L的左右子节点，<strong>左右全黑</strong>进入第3种，<strong>左红右黑</strong>进入第4种，<strong>右红</strong>进入第5种。</p>
+<p><img src="index_files/2c72ca28-0b09-48c2-8f5c-7c2d46b9be9b.png" alt=""></p>
 <p><strong>2. 兄弟节点B为黑色，父节点P为黑色，B的子节点均为黑色</strong></p>
 <p>如下的转化是将P的右子树也减少了一个黑色节点，红黑色P总体上就少了一个节点，所以需要将P看做N继续进行调整。</p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/a0acf756-5ec2-4d4c-bf71-037f0c233023.png" alt=""></p>
+<p><img src="index_files/1fa5714c-c891-4f68-b8e6-967db587dd3d.png" alt=""></p>
 <p><strong>3. 兄弟节点B为黑色，父节点P为红色，B的子节点均为黑色</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/9ec7a4a1-7087-4703-8e83-a8ce6e3f90ff.png" alt=""></p>
+<p>替换父节点和兄弟节点的颜色即可达到平衡。</p>
+<p><img src="index_files/cdf05ad2-9902-4f15-ba47-6dcce49b0c44.png" alt=""></p>
 <p><strong>4. 兄弟节点B为黑色（父节点P随意），B的左子节点L为红色，B的右子节点为黑色</strong></p>
-<p>调整之后，红黑树未平衡，但转为了第5种情况。</p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/1153a9f0-07f3-4a4d-ae71-f14881d1658f.png" alt=""></p>
+<p>调整之后，红黑树未平衡，但转为了<strong>第5种</strong>情况。</p>
+<p><img src="index_files/7a58d38e-ad5c-4838-9fcd-53286eebc2a4.png" alt=""></p>
 <p><strong>5. 兄弟节点B为黑色（父节点P随意），B的左子节点L随意，B的右子节点为红色</strong></p>
-<p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/a34cb813-9ba0-4cf7-829e-7e157444b32d.png" alt=""></p>
+<p><img src="index_files/9f3f99fa-a0d2-4e39-99cf-983a53b5b352.png" alt=""></p>
+<h4 id="平衡流程"><a href="#平衡流程" class="headerlink" title="平衡流程"></a>平衡流程</h4><p><img src="index_files/52bb97be-0144-4593-8d23-cf0fbfab7cb6.png" alt=""></p>
 
       
     </div>
@@ -645,7 +660,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#红黑树"><span class="nav-number">1.</span> <span class="nav-text">红黑树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#五个规则"><span class="nav-number">1.1.</span> <span class="nav-text">五个规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加节点"><span class="nav-number">1.2.</span> <span class="nav-text">添加节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除节点"><span class="nav-number">1.3.</span> <span class="nav-text">删除节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除节点X"><span class="nav-number">1.3.1.</span> <span class="nav-text">删除节点X</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平衡红黑树"><span class="nav-number">1.3.2.</span> <span class="nav-text">平衡红黑树</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#红黑树"><span class="nav-number">1.</span> <span class="nav-text">红黑树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#五个规则"><span class="nav-number">1.1.</span> <span class="nav-text">五个规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加节点"><span class="nav-number">1.2.</span> <span class="nav-text">添加节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除节点"><span class="nav-number">1.3.</span> <span class="nav-text">删除节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除节点X"><span class="nav-number">1.3.1.</span> <span class="nav-text">删除节点X</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平衡红黑树"><span class="nav-number">1.3.2.</span> <span class="nav-text">平衡红黑树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5种情况"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">5种情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平衡流程"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">平衡流程</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
