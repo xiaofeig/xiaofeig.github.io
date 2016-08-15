@@ -28,11 +28,11 @@ tags: [RB-Tree]
 
 **左旋：**
 
-![](index_files/691c800b-c73e-4308-b920-a2814e63b51a.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/691c800b-c73e-4308-b920-a2814e63b51a.png)
 
 **右旋：**
 
-![](index_files/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/29a6e54e-c51a-4ea9-9879-f3ea8e5e8898.png)
 
 
 ## 添加节点
@@ -41,19 +41,19 @@ tags: [RB-Tree]
 
 **1. 父节点为左子节点，叔叔节点为红色**
 
-![](index_files/0276095b-e89c-4231-925a-8ce95f2edf7b.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/0276095b-e89c-4231-925a-8ce95f2edf7b.png)
 
 **2. 父节点为左子节点，叔叔节点为黑色**
 
-![](index_files/63046423-8883-4c1d-ace1-5f8d41fcac4d.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/63046423-8883-4c1d-ace1-5f8d41fcac4d.png)
 
 **3. 父节点为右子节点，叔叔节点为红色**
 
-![](index_files/673ac674-f761-453b-9210-8fc2df1296f5.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/673ac674-f761-453b-9210-8fc2df1296f5.png)
 
 **4. 父节点为右子节点，叔叔节点为黑色**
 
-![](index_files/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/5ddaaf03-5577-48b8-a5dc-ea3a46f2e124.png)
 
 
 ## 删除节点
@@ -73,7 +73,7 @@ while(M.left != null)
     M = M.left;
 ```
 
-![](index_files/d8b76800-d009-425d-a32f-c29fdcff3ab6.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/d8b76800-d009-425d-a32f-c29fdcff3ab6.png)
 
 删除节点X（或M）之后，就可以平衡红黑树了，设删除的节点是M，N是M的唯一子节点：
 
@@ -92,31 +92,32 @@ while(M.left != null)
 
 进行如下转化后，红黑树仍然未平衡，子树N上缺少一个黑色节点，依据x的新兄弟节点L的左右子节点，**左右全黑**进入第3种，**左红右黑**进入第4种，**右红**进入第5种。
 
-![](index_files/2c72ca28-0b09-48c2-8f5c-7c2d46b9be9b.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/2c72ca28-0b09-48c2-8f5c-7c2d46b9be9b.png)
 
 **2. 兄弟节点B为黑色，父节点P为黑色，B的子节点均为黑色**
 
 如下的转化是将P的右子树也减少了一个黑色节点，红黑色P总体上就少了一个节点，所以需要将P看做N继续进行调整。
 
-![](index_files/1fa5714c-c891-4f68-b8e6-967db587dd3d.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/1fa5714c-c891-4f68-b8e6-967db587dd3d.png)
 
 **3. 兄弟节点B为黑色，父节点P为红色，B的子节点均为黑色**
 
 替换父节点和兄弟节点的颜色即可达到平衡。
 
-![](index_files/cdf05ad2-9902-4f15-ba47-6dcce49b0c44.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/cdf05ad2-9902-4f15-ba47-6dcce49b0c44.png)
 
 **4. 兄弟节点B为黑色（父节点P随意），B的左子节点L为红色，B的右子节点为黑色**
 
 调整之后，红黑树未平衡，但转为了**第5种**情况。
 
-![](index_files/7a58d38e-ad5c-4838-9fcd-53286eebc2a4.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/7a58d38e-ad5c-4838-9fcd-53286eebc2a4.png)
 
 **5. 兄弟节点B为黑色（父节点P随意），B的左子节点L随意，B的右子节点为红色**
 
-![](index_files/9f3f99fa-a0d2-4e39-99cf-983a53b5b352.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/9f3f99fa-a0d2-4e39-99cf-983a53b5b352.png)
 
 #### 平衡流程
 
-![](index_files/52bb97be-0144-4593-8d23-cf0fbfab7cb6.png)
+![](http://7xt0u5.com1.z0.glb.clouddn.com/52bb97be-0144-4593-8d23-cf0fbfab7cb6.png)
+
 
