@@ -130,7 +130,7 @@ duoshuo_info:
   admin_nickname: 博主
 
 # 多说热评文章
-duoshuo_hotartical: true
+duoshuo_hotartical: false
 
 
 # Facebook SDK Support.
