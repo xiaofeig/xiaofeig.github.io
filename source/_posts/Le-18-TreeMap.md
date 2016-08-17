@@ -216,7 +216,7 @@ public V put(K key, V value) {
 }
 ```
 
-## fixAfterInsertion
+### fixAfterInsertion
 
 ```java
 // 插入后，保持红黑树平衡进行调整
