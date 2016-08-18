@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="java," />
 
 
 
@@ -57,16 +57,18 @@
 
 
 
-<meta name="description" content="Python 练习册，每天一个小程序第 0017 题将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：">
+<meta name="description" content="HashSetHashSet基于HashMap来实现的，底层是使用HashMap的Key保存元素，Value统一为类的常量Object对象。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyCode0017">
-<meta property="og:url" content="http://coding.xiaofeig.cn/2016/07/23/Le-11-PyCode0017/index.html">
+<meta property="og:title" content="集合框架HashSet">
+<meta property="og:url" content="http://coding.xiaofeig.cn/2016/08/18/Le-19-HashSet/index.html">
 <meta property="og:site_name" content="Xiaofei's Blog">
-<meta property="og:description" content="Python 练习册，每天一个小程序第 0017 题将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：">
-<meta property="og:updated_time" content="2016-07-22T23:35:45.000Z">
+<meta property="og:description" content="HashSetHashSet基于HashMap来实现的，底层是使用HashMap的Key保存元素，Value统一为类的常量Object对象。">
+<meta property="og:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/31079052-15b3-4e58-a257-c59e9d78232c.png">
+<meta property="og:updated_time" content="2016-08-18T07:33:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PyCode0017">
-<meta name="twitter:description" content="Python 练习册，每天一个小程序第 0017 题将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：">
+<meta name="twitter:title" content="集合框架HashSet">
+<meta name="twitter:description" content="HashSetHashSet基于HashMap来实现的，底层是使用HashMap的Key保存元素，Value统一为类的常量Object对象。">
+<meta name="twitter:image" content="http://7xt0u5.com1.z0.glb.clouddn.com/31079052-15b3-4e58-a257-c59e9d78232c.png">
 
 
 
@@ -84,7 +86,7 @@
   };
 </script>
 
-  <title> PyCode0017 | Xiaofei's Blog </title>
+  <title> 集合框架HashSet | Xiaofei's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +236,7 @@
             
             
               
-                PyCode0017
+                集合框架HashSet
               
             
           </h1>
@@ -246,8 +248,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-23T07:35:42+08:00" content="2016-07-23">
-              2016-07-23
+            <time itemprop="dateCreated" datetime="2016-08-18T15:33:28+08:00" content="2016-08-18">
+              2016-08-18
             </time>
           </span>
 
@@ -272,8 +274,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
-                    <span itemprop="name">PyCode</span>
+                  <a href="/categories/Learning/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -288,8 +290,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/23/Le-11-PyCode0017/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/Le-11-PyCode0017/" itemprop="commentsCount"></span>
+                <a href="/2016/08/18/Le-19-HashSet/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/18/Le-19-HashSet/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,7 +301,7 @@
 
           
           
-             <span id="/2016/07/23/Le-11-PyCode0017/" class="leancloud_visitors" data-flag-title="PyCode0017">
+             <span id="/2016/08/18/Le-19-HashSet/" class="leancloud_visitors" data-flag-title="集合框架HashSet">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -320,28 +322,27 @@
       
 
       
-        <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/xiaofeig/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0017-题"><a href="#第-0017-题" class="headerlink" title="第 0017 题"></a>第 0017 题</h2><p>将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：</p>
+        <h1 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h1><p>HashSet基于HashMap来实现的，底层是使用HashMap的Key保存元素，Value统一为类的常量Object对象。</p>
 <a id="more"></a>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;root&gt;
-&lt;students&gt;
-&lt;!--
-    学生信息表
-    &quot;id&quot; : [名字, 数学, 语文, 英文]
---&gt;
-{
-    &quot;1&quot; : [&quot;张三&quot;, 150, 120, 100],
-    &quot;2&quot; : [&quot;李四&quot;, 90, 99, 95],
-    &quot;3&quot; : [&quot;王五&quot;, 60, 66, 68]
-}
-&lt;/students&gt;
-&lt;/root&gt;
-</code></pre><hr>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p><img src="http://7xt0u5.com1.z0.glb.clouddn.com/31079052-15b3-4e58-a257-c59e9d78232c.png" alt=""></p>
+<p>继承AbstractCollection，实现Set、Serializable、Cloneable接口。</p>
 <ul>
-<li>想将json格式的数据以可读的格式输出，但没找到合适的方法</li>
+<li>Serializable：可被序列化</li>
+<li>Cloneable：可被克隆</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> xml.dom <span class="keyword">import</span> getDOMImplementation</div><div class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadxlsx</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    加载student.xlsx</div><div class="line">    :return: 返回文件中的内容（dict）</div><div class="line">    """</div><div class="line">    wb = load_workbook(filename=<span class="string">'resource/student.xlsx'</span>)</div><div class="line">    ws = wb[<span class="string">'student'</span>]</div><div class="line">    content = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>):</div><div class="line">        temp = []</div><div class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</div><div class="line">            temp.append(ws.cell(row=i + <span class="number">1</span>, column=j + <span class="number">1</span>).value)</div><div class="line">        content[ws.cell(row=i + <span class="number">1</span>, column = <span class="number">1</span>).value] = temp</div><div class="line">    <span class="keyword">return</span> content</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dumpxml</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    将内容写入xml，并保存</div><div class="line">    （格式不太良好）</div><div class="line">    """</div><div class="line">    content = loadxlsx()</div><div class="line">    impl = getDOMImplementation()</div><div class="line">    newdoc = impl.createDocument(<span class="keyword">None</span>, <span class="string">'root'</span>, <span class="keyword">None</span>)</div><div class="line">    root = newdoc.documentElement</div><div class="line"></div><div class="line"></div><div class="line">    comment = newdoc.createComment(<span class="string">'\n\t学生信息表\n\t"id" : [名字, 数学, 语文, 英文]\n\t'</span>)</div><div class="line">    root.appendChild(comment)</div><div class="line"></div><div class="line"></div><div class="line">    students = newdoc.createElement(<span class="string">'students'</span>)</div><div class="line">    text = newdoc.createTextNode(content.__str__())</div><div class="line">    students.appendChild(text)</div><div class="line">    root.appendChild(students)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'resource/student.xml'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">        f.write(newdoc.toprettyxml())</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    dumpxml()</div></pre></td></tr></table></figure>
-<hr>
+<p><strong>特性：</strong></p>
+<ul>
+<li>无序</li>
+<li>唯一</li>
+<li>可为null</li>
+<li>不同步（非线程安全）</li>
+</ul>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用map的Key保存元素</span></div><div class="line"><span class="keyword">private</span> <span class="keyword">transient</span> HashMap&lt;E,Object&gt; map;</div><div class="line"><span class="comment">// map的Value均指向PRESENT，不设置为null是为了防止NullPointerException</span></div><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object PRESENT = <span class="keyword">new</span> Object();</div></pre></td></tr></table></figure>
+<h2 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用HashMap的初始容量0和默认加载因子0.75f来初始化（JDK1.8）</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashSet</span><span class="params">()</span> </span>&#123;</div><div class="line">    map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashSet</span><span class="params">(Collection&lt;? extends E&gt; c)</span> </span>&#123;</div><div class="line">	<span class="comment">// 容量为c的4/3倍和16的最大值</span></div><div class="line">    map = <span class="keyword">new</span> HashMap&lt;&gt;(Math.max((<span class="keyword">int</span>) (c.size()/.<span class="number">75f</span>) + <span class="number">1</span>, <span class="number">16</span>));</div><div class="line">	<span class="comment">// 添加所有元素</span></div><div class="line">    addAll(c);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 指定初始容量</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashSet</span><span class="params">(<span class="keyword">int</span> initialCapacity)</span> </span>&#123;</div><div class="line">    map = <span class="keyword">new</span> HashMap&lt;&gt;(initialCapacity);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 指定初始容量，加载因子（dummy未使用）</span></div><div class="line">HashSet(<span class="keyword">int</span> initialCapacity, <span class="keyword">float</span> loadFactor, <span class="keyword">boolean</span> dummy) &#123;</div><div class="line">    map = <span class="keyword">new</span> LinkedHashMap&lt;&gt;(initialCapacity, loadFactor);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> <span class="comment">// 添加元素</span></span></div><div class="line"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> <span class="comment">// 清除</span></div><div class="line">Object <span class="title">clone</span><span class="params">()</span> <span class="comment">// 浅复制</span></div><div class="line"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object o)</span> <span class="comment">// 是否包含</span></div><div class="line"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="comment">// 是否为空</span></div><div class="line">Iterator&lt;E&gt; <span class="title">iterator</span><span class="params">()</span> <span class="comment">// 迭代器</span></div><div class="line"><span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object o)</span> <span class="comment">// 移除</span></div><div class="line"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="comment">// 集合大小</span></div><div class="line">Spliterator&lt;E&gt; <span class="title">spliterator</span><span class="params">()</span></div></pre></td></tr></table></figure>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Spliterator spliterator = hashSet.spliterator();</div><div class="line"><span class="comment">// 为每个对象执行特定代码</span></div><div class="line">spliterator.forEachRemaining(<span class="keyword">new</span> Consumer() &#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Object o)</span> </span>&#123;</div><div class="line">		System.out.print(o+<span class="string">","</span>);</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</div><div class="line">	<span class="comment">// 调用HashMap.put(key, value)方法（key=e，value=PRESENT）</span></div><div class="line">    <span class="keyword">return</span> map.put(e, PRESENT)==<span class="keyword">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object o)</span> </span>&#123;</div><div class="line">	<span class="comment">//调用HashMap.remove(key)方法</span></div><div class="line">	<span class="keyword">return</span> map.remove(o)==PRESENT;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -377,7 +378,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/java/" rel="tag">#java</a>
           
         </div>
       
@@ -386,17 +387,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/23/Le-10-PyCode0016/" rel="next" title="PyCode0016">
-                <i class="fa fa-chevron-left"></i> PyCode0016
+              <a href="/2016/08/17/Le-18-TreeMap/" rel="next" title="集合框架TreeMap">
+                <i class="fa fa-chevron-left"></i> 集合框架TreeMap
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/23/Le-12-PyCode0018/" rel="prev" title="PyCode0018">
-                PyCode0018 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -422,8 +419,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/23/Le-11-PyCode0017/"
-           data-title="PyCode0017" data-url="http://coding.xiaofeig.cn/2016/07/23/Le-11-PyCode0017/">
+      <div class="ds-thread" data-thread-key="2016/08/18/Le-19-HashSet/"
+           data-title="集合框架HashSet" data-url="http://coding.xiaofeig.cn/2016/08/18/Le-19-HashSet/">
       </div>
     
   </div>
@@ -581,7 +578,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-练习册，每天一个小程序"><span class="nav-number">1.</span> <span class="nav-text">Python 练习册，每天一个小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-0017-题"><span class="nav-number">1.1.</span> <span class="nav-text">第 0017 题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HashSet"><span class="nav-number">1.</span> <span class="nav-text">HashSet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#结构"><span class="nav-number">1.1.</span> <span class="nav-text">结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">1.2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造"><span class="nav-number">1.3.</span> <span class="nav-text">构造</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">1.4.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.5.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码"><span class="nav-number">1.6.</span> <span class="nav-text">源码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#add"><span class="nav-number">1.6.1.</span> <span class="nav-text">add</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove"><span class="nav-number">1.6.2.</span> <span class="nav-text">remove</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
