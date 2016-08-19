@@ -1,9 +1,9 @@
 ---
 title: 集合框架HashMap
 date: 2016-08-07 16:31:47
-updated: 2016-08-07 16:31:52
-categories: [Learning, Java]
-tags: [java]
+updated: 2016-08-19 10:55:38
+categories: [Learning, Java, 集合框架]
+tags: [java, 数组, 链表, 红黑树]
 ---
 
 # [HashMap](http://www.jianshu.com/p/31a358d14caf)

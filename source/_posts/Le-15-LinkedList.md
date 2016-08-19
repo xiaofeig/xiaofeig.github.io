@@ -1,9 +1,9 @@
 ---
 title: 集合框架LinkedList
 date: 2016-08-07 16:30:23
-updated: 2016-08-07 16:30:29
-categories: [Learning, Java]
-tags: [java]
+updated: 2016-08-19 10:53:56
+categories: [Learning, Java, 集合框架]
+tags: [java, 链表]
 ---
 
 # [LinkedList](http://www.jianshu.com/p/681802a00cdf)

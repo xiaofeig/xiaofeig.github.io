@@ -1,9 +1,9 @@
 ---
 title: 集合框架Hashtable
 date: 2016-08-19 10:33:20
-updated: 2016-08-19 10:33:25
-categories: [Learning, Java]
-tags: [java]
+updated: 2016-08-19 10:56:10
+categories: [Learning, Java, 集合框架]
+tags: [java, 链表]
 ---
 
 # Hashtable

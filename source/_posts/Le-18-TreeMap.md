@@ -1,9 +1,9 @@
 ---
 title: 集合框架TreeMap
 date: 2016-08-17 21:48:40
-updated: 2016-08-17 21:48:45
-categories: [Learning, Java]
-tags: [java]
+updated: 2016-08-19 10:55:03
+categories: [Learning, Java, 集合框架]
+tags: [java, 红黑树]
 ---
 
 # [TreeMap](http://www.jianshu.com/p/210c2f4ca130)

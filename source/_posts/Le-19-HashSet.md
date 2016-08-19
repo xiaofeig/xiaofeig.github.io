@@ -1,8 +1,8 @@
 ---
 title: 集合框架HashSet
 date: 2016-08-18 15:33:28
-updated: 2016-08-18 15:33:33
-categories: [Learning, Java]
+updated: 2016-08-19 10:52:03
+categories: [Learning, Java, 集合框架]
 tags: [java]
 ---
 
@@ -45,9 +45,9 @@ public HashSet() {
     map = new HashMap<>();
 }
 public HashSet(Collection<? extends E> c) {
-	// 容量为c的4/3倍和16的最大值
+    // 容量为c的4/3倍和16的最大值
     map = new HashMap<>(Math.max((int) (c.size()/.75f) + 1, 16));
-	// 添加所有元素
+    // 添加所有元素
     addAll(c);
 }
 // 指定初始容量
@@ -80,10 +80,10 @@ Spliterator<E> spliterator()
 Spliterator spliterator = hashSet.spliterator();
 // 为每个对象执行特定代码
 spliterator.forEachRemaining(new Consumer() {
-	@Override
-	public void accept(Object o) {
-		System.out.print(o+",");
-	}
+    @Override
+    public void accept(Object o) {
+        System.out.print(o+",");
+    }
 });
 ```
 
@@ -93,7 +93,7 @@ spliterator.forEachRemaining(new Consumer() {
 
 ```java
 public boolean add(E e) {
-	// 调用HashMap.put(key, value)方法（key=e，value=PRESENT）
+    // 调用HashMap.put(key, value)方法（key=e，value=PRESENT）
     return map.put(e, PRESENT)==null;
 }
 ```
@@ -102,8 +102,8 @@ public boolean add(E e) {
 
 ```java
 public boolean remove(Object o) {
-	//调用HashMap.remove(key)方法
-	return map.remove(o)==PRESENT;
+    //调用HashMap.remove(key)方法
+    return map.remove(o)==PRESENT;
 }
 ```
 

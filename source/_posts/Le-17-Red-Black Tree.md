@@ -1,9 +1,9 @@
 ---
 title: 红黑树
 date: 2016-08-14 15:34:04
-updated: 2016-08-15 11:17:51
+updated: 2016-08-19 10:54:27
 categories: [Learning, Tree]
-tags: [RB-Tree]
+tags: [红黑树]
 ---
 
 # [红黑树](http://www.jianshu.com/p/210c2f4ca130)

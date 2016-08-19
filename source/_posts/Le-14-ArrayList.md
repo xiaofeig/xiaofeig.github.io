@@ -1,9 +1,9 @@
 ---
 title: 集合框架ArrayList
 date: 2016-08-07 16:26:23
-updated: 2016-08-07 16:26:30
-categories: [Learning, Java]
-tags: [java]
+updated: 2016-08-19 10:53:17
+categories: [Learning, Java, 集合框架]
+tags: [java, 数组]
 ---
 
 # [ArrayList](http://www.jianshu.com/p/085a5ba2aca8)
