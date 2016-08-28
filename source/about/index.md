@@ -1,7 +1,7 @@
 ---
  title: about
  date: 2016-04-02 14:12:44
- updated: 2016-07-23 07:45:35
+ updated: 2016-08-28 18:40:45
  type: "about"
 ---
 
@@ -12,6 +12,7 @@
 - <i class="fa fa-home"></i> [coding.xiaofeig.cn](http://coding.xiaofeig.cn)
 - <i class="fa fa-phone"></i> 18883870458
 - <i class="fa fa-envelope"></i> i@xiaofeig.cn
+- <i class="fa fa-file-pdf-o"></i> [resume.xiaofeig.cn](http://resume.xiaofeig.cn)
 
 # Abstract
 
