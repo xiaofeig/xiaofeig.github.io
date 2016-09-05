@@ -1,0 +1,833 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java,数组,排序," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="堆n个元素的序列{k1, k2, …, kn}称之为堆，当且仅当满足以下条件时:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="堆排序">
+<meta property="og:url" content="http://coding.xiaofeig.cn/2016/09/05/Re-02-HeapSort/index.html">
+<meta property="og:site_name" content="Xiaofei's Blog">
+<meta property="og:description" content="堆n个元素的序列{k1, k2, …, kn}称之为堆，当且仅当满足以下条件时:">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \Large k_i \ge k_{2i} \&\& k_i \ge k_{2i+1}">
+<meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \Large k_i \le k_{2i} \&\& k_i \le k_{2i+1}">
+<meta property="og:updated_time" content="2016-09-05T14:02:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="堆排序">
+<meta name="twitter:description" content="堆n个元素的序列{k1, k2, …, kn}称之为堆，当且仅当满足以下条件时:">
+<meta name="twitter:image" content="http://www.forkosh.com/mathtex.cgi? \Large k_i \ge k_{2i} \&\& k_i \ge k_{2i+1}">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6266250384977692000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 堆排序 | Xiaofei's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7e2ee4ffda2eb8e51b51ee174565d283";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Xiaofei's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Hi, xiaofei...</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                堆排序
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-05T22:01:57+08:00" content="2016-09-05">
+              2016-09-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Reading/" itemprop="url" rel="index">
+                    <span itemprop="name">Reading</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Reading/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/05/Re-02-HeapSort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/05/Re-02-HeapSort/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/05/Re-02-HeapSort/" class="leancloud_visitors" data-flag-title="堆排序">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h1><p>n个元素的序列{k1, k2, …, kn}称之为堆，当且仅当满足以下条件时:</p>
+<a id="more"></a>
+<p>大根堆：<img src="http://www.forkosh.com/mathtex.cgi? \Large k_i \ge k_{2i} \&\& k_i \ge k_{2i+1}"></p>
+<p>或</p>
+<p>小根堆：<img src="http://www.forkosh.com/mathtex.cgi? \Large k_i \le k_{2i} \&\& k_i \le k_{2i+1}"></p>
+<h1 id="排序思想"><a href="#排序思想" class="headerlink" title="排序思想"></a>排序思想</h1><ol>
+<li><strong>建初堆</strong>：按堆的定义将待排序列<strong>r[1..n]</strong>调整为大根堆，交换r[1]和r[n]，则r[n]为关键字最大的记录；</li>
+<li><strong>调整堆</strong>：将r[1..n-1]重新调整为堆，交换r[1]和r[n-1]，则r[n-1]为关键字次大的记录；</li>
+<li><strong>循环n-1次</strong>，直到交换了r[1]和r[2]为止，得到了一个非递减的有序序列r[1..n]。</li>
+</ol>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>将无序序列{49, 38, 65, 97, 76, 13, 27, 49}进行堆排序。</p>
+<p><strong>1.</strong> 筛选法建立大根堆，从最后一个非叶子节点（n/2）开始筛选</p>
+<ul>
+<li><code>97</code>满足，<code>65</code>满足</li>
+<li>(1)→(2)：<code>38</code>不满足，<code>49</code>→<code>97</code>，<code>97</code>→<code>38</code>，<code>38</code>→<code>49</code></li>
+<li>(2)→(3)：<code>49</code>不满足，<code>76</code>→<code>97</code>，<code>97</code>→<code>49</code>，<code>49</code>→<code>76</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">      49                  49                  97</div><div class="line">  ┌───┴───┐           ┌───┴───┐           ┌───┴───┐</div><div class="line">  38      65          97      65          76      65</div><div class="line">┌─┴─┐   ┌─┴─┐       ┌─┴─┐   ┌─┴─┐       ┌─┴─┐   ┌─┴─┐</div><div class="line">97  76  13  27      49  76  13  27      49  49  13  27</div><div class="line">│                   │                   │</div><div class="line">49                  38                  38</div><div class="line">     (1)                 (2)                 (3)</div></pre></td></tr></table></figure>
+<p><strong>2.</strong> 调整堆</p>
+<ul>
+<li>(3)→(4)：交换，<code>97</code>←→<code>38</code>，<code>97</code>为最大值节点</li>
+<li>(4)→(5)：调整根节点，<code>49</code>→<code>76</code>，<code>76</code>→<code>38</code>，<code>38</code>→<code>49</code></li>
+<li>(5)→(6)：交换，<code>76</code>←→<code>27</code>，<code>76</code>为次大值节点</li>
+<li>(6)→(7)：调整根节点…</li>
+<li>(7)→(8)：交换…</li>
+<li>…</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">      97                  38                  76                  27</div><div class="line">  ┌───┴───┐           ┌───┴───┐           ┌───┴───┐           ┌───┴───┐</div><div class="line">  76      65          76      65          49      65          49      65</div><div class="line">┌─┴─┐   ┌─┴─┐       ┌─┴─┐   ┌─┴─┐       ┌─┴─┐   ┌─┴─┐       ┌─┴─┐   ┌─┴─×</div><div class="line">49  49  13  27      49  49  13  27      38  49  13  27      38  49  13  76</div><div class="line">│                   ×                   ×                   ×</div><div class="line">38                  97                  97                  97</div><div class="line">     (3)                 (4)                 (5)                 (6)</div><div class="line"></div><div class="line">      65                  13                  49                  13</div><div class="line">  ┌───┴───┐           ┌───┴───┐           ┌───┴───┐           ┌───┴───┐</div><div class="line">  49      27          49      27          49      27          49      27</div><div class="line">┌─┴─┐   ┌─┴─×       ┌─┴─┐   ×─┴─×       ┌─┴─┐   ×─┴─×       ┌─┴─×   ×─┴─×</div><div class="line">38  49  13  76      38  49  65  76      38  13  65  76      38  49  65  76</div><div class="line">×                   ×                   ×                   ×</div><div class="line">97                  97                  97                  97</div><div class="line">     (7)                 (8)                 (9)                 (10)</div><div class="line"></div><div class="line">      49                  13                  38                  27</div><div class="line">  ┌───┴───┐           ┌───┴───┐           ┌───┴───┐           ┌───┴───×</div><div class="line">  38      27          38      27          13      27          13      38</div><div class="line">┌─┴─×   ×─┴─×       ×─┴─×   ×─┴─×       ×─┴─×   ×─┴─×       ×─┴─×   ×─┴─×</div><div class="line">97  49  65  76      49  49  65  76      49  49  65  76      49  49  65  76</div><div class="line">×                   ×                   ×                   ×</div><div class="line">97                  97                  97                  97</div><div class="line">     (12)                (12)                (13)                (14)</div><div class="line"></div><div class="line">      27                  13</div><div class="line">  ┌───┴───×           ×───┴───×</div><div class="line">  13      38          27      38</div><div class="line">×─┴─×   ×─┴─×       ×─┴─×   ×─┴─×</div><div class="line">49  49  65  76      49  49  65  76</div><div class="line">×                   ×</div><div class="line">97                  97</div><div class="line">     (15)                (16)</div></pre></td></tr></table></figure>
+<h1 id="Java实现"><a href="#Java实现" class="headerlink" title="Java实现"></a>Java实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 堆排序</div><div class="line"> * <span class="doctag">@param</span> list</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(List&lt;Integer&gt; list)</span></span>&#123;</div><div class="line">	createHeap(list);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=list.size()-<span class="number">1</span>;i&gt;<span class="number">0</span>;i--)&#123;</div><div class="line">		<span class="comment">// 交换第0个与第i个节点</span></div><div class="line">		Integer temp =list.get(<span class="number">0</span>);</div><div class="line">		list.set(<span class="number">0</span>, list.get(i));</div><div class="line">		list.set(i, temp);</div><div class="line">		<span class="comment">// 调整堆</span></div><div class="line">		adjustHeap(list, <span class="number">0</span>, i-<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 建初堆</div><div class="line"> * <span class="doctag">@param</span> list</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">createHeap</span><span class="params">(List&lt;Integer&gt; list)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> l = list.size();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l/<span class="number">2</span>-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)&#123; <span class="comment">// 最后一个非叶子节点开始，调整至根节点</span></div><div class="line">		adjustHeap(list, i, l-<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 筛选法调整堆</div><div class="line"> * <span class="doctag">@param</span> list</div><div class="line"> * <span class="doctag">@param</span> m 待调整节点的下标</div><div class="line"> * <span class="doctag">@param</span> n 最后一个未调整节点的下标</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">adjustHeap</span><span class="params">(List&lt;Integer&gt; list, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">	Integer temp = list.get(m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>*m+<span class="number">1</span>;i&lt;=n;i=i*<span class="number">2</span>+<span class="number">1</span>)&#123;</div><div class="line">		<span class="keyword">if</span>(i&lt;n&amp;&amp;list.get(i)&lt;list.get(i+<span class="number">1</span>))&#123; <span class="comment">// 左右子节点选出较大节点</span></div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(temp&gt;=list.get(i))&#123; <span class="comment">// 均不小于左右子节点，无需调整</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">		list.set(m, list.get(i));</div><div class="line">		m = i; <span class="comment">//记录子节点下标，继续迭代</span></div><div class="line">	&#125;</div><div class="line">	list.set(m, temp); <span class="comment">// 最终位置插入节点</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">	Integer[] array = &#123;<span class="number">49</span>, <span class="number">38</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>&#125;;</div><div class="line">	List&lt;Integer&gt; list = Arrays.asList(array);</div><div class="line">	heapSort(list);</div><div class="line">	System.out.println(list.toString());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><strong>时间复杂度</strong>：最好、最坏、平均均为：$$ O(nlog_2n) $$</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>不稳定</li>
+<li>只能用于顺序结构，不能用于链式结构</li>
+<li>初始建堆所需的比较次数较多，因此记录数较少时不宜采用。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>请博主喝奶茶:)。</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat_reward.gif" alt="xiaofeig WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay_reward.gif" alt="xiaofeig Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/数组/" rel="tag">#数组</a>
+          
+            <a href="/tags/排序/" rel="tag">#排序</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/19/Le-1A-Hashtable/" rel="next" title="集合框架Hashtable">
+                <i class="fa fa-chevron-left"></i> 集合框架Hashtable
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/05/Re-02-HeapSort/"
+           data-title="堆排序" data-url="http://coding.xiaofeig.cn/2016/09/05/Re-02-HeapSort/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar_colorful.jpg"
+               alt="xiaofeig" />
+          <p class="site-author-name" itemprop="name">xiaofeig</p>
+          <p class="site-description motion-element" itemprop="description">因为无能为力，所以顺其自然。因为心无所恃，所以随遇而安。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/gao-xiao-fei-72" target="_blank">
+                  
+                    <i class="fa fa-edit"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-code"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/xiaofeig002" target="_blank">
+                  
+                    <i class="fa fa-film"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/user/home?id=80637490" target="_blank">
+                  
+                    <i class="fa fa-music"></i>
+                  
+                  网易云音乐
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackoverflow.com/users/5844489/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-stack-overflow"></i>
+                  
+                  StackOverflow
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/xiaofeig" target="_blank">
+                  
+                    <i class="fa fa-columns"></i>
+                  
+                  Segmentfault
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#堆"><span class="nav-number">1.</span> <span class="nav-text">堆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序思想"><span class="nav-number">2.</span> <span class="nav-text">排序思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java实现"><span class="nav-number">4.</span> <span class="nav-text">Java实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaofeig</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xiaofeig"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("CjnhARzzvB4UVTLJHiO2Whwf-gzGzoHsz", "YPfw4nq9yyTA1eIqbFGiN4JP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
