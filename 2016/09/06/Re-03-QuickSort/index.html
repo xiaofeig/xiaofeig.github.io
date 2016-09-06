@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="java,数组,排序," />
 
 
 
@@ -57,16 +57,31 @@
 
 
 
-<meta name="description" content="Python 练习册，每天一个小程序第 0017 题将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：">
+<meta name="description" content="排序思想
+选择中轴元素pivotKey，默认为第0个元素（或最左边、最右边、中间的中位数）
+i表示&amp;lt;pivotKey的元素的下标，从左至右扫描，遇到&amp;gt;=pivotKey停止
+j表示&amp;gt;pivotKey的元素的下标，从右至左扫描，遇到&amp;lt;=pivotKey停止
+两次扫描均停止后，i&amp;lt;j或i&amp;gt;=j
+若i&amp;lt;j，交换a[i]和a[j]；若i&amp;gt;=j，a[j]=pi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyCode0017">
-<meta property="og:url" content="http://coding.xiaofeig.cn/2016/07/23/Le-11-PyCode0017/index.html">
+<meta property="og:title" content="快速排序">
+<meta property="og:url" content="http://coding.xiaofeig.cn/2016/09/06/Re-03-QuickSort/index.html">
 <meta property="og:site_name" content="Xiaofei's Blog">
-<meta property="og:description" content="Python 练习册，每天一个小程序第 0017 题将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：">
-<meta property="og:updated_time" content="2016-07-22T23:35:45.000Z">
+<meta property="og:description" content="排序思想
+选择中轴元素pivotKey，默认为第0个元素（或最左边、最右边、中间的中位数）
+i表示&amp;lt;pivotKey的元素的下标，从左至右扫描，遇到&amp;gt;=pivotKey停止
+j表示&amp;gt;pivotKey的元素的下标，从右至左扫描，遇到&amp;lt;=pivotKey停止
+两次扫描均停止后，i&amp;lt;j或i&amp;gt;=j
+若i&amp;lt;j，交换a[i]和a[j]；若i&amp;gt;=j，a[j]=pi">
+<meta property="og:updated_time" content="2016-09-06T05:43:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PyCode0017">
-<meta name="twitter:description" content="Python 练习册，每天一个小程序第 0017 题将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：">
+<meta name="twitter:title" content="快速排序">
+<meta name="twitter:description" content="排序思想
+选择中轴元素pivotKey，默认为第0个元素（或最左边、最右边、中间的中位数）
+i表示&amp;lt;pivotKey的元素的下标，从左至右扫描，遇到&amp;gt;=pivotKey停止
+j表示&amp;gt;pivotKey的元素的下标，从右至左扫描，遇到&amp;lt;=pivotKey停止
+两次扫描均停止后，i&amp;lt;j或i&amp;gt;=j
+若i&amp;lt;j，交换a[i]和a[j]；若i&amp;gt;=j，a[j]=pi">
 
 
 
@@ -84,7 +99,7 @@
   };
 </script>
 
-  <title> PyCode0017 | Xiaofei's Blog </title>
+  <title> 快速排序 | Xiaofei's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +249,7 @@
             
             
               
-                PyCode0017
+                快速排序
               
             
           </h1>
@@ -246,8 +261,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-23T07:35:42+08:00" content="2016-07-23">
-              2016-07-23
+            <time itemprop="dateCreated" datetime="2016-09-06T13:43:20+08:00" content="2016-09-06">
+              2016-09-06
             </time>
           </span>
 
@@ -260,8 +275,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning</span>
+                  <a href="/categories/Reading/" itemprop="url" rel="index">
+                    <span itemprop="name">Reading</span>
                   </a>
                 </span>
 
@@ -272,8 +287,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning/PyCode/" itemprop="url" rel="index">
-                    <span itemprop="name">PyCode</span>
+                  <a href="/categories/Reading/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -288,8 +303,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/23/Le-11-PyCode0017/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/Le-11-PyCode0017/" itemprop="commentsCount"></span>
+                <a href="/2016/09/06/Re-03-QuickSort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/Re-03-QuickSort/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,7 +314,7 @@
 
           
           
-             <span id="/2016/07/23/Le-11-PyCode0017/" class="leancloud_visitors" data-flag-title="PyCode0017">
+             <span id="/2016/09/06/Re-03-QuickSort/" class="leancloud_visitors" data-flag-title="快速排序">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -320,28 +335,61 @@
       
 
       
-        <h1 id="Python-练习册，每天一个小程序"><a href="#Python-练习册，每天一个小程序" class="headerlink" title="Python 练习册，每天一个小程序"></a><a href="https://github.com/xiaofeig/show-me-the-code" target="_blank" rel="external">Python 练习册，每天一个小程序</a></h1><h2 id="第-0017-题"><a href="#第-0017-题" class="headerlink" title="第 0017 题"></a>第 0017 题</h2><p>将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如下所示：</p>
-<a id="more"></a>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;root&gt;
-&lt;students&gt;
-&lt;!--
-    学生信息表
-    &quot;id&quot; : [名字, 数学, 语文, 英文]
---&gt;
-{
-    &quot;1&quot; : [&quot;张三&quot;, 150, 120, 100],
-    &quot;2&quot; : [&quot;李四&quot;, 90, 99, 95],
-    &quot;3&quot; : [&quot;王五&quot;, 60, 66, 68]
-}
-&lt;/students&gt;
-&lt;/root&gt;
-</code></pre><hr>
-<ul>
-<li>想将json格式的数据以可读的格式输出，但没找到合适的方法</li>
+        <h1 id="排序思想"><a href="#排序思想" class="headerlink" title="排序思想"></a>排序思想</h1><ul>
+<li><strong>选择中轴元素pivotKey</strong>，默认为第0个元素（或最左边、最右边、中间的中位数）</li>
+<li>i表示<code>&lt;pivotKey</code>的元素的下标，从左至右扫描，遇到<code>&gt;=pivotKey</code>停止</li>
+<li>j表示<code>&gt;pivotKey</code>的元素的下标，从右至左扫描，遇到<code>&lt;=pivotKey</code>停止</li>
+<li>两次扫描均停止后，<code>i&lt;j</code>或<code>i&gt;=j</code></li>
+<li>若<code>i&lt;j</code>，交换a[i]和a[j]；若<code>i&gt;=j</code>，a[j]=pivotKey</li>
+<li>对j的左右子树重复上述上述操作</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> xml.dom <span class="keyword">import</span> getDOMImplementation</div><div class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadxlsx</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    加载student.xlsx</div><div class="line">    :return: 返回文件中的内容（dict）</div><div class="line">    """</div><div class="line">    wb = load_workbook(filename=<span class="string">'resource/student.xlsx'</span>)</div><div class="line">    ws = wb[<span class="string">'student'</span>]</div><div class="line">    content = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>):</div><div class="line">        temp = []</div><div class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</div><div class="line">            temp.append(ws.cell(row=i + <span class="number">1</span>, column=j + <span class="number">1</span>).value)</div><div class="line">        content[ws.cell(row=i + <span class="number">1</span>, column = <span class="number">1</span>).value] = temp</div><div class="line">    <span class="keyword">return</span> content</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dumpxml</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    将内容写入xml，并保存</div><div class="line">    （格式不太良好）</div><div class="line">    """</div><div class="line">    content = loadxlsx()</div><div class="line">    impl = getDOMImplementation()</div><div class="line">    newdoc = impl.createDocument(<span class="keyword">None</span>, <span class="string">'root'</span>, <span class="keyword">None</span>)</div><div class="line">    root = newdoc.documentElement</div><div class="line"></div><div class="line"></div><div class="line">    comment = newdoc.createComment(<span class="string">'\n\t学生信息表\n\t"id" : [名字, 数学, 语文, 英文]\n\t'</span>)</div><div class="line">    root.appendChild(comment)</div><div class="line"></div><div class="line"></div><div class="line">    students = newdoc.createElement(<span class="string">'students'</span>)</div><div class="line">    text = newdoc.createTextNode(content.__str__())</div><div class="line">    students.appendChild(text)</div><div class="line">    root.appendChild(students)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'resource/student.xml'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">        f.write(newdoc.toprettyxml())</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    dumpxml()</div></pre></td></tr></table></figure>
-<hr>
+<a id="more"></a>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>对序列{49, 38, 65, 97, 76, 13, 27, 49}进行快速排序。</p>
+<p>第一趟排序过程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">key</div><div class="line">↓</div><div class="line">49, 38, 65, 97, 76, 13, 27, 49</div><div class="line">↑                       ↑ ← ↑</div><div class="line">i                       j   j</div><div class="line">27, 38, 65, 97, 76, 13,   , 49</div><div class="line">↑  --→  ↑               ↑</div><div class="line">i       i               j</div><div class="line">27, 38,   , 97, 76, 13, 65, 49</div><div class="line">        ↑           ↑ ← ↑</div><div class="line">        i           j   j</div><div class="line">27, 38, 13, 97, 76,   , 65, 49</div><div class="line">        ↑ → ↑       ↑</div><div class="line">        i   i       j</div><div class="line">27, 38, 13,   , 76, 97, 65, 49</div><div class="line">            ↑↑ ←--  ↑</div><div class="line">            ij      j</div><div class="line">27, 38, 13, 49, 76, 97, 65, 49</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">初始状态</td>
+<td style="text-align:left">{49 38 65 97 76 13 27 49}</td>
+</tr>
+<tr>
+<td style="text-align:left">一趟排序结果</td>
+<td style="text-align:left">{27 38 13} 49 {76 97 65 49}</td>
+</tr>
+<tr>
+<td style="text-align:left">二趟排序结果</td>
+<td style="text-align:left">{13} 27 {38} 49 {76 97 65 49}</td>
+</tr>
+<tr>
+<td style="text-align:left">三趟排序结果</td>
+<td style="text-align:left">13 27 38 49 {76 97 65 49}</td>
+</tr>
+<tr>
+<td style="text-align:left">四趟排序结果</td>
+<td style="text-align:left">13 27 38 49 {49 65} 76 {97}</td>
+</tr>
+<tr>
+<td style="text-align:left">五趟排序结果</td>
+<td style="text-align:left">13 27 38 49 49 {65} 76 97</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Java实现"><a href="#Java实现" class="headerlink" title="Java实现"></a>Java实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(Integer[] array)</span> </span>&#123;</div><div class="line">	qSort(array, <span class="number">0</span>, array.length-<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 递归排序左右子树</div><div class="line"> * <span class="doctag">@param</span> array</div><div class="line"> * <span class="doctag">@param</span> i 最左侧元素下标</div><div class="line"> * <span class="doctag">@param</span> j 最右侧元素下标</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">qSort</span><span class="params">(Integer[] array, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span>(i&lt;j) &#123;</div><div class="line">		<span class="keyword">int</span> pivotIndex = partition(array, i, j);</div><div class="line">		qSort(array, i, pivotIndex-<span class="number">1</span>);</div><div class="line">		qSort(array, pivotIndex+<span class="number">1</span>, j);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 分区</div><div class="line"> * <span class="doctag">@param</span> array</div><div class="line"> * <span class="doctag">@param</span> i 最左侧元素下标</div><div class="line"> * <span class="doctag">@param</span> j 最右侧元素下标</div><div class="line"> * <span class="doctag">@return</span> 返回中轴下标</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(Integer[] array, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">	Integer pivotKey = array[i]; <span class="comment">// 最左侧元素作为中轴</span></div><div class="line">	<span class="keyword">while</span>(i&lt;j) &#123;</div><div class="line">		<span class="keyword">while</span>(i&lt;j&amp;&amp;array[j]&gt;=pivotKey)&#123;</div><div class="line">			j--;</div><div class="line">		&#125;</div><div class="line">		array[i] = array[j]; <span class="comment">// 小于中轴的元素移至左侧</span></div><div class="line">		<span class="keyword">while</span>(i&lt;j&amp;&amp;array[i]&lt;=pivotKey) &#123;</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">		array[j] = array[i]; <span class="comment">// 大于中轴的元素移至右侧</span></div><div class="line">	&#125;</div><div class="line">	array[i] = pivotKey; <span class="comment">// 重置中轴</span></div><div class="line">	<span class="keyword">return</span> i; <span class="comment">// 返回中轴下标</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">	Integer[] array = &#123;<span class="number">49</span>, <span class="number">38</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>&#125;;</div><div class="line">	quickSort(array);</div><div class="line">	System.out.println(Arrays.toString(array));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><strong>时间复杂度：</strong></p>
+<p>最好、平均： $$O(nlog_2n)$$<br>最坏： $$O(n^2)$$</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>不稳定</li>
+<li>适合顺序结构，不宜链式结构</li>
+<li>当n较大时，在平均情况下快速排序是所有内部排序方法中速度最快的一种，所以适合初始记录无序、n较大时的情况</li>
+</ul>
 
       
     </div>
@@ -377,7 +425,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/数组/" rel="tag">#数组</a>
+          
+            <a href="/tags/排序/" rel="tag">#排序</a>
           
         </div>
       
@@ -386,17 +438,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/23/Le-10-PyCode0016/" rel="next" title="PyCode0016">
-                <i class="fa fa-chevron-left"></i> PyCode0016
+              <a href="/2016/09/05/Re-02-HeapSort/" rel="next" title="堆排序">
+                <i class="fa fa-chevron-left"></i> 堆排序
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/23/Le-12-PyCode0018/" rel="prev" title="PyCode0018">
-                PyCode0018 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -422,8 +470,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/23/Le-11-PyCode0017/"
-           data-title="PyCode0017" data-url="http://coding.xiaofeig.cn/2016/07/23/Le-11-PyCode0017/">
+      <div class="ds-thread" data-thread-key="2016/09/06/Re-03-QuickSort/"
+           data-title="快速排序" data-url="http://coding.xiaofeig.cn/2016/09/06/Re-03-QuickSort/">
       </div>
     
   </div>
@@ -581,7 +629,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-练习册，每天一个小程序"><span class="nav-number">1.</span> <span class="nav-text">Python 练习册，每天一个小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-0017-题"><span class="nav-number">1.1.</span> <span class="nav-text">第 0017 题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序思想"><span class="nav-number">1.</span> <span class="nav-text">排序思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java实现"><span class="nav-number">3.</span> <span class="nav-text">Java实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
         </section>
